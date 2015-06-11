@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="ThinkCrazyApp">
+  <head>
+    <title>Solar Energy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>#map-canvas{position:absolute;top:0;bottom:0;left:0;right:0;overflow:scroll}.ng-hide{visibility:hidden;}</style>
+    <link rel="stylesheet" href="vendor/angular-material.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!-- <link rel="stylesheet" href="assets/css/autocomplete.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/avatars.css"> -->
+    <!-- <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+  </head>
+  <body layout="column" ng-controller="LayoutCtrl">
+    <!-- Topnav ui-view -->
+    <div ui-view="topnav" style="background-color:rgb(63, 81, 181);">
+      <md-toolbar layout="row" layout-align="center center">
+      </md-toolbar>
+    </div>
+    <!-- Main ui-view -->
+    <div id="content" ui-view layout-padding flex></div>
+    <!-- Scripts -->
+    <footer>
+      <!-- Angular -->
+      <script src="vendor/angular.min.js"></script>
+      <script src="vendor/firebase.js"></script>
+      <script src="vendor/angular-local-storage.min.js"></script>
+      <!-- Geofire 
+      <script src="vendor/geofire.min.js"></script>
+      <script src="vendor/lodash.min.js"></script>
+      <script src="vendor/rsvp.min.js"></script>
+      -->
+      <!-- App -->
+      <script src="app.js"></script>
+      <script src="src/home/home.js"></script>
+      <script src="src/layout/layout.js"></script>
+      <script src="src/user/user-module.js"></script>
+      <script src="src/user/user-factory.js"></script>
+      <script src="src/user/user-service.js"></script>
+      <!-- More Angular -->
+      <script src="vendor/angular-ui-router.min.js"></script>
+      <script src="vendor/angular-material.min.js"></script>
+      <script src="vendor/angular-aria.min.js"></script>
+      <script src="vendor/angular-animate.min.js"></script>
+      <script src="vendor/underscore-min.js"></script>
+      <script src="vendor/angularfire.min.js"></script>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,40 @@
+<md-content class="md-padding" ng-if="userData && userData.provider !== 'anonymous'">
+  <form name="userForm">
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>First Name</label>
+        <input ng-model="$root.userData.name.first">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Last Name</label>
+        <input ng-model="$root.userData.name.last">
+      </md-input-container>
+    </div>
+    <md-input-container flex>
+      <label>Email</label>
+      <input type="email" ng-model="$root.userData.email">
+    </md-input-container>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>City</label>
+        <input ng-model="$root.userData.city">
+      </md-input-container>
+      <md-input-container flex>
+        <label>State</label>
+        <input ng-model="$root.userData.state">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Postal Code</label>
+        <input ng-model="$root.userData.zip">
+      </md-input-container>
+    </div>
+  </form>
+</md-content>
+
+<md-content ng-if="userData && userData.provider === 'anonymous'" layout="column" layout-align="center center" layout-fill>
+  <h4>To view your profile</h4>
+  <md-button ui-sref="user.login" class="md-primary">Sign in</md-button>
+  <small>or</small>
+  <md-button ui-sref="user.signup" class="md-accent">Create an Account</md-button>
+</md-content>
+
