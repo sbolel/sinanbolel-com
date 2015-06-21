@@ -4,11 +4,15 @@ var appModule = angular.module('ThinkCrazyApp', [
   'firebase',
   'user',
   'home',
-  'layout'
+  'layout',
+  'admin',
+  'angularMoment'
 ]);
 
-appModule.constant('FBURL', 'https://getsun-dev.firebaseio.com/');
-appModule.value('FBREF', new Firebase('https://getsun-dev.firebaseio.com/'));
+appModule.constant('FBURL', 'https://thinkcrazy.firebaseio.com/');
+appModule.value('FBREF', new Firebase('https://thinkcrazy.firebaseio.com/'));
+
+appModule.constant('AUTO_ANON', false);
 
 appModule.run(function ($log, $rootScope, $state, $stateParams) {
     $log.debug("module.ThinkCrazyApp.run()");

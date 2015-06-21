@@ -1,6 +1,6 @@
 var layoutModule = angular.module('layout', []);
 
-layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, LayoutService){
+layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, $timeout, $mdSidenav, $mdUtil, $log, LayoutService){
   $scope.goBack = function(){
     var backState = $rootScope.$state.$back;
     if ( backState && (backState.name!='') ) {
@@ -9,11 +9,37 @@ layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, Layou
       $state.go('workspace.home');
     }
   }
-  $scope.toggleRight = function() {
-    LayoutService.toggleRight();
+  $scope.toggleLeft = buildToggler('left');
+  $scope.toggleRight = buildToggler('right');
+  /**
+   * Build handler to open/close a SideNav; when animation finishes
+   * report completion in console
+   */
+  function buildToggler(navID) {
+    var debounceFn =  $mdUtil.debounce(function(){
+          $mdSidenav(navID)
+            .toggle()
+            .then(function () {
+              $log.debug("toggle " + navID + " is done");
+            });
+        },300);
+    return debounceFn;
   };
-  $scope.toggleLeft = function() { 
-    LayoutService.toggleLeft();
+})
+.controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+  $scope.close = function () {
+    $mdSidenav('left').close()
+      .then(function () {
+        $log.debug("close LEFT is done");
+      });
+  };
+})
+.controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+  $scope.close = function () {
+    $mdSidenav('right').close()
+      .then(function () {
+        $log.debug("close RIGHT is done");
+      });
   };
 });
 

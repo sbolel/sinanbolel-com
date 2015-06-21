@@ -1,0 +1,50 @@
+{
+  "name": "thinkcrazy",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sbolel/thinkcrazy",
+  "authors": [
+    "Sinan Bolel <dev@sinanbolel.com>"
+  ],
+  "description": "Think Crazy Portal",
+  "main": "./app/app.js",
+  "keywords": [
+    "Think",
+    "Crazy",
+    "Sinan",
+    "Bolel",
+    "freelance",
+    "developer",
+    "programmer",
+    "apps",
+    "websites",
+    ""
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1",
+    "angular-animate": "~1.4.0",
+    "angular-aria": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "angular-local-storage": "~0.2.2",
+    "angular-material": "~0.9.8",
+    "angular-moment": "~0.10.1",
+    "angular-ui-grid": "~3.0.0-rc.22",
+    "angular-ui-router": "~0.2.15",
+    "angular-ui-router.stateHelper": "~1.3.0",
+    "angular-route": "~1.4.0",
+    "angularfire": "~1.1.1",
+    "firebase": "~2.2.7",
+    "ionicons": "~2.0.1",
+    "material-design-icons": "~2.0.0",
+    "underscore": "~1.8.3",
+    "moment": "~2.10.3"
+  }
+}

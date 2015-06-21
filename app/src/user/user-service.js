@@ -1,4 +1,5 @@
-userModule.service('UserService', function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBREF, User) {  
+userModule.service('UserService', function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBREF, User, AUTO_ANON) {  
+
   var self, auth, _authObj, currentUser, previousUser;
   _authObj = $firebaseAuth(FBREF);
   self = {
@@ -10,12 +11,14 @@ userModule.service('UserService', function($log, $rootScope, $firebaseAuth, $fir
           $log.debug("User loaded", currentUser);
         });
       } else {
-        self.loginAnonymously().then(function(authData){
-          User(authData).then(function(userData){
-            currentUser = userData;
-            $log.debug("User loaded", currentUser);
+        if(AUTO_ANON === true) {
+          self.loginAnonymously().then(function(authData){
+            User(authData).then(function(userData){
+              currentUser = userData;
+              $log.debug("User loaded", currentUser);
+            });
           });
-        });
+        }
       }
     },
     requireAuth: function () {

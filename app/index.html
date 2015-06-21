@@ -7,45 +7,44 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <style>#map-canvas{position:absolute;top:0;bottom:0;left:0;right:0;overflow:scroll}.ng-hide{visibility:hidden;}</style>
-    <link rel="stylesheet" href="vendor/angular-material.min.css">
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
+    <!-- endbower -->
     <link rel="stylesheet" href="assets/css/app.css">
-    <!-- <link rel="stylesheet" href="assets/css/autocomplete.css"> -->
-    <!-- <link rel="stylesheet" href="assets/css/avatars.css"> -->
-    <!-- <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
   </head>
   <body layout="column" ng-controller="LayoutCtrl">
-    <!-- Topnav ui-view -->
-    <div ui-view="topnav" style="background-color:rgb(63, 81, 181);">
-      <md-toolbar layout="row" layout-align="center center">
-      </md-toolbar>
-    </div>
-    <!-- Main ui-view -->
-    <div id="content" ui-view layout-padding flex></div>
-    <!-- Scripts -->
+    <div id="content" ui-view layout-fill flex></div>
     <footer>
-      <!-- Angular -->
-      <script src="vendor/angular.min.js"></script>
-      <script src="vendor/firebase.js"></script>
-      <script src="vendor/angular-local-storage.min.js"></script>
-      <!-- Geofire 
-      <script src="vendor/geofire.min.js"></script>
-      <script src="vendor/lodash.min.js"></script>
-      <script src="vendor/rsvp.min.js"></script>
-      -->
-      <!-- App -->
+      <!-- bower:js -->
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-aria/angular-aria.js"></script>
+      <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+      <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+      <script src="bower_components/angular-material/angular-material.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/angular-moment/angular-moment.js"></script>
+      <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-ui-router.stateHelper/statehelper.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/firebase/firebase.js"></script>
+      <script src="bower_components/angularfire/dist/angularfire.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
+      <!-- endbower -->
       <script src="app.js"></script>
       <script src="src/home/home.js"></script>
       <script src="src/layout/layout.js"></script>
       <script src="src/user/user-module.js"></script>
       <script src="src/user/user-factory.js"></script>
       <script src="src/user/user-service.js"></script>
-      <!-- More Angular -->
-      <script src="vendor/angular-ui-router.min.js"></script>
-      <script src="vendor/angular-material.min.js"></script>
-      <script src="vendor/angular-aria.min.js"></script>
-      <script src="vendor/angular-animate.min.js"></script>
-      <script src="vendor/underscore-min.js"></script>
-      <script src="vendor/angularfire.min.js"></script>
+      <script src="src/user/lead-factory.js"></script>
+      <script src="src/admin/admin-module.js"></script>
+      <script src="src/admin/object-factory.js"></script>
+      <script src="src/admin/clients/clients-module.js"></script>
+      <script src="src/admin/projects/projects-module.js"></script>
     </footer>
   </body>
 </html>

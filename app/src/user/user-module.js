@@ -91,3 +91,16 @@ userModule.controller('UserCtrl', function($log, $scope, $state, UserService) {
   };
 
 });
+
+
+userModule.controller('LeadsController', function($log, $scope, Lead){
+
+  var lead = new Lead($scope).then(function(leadData){
+    lead = leadData;
+  });
+
+  $scope.submit = function(){
+    lead.$submit();
+  };
+
+});
