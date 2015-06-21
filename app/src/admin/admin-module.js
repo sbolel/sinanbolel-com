@@ -1,6 +1,6 @@
 var adminModule = angular.module('admin',[
   'ui.grid', 'ui.grid.resizeColumns',
-  'clients', 'projects'
+  'clients', 'projects', 'tables'
 ]);
 
 adminModule.config(function ($stateProvider) {
@@ -46,18 +46,43 @@ adminModule.config(function ($stateProvider) {
 
 });
 
-adminModule.controller('AdminController', function($log, $scope, ObjectFactory, LeadsTable) {
+adminModule.controller('AdminController', function($log, $rootScope, $scope, $state, ObjectFactory, StateService, TableFactory) {
+
+  var state;
+  var table;
+
+  var setTableData = function() {
+    $scope.tableOptions.data = $scope[state];
+  };
 
   $scope.init = function() {
+    state = StateService.getLastChild();
+    StateService.loadData().then(function(dataObject){
+      $scope[state] = dataObject.contents;
+      setTableData();
+    });
+    table = TableFactory[state];
     $scope.tableOptions = {
       enableFiltering: true,
-      columnDefs: LeadsTable
+      columnDefs: table
     }
   };
 
-  var leads = new ObjectFactory(['leads'], 50).then(function(data){
-    $scope.leads = data;
-    $scope.tableOptions.data = $scope.leads;
-  });
+  $scope.createObject = function(objectData) {
+    $scope[state].$add(objectData);
+    // show table data and ask for input
+  };
+
+  $scope.viewObject = function() {
+
+  };
+
+  $scope.editObject = function() {
+
+  };
+
+  $scope.removeObject = function() {
+
+  };
 
 });

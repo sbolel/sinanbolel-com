@@ -1,5 +1,7 @@
-adminModule.factory('LeadsTable', function(uiGridConstants){
-  return [
+var tablesModule = angular.module('tables',[])
+.factory('TableFactory', function(uiGridConstants){
+  var self = {
+    leads: [
     { 
       name: 'name',
       field: 'name',
@@ -49,21 +51,20 @@ adminModule.factory('LeadsTable', function(uiGridConstants){
           priority: 0
         }
     }
-  ];
-});
-
-adminModule.factory('ClientsTable', function(uiGridConstants){
-  return [
+  ],
+  clients: [
+    { 
+      name: 'active',
+      field: 'active',
+      displayName: 'Health',
+      headerCellTemplate: '<md-button class="md-icon-button" aria-label="Projects"><i class="ion-ios-lightbulb"></i></md-button>',
+      type: 'bool',
+      width: 60
+    },
     { 
       name: 'id',
       field: '$id',
       displayName: '$id',
-      type: 'string'
-    },
-    { 
-      name: 'active',
-      field: 'active',
-      displayName: '&hearts;',
       type: 'string'
     },
     { 
@@ -118,11 +119,8 @@ adminModule.factory('ClientsTable', function(uiGridConstants){
     //   cellTemplate: "<span>{{row.entity.submitAt  | amDateFormat:'HH:mm:ss ZZ'}}</span>",
     //   width: 130
     // },
-  ];
-});
-
-adminModule.factory('ProjectsTable', function(uiGridConstants){
-  return [
+  ],
+  projects: [
     { 
       name: 'project-name',
       field: 'name',
@@ -141,5 +139,7 @@ adminModule.factory('ProjectsTable', function(uiGridConstants){
       displayName: 'Docs',
       type: 'number',
     }
-  ];
+  ]
+}
+return self;
 });

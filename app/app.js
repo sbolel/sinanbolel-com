@@ -40,3 +40,26 @@ appModule.filter('reverse', function() {
   };
 });
 
+appModule.service('StateService', function($log, $rootScope, $state, $q, ObjectFactory){
+  var self = {
+    getLastChild: function() {
+      var statePath = $state.$current.toString();
+      var array = statePath.split('.');
+      var res = array[array.length-1];
+      return res;
+    },
+    loadData: function(){
+      var deferred = $q.defer();
+      var stateName = self.getLastChild();
+      var data = new ObjectFactory([stateName], 50).then(function(data){
+        var res = {contents: data,state: stateName};
+        deferred.resolve(res);
+      }).catch(function(error){
+        deferred.reject(error);
+      });
+      return deferred.promise;
+    }
+  };
+  return self;
+});
+

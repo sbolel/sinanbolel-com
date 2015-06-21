@@ -1,7 +1,13 @@
 <md-card layout="column" ng-init="init()" flex>
-  <md-toolbar class="md-primary">
+  <md-toolbar layout="row" class="md-primary dark">
       <div class="md-toolbar-tools">
         Clients
+      </div>
+      <span flex></span>
+      <div class="button-glyphs" ng-click="createObject('clients')">
+        <md-button class="md-fab md-mini md-accent" aria-label="Add Client">
+          <i class="ion-plus"></i>
+        </md-button>
       </div>
   </md-toolbar>
   <md-card-content layout="column" layout-align="center center" flex>

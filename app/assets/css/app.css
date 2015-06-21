@@ -58,6 +58,9 @@ p.lead {
 .md-input {
   margin-bottom: 0;
 }
+.dark {
+  background-color: #616161;
+}
 
 md-card.background {
   background-color: #333;
