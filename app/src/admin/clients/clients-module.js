@@ -12,7 +12,7 @@ clientsModule.config(function ($stateProvider) {
       url: '',
       views: {
         '': {
-          templateUrl: 'templates/clients.index.html'
+          templateUrl: 'app/src/admin/templates/leads.index.html'
         }
       }
     });

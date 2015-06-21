@@ -1,47 +1,69 @@
 <div layout-fill>
+  
   <md-toolbar layout="row" layout-align="center center">
     <div class="md-toolbar-tools">
-      <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+      <md-button class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()">
         <md-icon md-svg-icon="assets/icons/ic_menu_48px.svg"></md-icon>
       </md-button>
       <h1>Admin</h1>
+      <span flex></span>
+
+      <div class="toolbar-button pointer" ng-click="goTo('admin.leads')" layout="column" layout-align="center center" style="text-align: center;">
+        <div class="button-glyphs">
+          <md-button class="md-icon-button" aria-label="Leads">
+            <i class="ion-flag"></i>
+          </md-button>
+        </div>
+        <div class="button-scale">
+          <span class="step">Leads</span>
+        </div>
+      </div>
+
+      <div class="toolbar-button pointer" ng-click="goTo('admin.clients')" layout="column" layout-align="center center" style="text-align: center;">
+        <div class="button-glyphs">
+          <md-button class="md-icon-button" aria-label="Clients">
+            <i class="ion-android-contacts"></i>
+          </md-button>
+        </div>
+        <div class="button-scale">
+          <span class="step">Clients</span>
+        </div>
+      </div>
+
+      <div class="toolbar-button pointer" ng-click="goTo('admin.projects')" layout="column" layout-align="center center" style="text-align: center;">
+        <div class="button-glyphs">
+          <md-button class="md-icon-button" aria-label="Projects">
+            <i class="ion-briefcase"></i>
+          </md-button>
+        </div>
+        <div class="button-scale">
+          <span class="step">Projects</span>
+        </div>
+      </div>
+
     </div>
   </md-toolbar>
+
   <div ng-init="init()" layout="column" style="height:100%">
     <section layout="row" flex>
       <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
         <md-toolbar class="md-theme-indigo">
           <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+            <md-button class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()">
               <md-icon md-svg-icon="assets/icons/ic_cancel_48px.svg"></md-icon>
             </md-button>
-            <!-- <h1>Admin</h1> -->
+            <!-- <h1></h1> -->
           </div>
         </md-toolbar>
         <md-content layout-padding ng-controller="LeftCtrl" flex>
 
         </md-content>
       </md-sidenav>
+      
       <md-content flex layout-padding>
         <div ui-view layout="column" layout-fill layout-align="top center"></div>
       </md-content>
-  <!--     <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-        <md-toolbar class="md-theme-light">
-          <h1 class="md-toolbar-tools">Sidenav Right</h1>
-        </md-toolbar>
-        <md-content ng-controller="RightCtrl" layout-padding>
-          <form>
-            <md-input-container>
-              <label for="testInput">Test input</label>
-              <input type="text" id="testInput"
-                     ng-model="data" md-sidenav-focus>
-            </md-input-container>
-          </form>
-          <md-button ng-click="close()" class="md-primary">
-            Close Sidenav Right
-          </md-button>
-        </md-content>
-      </md-sidenav> -->
+
     </section>
   </div>
 </div>

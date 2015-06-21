@@ -1,0 +1,12 @@
+<md-card layout="column" ng-init="init()" flex>
+  <md-toolbar class="md-primary">
+      <div class="md-toolbar-tools">
+        Clients
+      </div>
+  </md-toolbar>
+  <md-card-content layout="column" layout-align="center center" flex>
+    <md-content layout="column" layout-fill flex>
+      <div ng-if="clients" ui-grid="tableOptions" ui-grid-resize-columns flex="100"></div>
+    </md-content>
+  </md-card-content>
+</md-card>

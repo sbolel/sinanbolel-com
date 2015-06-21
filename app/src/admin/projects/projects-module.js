@@ -12,7 +12,7 @@ projectsModule.config(function ($stateProvider) {
       url: '',
       views: {
         '': {
-          templateUrl: 'templates/projects.index.html'
+          templateUrl: 'app/src/admin/templates/projects.index.html'
         }
       }
     });

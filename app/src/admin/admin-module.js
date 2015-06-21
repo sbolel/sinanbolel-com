@@ -19,6 +19,22 @@ adminModule.config(function ($stateProvider) {
         }
       }
     })
+    .state('admin.clients', {
+      url: '/clients',
+      views: {
+        '': {
+          templateUrl: 'src/admin/templates/clients.index.html'
+        }
+      }
+    })
+    .state('admin.projects', {
+      url: '/projects',
+      views: {
+        '': {
+          templateUrl: 'src/admin/templates/projects.index.html'
+        }
+      }
+    })
     .state('admin.leads', {
       url: '/leads',
       views: {

@@ -91,6 +91,27 @@ md-card.background {
   color: rgba(0,0,0,.54);
 }
 
+.md-icon-button i {
+  font-size: 1.5em;
+}
+
+.toolbar-button {
+  position: relative;
+}
+
+.toolbar-button .button-glyph {
+  padding-bottom: 0.125em;
+}
+
+.toolbar-button .button-scale span {
+  font-size: 0.5em;
+  position: absolute;
+  width: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 /* Spacing */
 
 .mb20 {margin-bottom: 20px;}

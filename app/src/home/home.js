@@ -5,7 +5,6 @@ homeModule.config(function ($stateProvider) {
     .state('home', {
       url: '/',
       abstract: true,
-      controller: 'HomeCtrl',
       template: '<ui-view/>'
     })
     .state('home.index', {
@@ -16,9 +15,5 @@ homeModule.config(function ($stateProvider) {
         }
       }
     });
-});
-
-homeModule.controller('HomeCtrl', function($scope) {
-  $scope.alert = '';
 });
 

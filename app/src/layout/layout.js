@@ -1,6 +1,7 @@
 var layoutModule = angular.module('layout', []);
 
 layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, $timeout, $mdSidenav, $mdUtil, $log, LayoutService){
+  
   $scope.goBack = function(){
     var backState = $rootScope.$state.$back;
     if ( backState && (backState.name!='') ) {
@@ -8,9 +9,15 @@ layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, $time
     } else {
       $state.go('workspace.home');
     }
-  }
+  };
+
+  $scope.goTo = function(stateName) {
+    $state.go(stateName);
+  };
+
   $scope.toggleLeft = buildToggler('left');
   $scope.toggleRight = buildToggler('right');
+
   /**
    * Build handler to open/close a SideNav; when animation finishes
    * report completion in console
@@ -26,6 +33,7 @@ layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, $time
     return debounceFn;
   };
 })
+
 .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
   $scope.close = function () {
     $mdSidenav('left').close()
