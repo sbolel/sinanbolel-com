@@ -1,6 +1,6 @@
 var adminModule = angular.module('admin',[
   'ui.grid', 'ui.grid.resizeColumns',
-  'clients', 'projects', 'tables'
+  'tables'
 ]);
 
 adminModule.config(function ($stateProvider) {
@@ -84,5 +84,13 @@ adminModule.controller('AdminController', function($log, $rootScope, $scope, $st
   $scope.removeObject = function() {
 
   };
+
+});
+
+adminModule.controller('AdminCreateController', function($log, $rootScope, $scope, $state) {
+
+});
+
+adminModule.controller('AdminViewController', function($log, $rootScope, $scope, $state) {
 
 });
