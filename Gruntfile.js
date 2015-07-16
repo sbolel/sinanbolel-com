@@ -1,7 +1,4 @@
-  var searchString;
-
 module.exports = function(grunt) {
-
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -10,7 +7,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-search');
   grunt.loadNpmTasks('grunt-wiredep');
 
   grunt.initConfig({
@@ -63,7 +59,6 @@ module.exports = function(grunt) {
     jshint: {
       files: ['Gruntfile.js', 'app/**/*.js'],
       options: {
-        // options here to override JSHint defaults
         globals: {
           jQuery: true,
           console: true,
@@ -90,37 +85,13 @@ module.exports = function(grunt) {
         files: ['bower.json'],
         tasks:['wiredep']
       }
-    },
-
-    search: {
-          files: {
-              src: ["app/**"]
-          },
-          options: {
-              searchString: searchString,
-              logFormat: "console"
-          }
     }
 
   });
   
-  grunt.registerTask('add', function(fileName) {
-    // if(typeof(addToPath)==='undefined' || typeof(fileName)==='undefined') {
-    //   console.log("Usage: grunt add addToPath fileName");
-    //   grunt.fail.fatal("Missing arguments", 3);
-    // } else {
-      console.log("Copying "+fileName);
-      searchString = fileName;
-      // grunt.file.match(['!*.js'], ['foo.js', 'bar.js'])
-      // grunt.task.run('find');
-      // grunt.task.run('find:'+fileName);
-      // grunt.file.copy('app/bower_components/**/**/', destpath [, options])
-    // }
-  },['search']); 
-
+  grunt.registerTask('build', ['concat', 'uglify']);
   grunt.registerTask('test', ['jshint', 'qunit']);
   grunt.registerTask('serve', ['jshint', 'qunit', 'concat', 'uglify']);
-  grunt.registerTask('build', ['concat', 'uglify']);
   grunt.registerTask('default', ['wiredep','connect','watch']);
 
 };
