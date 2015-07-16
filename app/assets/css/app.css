@@ -35,6 +35,9 @@ p.lead {
 .fullscreen {
   height: 95vh;
 }
+.hs {
+  height: 45vh;
+}
 .container {
   max-width: 940px;
 }

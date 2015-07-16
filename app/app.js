@@ -6,6 +6,7 @@ var appModule = angular.module('ThinkCrazyApp', [
   'layout',
   'home',
   'user',
+  'thinkcrazy.apps'
 ]);
 
 appModule.constant('FBURL', 'https://thinkcrazy.firebaseio.com/');

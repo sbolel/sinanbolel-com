@@ -5,20 +5,8 @@
       <div flex flex-sm="90" flex-md="70" flex-gt-md="70" style="position:absolute;left:1em;">
         <h1 class="large">Let's Think Crazy.</h1>
         <h6 class="uppercase">remarkable solutions for groovy projects</h6>
-        <!-- <p class="lead">view our portfolio, get in touch, work with us.</p> -->
       </div>
       <span flex></span>
-    </md-card-content>
-  </md-card>
-
-  <md-card layout="column" class="cover mb50">
-    <md-card-content layout="column" layout-align="center center">
-      <div class="center container">
-        <h6 class="uppercase">why work with us?</h6>
-        <h2>Because we feel you.</h2>
-        <img></h6>
-        <p class="lead">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
     </md-card-content>
   </md-card>
 
@@ -27,31 +15,25 @@
       <h1 class="large mt20" style="width:100%;max-width:640px;text-align:left;">get in touch</h1>
       <form name="contact" style="width:100%;max-width:640px;">
         <h4>What's your info?</h4>
-        <div>
           <md-input-container flex>
             <label>Name</label>
             <input type="text" ng-model="leadData.name">
           </md-input-container>
-        </div>
-        <div layout="column">
           <md-input-container flex>
             <label>Email (required)</label>
             <input type="email" ng-model="leadData.email">
           </md-input-container>
-          <md-input-container flex>
-            <label>Phone Number</label>
-            <input type="tel" ng-model="leadData.phone">
-          </md-input-container>
-        </div>
           <h4>What would you like to discuss?</h4>
           <md-input-container flex>
             <label></label>
             <textarea ng-model="leadData.message" columns="1" md-maxlength="500"></textarea>
           </md-input-container>
         </div>
-<!--         <div class="mt20" style="text-align:right;">
+<!--         
+        <div class="mt20" style="text-align:right;">
           <md-button class="md-raised md-primary" ng-click="submit()">submit</md-button>
-        </div> -->
+        </div>
+-->
       </form>
     </md-card-content>
   </md-card>
