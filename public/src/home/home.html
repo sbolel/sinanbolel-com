@@ -1,0 +1,57 @@
+<md-content layout="column" style="background-color:#e3e3e3;">
+
+  <div class="cover fullscreen center" layout="column" style="background-color:#607D8B;color:#ECEFF1" layout-align="center center">
+      <!-- <img src=""/> -->
+      <h1 class="large">sinanbolel</h1>
+  </div>
+
+  <div class="cover pt20 pb20" style="background-color:#263238;color:white;">
+      <md-list layout="row" layout-align="center center">
+        <md-list-item class="md-2-line center" flex>
+          <md-button ui-sref="apps.home" class="md-list-item-text">
+            <i class="md-avatar md-accent ion-ios-browsers-outline lg"></i>
+            <h1 style="color:#B0BEC5">projects</h1>
+          </md-button>
+        </md-list-item>
+        <md-list-item class="md-2-line center" flex>
+          <md-button ui-sref="home.index" class="md-list-item-text">
+            <md-tooltip>
+              coming soon...
+            </md-tooltip>
+            <i class="md-avatar md-accent ion-grid lg"></i>
+            <h1 style="color:#B0BEC5">portfolio</h1>
+          </md-button>
+        </md-list-item>
+        <md-divider></md-divider>
+      </md-list>
+  </div>
+
+  <div ng-controller="LeadsController" class="cover pt20 pb30" style="background-color:#CFD8DC;color:#263238;">
+    <div layout="column" layout-align="center center">
+      <h1 class="large mt20 mb20" style="width:100%;max-width:640px;text-align:left;">get in touch</h1>
+      <form name="contact" style="width:100%;max-width:640px;">
+        <h4>What's your info?</h4>
+          <md-input-container flex>
+            <label>Name</label>
+            <input type="text" ng-model="leadData.name">
+          </md-input-container>
+          <md-input-container flex>
+            <label>Email (required)</label>
+            <input type="email" ng-model="leadData.email">
+          </md-input-container>
+          <h4>What would you like to discuss?</h4>
+          <md-input-container flex>
+            <label></label>
+            <textarea ng-model="leadData.message" columns="1" md-maxlength="500"></textarea>
+          </md-input-container>
+        </div>
+<!--         
+        <div class="mt20" style="text-align:right;">
+          <md-button md-fab class="md-raised md-primary" ng-click="submit()">submit</md-button>
+        </div>
+-->
+      </form>
+    </div>
+  </div>
+
+</md-content>

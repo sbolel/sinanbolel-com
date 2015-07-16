@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       client: {
         options: {
           port: 9000,
-          base: './app',
+          base: './public',
           livereload: true,
           open: {
             target: 'http://localhost:9000',
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
     wiredep: {
       task: {
-        src: ['app/index.html']
+        src: ['public/index.html']
       }
     },
 
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         separator: ''
       },
       dist: {
-        src: ['app/**/*.js', '!app/bower_components/**/*'],
+        src: ['public/**/*.js', '!public/vendor/**/*'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      files: ['Gruntfile.js', 'app/**/*.js'],
+      files: ['Gruntfile.js', 'public/**/*.js'],
       options: {
         globals: {
           jQuery: true,
@@ -70,13 +70,13 @@ module.exports = function(grunt) {
 
     watch: {
       html: {
-        files: ['app/**/*.html', '!app/bower_components/**'],
+        files: ['public/**/*.html'],
         options: {
           livereload: true
         }
       },
       js: {
-        files: ['app/**/*.js', '!app/bower_components/**'],
+        files: ['public/**/*.js'],
         options: {
           livereload: true
         }

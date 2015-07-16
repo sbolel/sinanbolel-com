@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="SinanBolelApp">
+  <head>
+    <title>Sinan Bolel</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Sinan Bolel <sinanbolel@gmail.com>">
+    <meta name="description" content="Sinan Bolel's Personal Page">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <!-- bower:css -->
+    <link rel='stylesheet' href='../bower_components/angular-material/angular-material.css' />
+    <link rel='stylesheet' href='../bower_components/angular-ui-grid/ui-grid.css' />
+    <link rel='stylesheet' href='../bower_components/ionicons/css/ionicons.css' />
+    <!-- endbower -->
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body layout="column" ng-controller="LayoutCtrl">
+    <div id="content" ui-view layout-fill flex></div>
+    <footer>
+      <!-- bower:js -->
+      <script src="../bower_components/angular/angular.js"></script>
+      <script src="../bower_components/angular-animate/angular-animate.js"></script>
+      <script src="../bower_components/angular-aria/angular-aria.js"></script>
+      <script src="../bower_components/angular-material/angular-material.js"></script>
+      <script src="../bower_components/moment/moment.js"></script>
+      <script src="../bower_components/angular-moment/angular-moment.js"></script>
+      <script src="../bower_components/angular-ui-grid/ui-grid.js"></script>
+      <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="../bower_components/angular-ui-router.stateHelper/statehelper.js"></script>
+      <script src="../bower_components/angular-route/angular-route.js"></script>
+      <script src="../bower_components/firebase/firebase.js"></script>
+      <script src="../bower_components/angularfire/dist/angularfire.js"></script>
+      <script src="../bower_components/underscore/underscore.js"></script>
+      <!-- endbower -->
+      <script src="app.js"></script>
+      <script src="src/home/home.js"></script>
+      <script src="src/layout/layout.js"></script>
+      <script src="src/user/user-module.js"></script>
+      <script src="src/user/user-factory.js"></script>
+      <script src="src/user/user-service.js"></script>
+      <script src="src/user/lead-factory.js"></script>
+      <script src="src/util/server.js"></script>
+      <script src="src/apps/apps.js"></script>
+      <script src="src/apps/requester/requester.js"></script>
+      <script src="src/apps/requester/requester-service.js"></script>
+    </footer>
+  </body>
+</html>
+

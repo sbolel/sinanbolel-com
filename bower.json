@@ -6,23 +6,25 @@
   "homepage": "https://github.com/sbolel/thinkcrazy",
   "author": "Sinan Bolel <dev@sinanbolel.com>",
   "description": "Think Crazy Co single-page application",
-  "main": "./app/app.js",
+  "main": "./public/app.js",
   "keywords": [
+    "Sinan Bolel",
     "Think",
     "Crazy",
-    "Sinan Bolel",
-    "freelance",
+    "computer science",
+    "engineer",
+    "program manager",
     "developer",
+    "freelance",
     "programmer",
-    "app",
-    "website"
+    "application",
+    "apps"
   ],
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/bower_components",
     "test",
     "tests"
   ],

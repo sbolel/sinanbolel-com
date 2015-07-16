@@ -1,0 +1,10 @@
+{
+  "firebase": "sinanbolel",
+  "public": "./public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**",
+    "**/bower_components/**"
+  ]
+}
