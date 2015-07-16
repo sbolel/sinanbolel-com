@@ -6,11 +6,11 @@ var appModule = angular.module('ThinkCrazyApp', [
   'layout',
   'home',
   'user',
+  'thinkcrazy.server',
   'thinkcrazy.apps'
 ]);
 
 appModule.constant('FBURL', 'https://thinkcrazy.firebaseio.com/');
-appModule.value('FBREF', new Firebase('https://thinkcrazy.firebaseio.com/'));
 
 appModule.constant('AUTO_ANON', false);
 
