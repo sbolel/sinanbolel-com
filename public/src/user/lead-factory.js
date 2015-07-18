@@ -19,8 +19,11 @@ userModule.factory('LeadFactory', function($log, $rootScope, $firebaseAuth, $fir
   var ref = new Firebase(FBURL);
   return $firebaseObject.$extend({
     $$defaults: {
+      name: null,
+      email: null,
+      message: null
     },
-    $submit: function() {
+    $submit: function(callback) {
       deferred = $q.defer();
       this.submitAt = Firebase.ServerValue.TIMESTAMP;
       this.$save().then(function(ref){
