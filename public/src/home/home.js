@@ -1,6 +1,6 @@
 var homeModule = angular.module('home',[]);
 
-homeModule.config(function ($stateProvider) {
+homeModule.config(['$stateProvider', function ($stateProvider) {
   $stateProvider
     .state('home', {
       url: '/',
@@ -16,7 +16,7 @@ homeModule.config(function ($stateProvider) {
         }
       }
     });
-});
+}]);
 
 homeModule.controller('HomeController',['$log', '$scope', '$mdToast', 'Lead', function($log, $scope, $mdToast, Lead){
   
@@ -29,20 +29,17 @@ homeModule.controller('HomeController',['$log', '$scope', '$mdToast', 'Lead', fu
       lead = leadData;
     });
   };
-
   var toastPosition = {
     bottom: true,
     top: false,
     left: true,
     right: true
   };
-
   var getToastPosition = function() {
     return Object.keys(toastPosition)
       .filter(function(pos) { return toastPosition[pos]; })
       .join(' ');
   };
-
   var showToast = function() {
     $mdToast.show(
       $mdToast.simple()
@@ -51,7 +48,6 @@ homeModule.controller('HomeController',['$log', '$scope', '$mdToast', 'Lead', fu
         .hideDelay(5000)
     );
   };
-
   $scope.submit = function(){
     if ($scope.leadData) {
       lead.$submit().then(function(){
@@ -65,7 +61,5 @@ homeModule.controller('HomeController',['$log', '$scope', '$mdToast', 'Lead', fu
       });
     }
   };
-
   setLead();
-
 }]);

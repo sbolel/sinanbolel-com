@@ -3,7 +3,7 @@ var adminModule = angular.module('admin',[
   'tables'
 ]);
 
-adminModule.config(function ($stateProvider) {
+adminModule.config(['$stateProvider', function($stateProvider) {
   $stateProvider
     .state('admin', {
       url: '/admin',
@@ -43,18 +43,16 @@ adminModule.config(function ($stateProvider) {
         }
       }
     });
+}]);
 
-});
-
-adminModule.controller('AdminController', function($log, $rootScope, $scope, $state, ObjectFactory, StateService, TableFactory) {
+adminModule.controller('AdminController', ['$log', '$rootScope', '$scope', '$state', 'ObjectFactory', 'StateService', 'TableFactory',
+  function($log, $rootScope, $scope, $state, ObjectFactory, StateService, TableFactory) {
 
   var state;
   var table;
-
   var setTableData = function() {
     $scope.tableOptions.data = $scope[state];
   };
-
   $scope.init = function() {
     state = StateService.getLastChild();
     StateService.loadData().then(function(dataObject){
@@ -67,30 +65,25 @@ adminModule.controller('AdminController', function($log, $rootScope, $scope, $st
       columnDefs: table
     }
   };
-
   $scope.createObject = function(objectData) {
     $scope[state].$add(objectData);
     // show table data and ask for input
   };
-
   $scope.viewObject = function() {
 
   };
-
   $scope.editObject = function() {
 
   };
-
   $scope.removeObject = function() {
 
   };
+}]);
 
-});
+adminModule.controller('AdminCreateController', ['$log', '$rootScope', '$scope', '$state', function($log, $rootScope, $scope, $state) {
 
-adminModule.controller('AdminCreateController', function($log, $rootScope, $scope, $state) {
+}]);
 
-});
+adminModule.controller('AdminViewController', ['$log', '$rootScope', '$scope', '$state', function($log, $rootScope, $scope, $state) {
 
-adminModule.controller('AdminViewController', function($log, $rootScope, $scope, $state) {
-
-});
+}]);

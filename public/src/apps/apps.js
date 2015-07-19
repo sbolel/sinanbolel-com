@@ -2,7 +2,7 @@ var appsModule = angular.module('thinkcrazy.apps', [
   'thinkcrazy.apps.requester'
   ]);
 
-appsModule.config(function ($stateProvider) {
+appsModule.config(['$stateProvider', function($stateProvider) {
   $stateProvider
     .state('apps', {
       url: '/apps',
@@ -13,4 +13,4 @@ appsModule.config(function ($stateProvider) {
       url: '',
       templateUrl: 'src/apps/apps.html'
     })
-});
+}]);

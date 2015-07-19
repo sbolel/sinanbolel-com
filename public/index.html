@@ -26,42 +26,33 @@
     <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="assets/favicons/manifest.json">
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
-    <link rel='stylesheet' href='bower_components/angular-ui-grid/ui-grid.css' />
-    <link rel='stylesheet' href='bower_components/ionicons/css/ionicons.css' />
     <!-- endbower -->
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="vendor/angular-material.css"></link>
+    <link rel="stylesheet" href="vendor/ionicons.css"></link>
+    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
   </head>
   <body layout="column" ng-controller="LayoutCtrl">
     <div id="content" ui-view layout-fill flex></div>
     <footer>
       <!-- bower:js -->
-      <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-animate/angular-animate.js"></script>
-      <script src="bower_components/angular-aria/angular-aria.js"></script>
-      <script src="bower_components/angular-material/angular-material.js"></script>
-      <script src="bower_components/moment/moment.js"></script>
-      <script src="bower_components/angular-moment/angular-moment.js"></script>
-      <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
-      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-      <script src="bower_components/angular-ui-router.stateHelper/statehelper.js"></script>
-      <script src="bower_components/angular-route/angular-route.js"></script>
-      <script src="bower_components/firebase/firebase.js"></script>
-      <script src="bower_components/angularfire/dist/angularfire.js"></script>
-      <script src="bower_components/underscore/underscore.js"></script>
       <!-- endbower -->
-      <script src="app.js"></script>
-      <script src="src/home/home.js"></script>
-      <script src="src/layout/layout.js"></script>
-      <script src="src/user/user-module.js"></script>
-      <script src="src/user/user-factory.js"></script>
-      <script src="src/user/user-service.js"></script>
-      <script src="src/user/lead-factory.js"></script>
-      <script src="src/util/server.js"></script>
-      <script src="src/apps/apps.js"></script>
-      <script src="src/apps/requester/requester.js"></script>
-      <script src="src/apps/requester/requester-service.js"></script>
+      <script src="vendor/angular.js "></script>
+      <script src="vendor/angular-animate.js "></script>
+      <script src="vendor/angular-aria.js "></script>
+      <script src="vendor/angular-material.js "></script>
+      <script src="vendor/moment.js "></script>
+      <script src="vendor/angular-moment.js "></script>
+      <script src="vendor/ui-grid.js "></script>
+      <script src="vendor/angular-ui-router.js "></script>
+      <script src="vendor/statehelper.js "></script>
+      <script src="vendor/angular-route.js "></script>
+      <script src="vendor/firebase.js "></script>
+      <script src="vendor/angularfire.js "></script>
+      <script src="vendor/angular-trackjs.js"></script>
+      <script type="text/javascript">window._trackJs={token:'368c1e68150148bfbc92b626884c7dc2',visitor:{enabled:true}};</script>
+      <script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous"></script>
+      <script src="vendor/sinanbolel.min.js"></script>
     </footer>
   </body>
 </html>

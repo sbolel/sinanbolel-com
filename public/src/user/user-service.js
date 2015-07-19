@@ -1,4 +1,5 @@
-userModule.service('UserService', 
+var userServices = angular.module('user.services',[])
+.service('UserService', 
   ['$log', '$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL', 'User', 'AUTO_ANON',
   function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBURL, User, AUTO_ANON) {  
 

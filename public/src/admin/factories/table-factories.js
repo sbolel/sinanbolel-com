@@ -1,5 +1,5 @@
 var tablesModule = angular.module('tables',[])
-.factory('TableFactory', function(uiGridConstants){
+.factory('TableFactory', ['uiGridConstants', function(uiGridConstants){
   var self = {
     leads: [
     { 
@@ -142,4 +142,4 @@ var tablesModule = angular.module('tables',[])
   ]
 }
 return self;
-});
+}]);

@@ -1,11 +1,11 @@
 {
-  "name": "thinkcrazy",
-  "version": "1.0.0",
+  "name": "sinanbolel",
+  "version": "1.0.1",
   "private": "true",
-  "repository": "https://github.com/sbolel/thinkcrazy",
-  "homepage": "https://github.com/sbolel/thinkcrazy",
-  "author": "Sinan Bolel <dev@sinanbolel.com>",
-  "description": "Think Crazy Co single-page application",
+  "author": "Sinan Bolel <sinanbolel@gmail.com>",
+  "description": "Sinan Bolel's Personal Site",
+  "homepage": "sinanbolel.com",
+  "repository": "https://github.com/sbolel/sbolel.github.io",
   "main": "./public/app.js",
   "keywords": [
     "Sinan Bolel",
@@ -43,7 +43,8 @@
     "ionicons": "~2.0.1",
     "material-design-icons": "~2.0.0",
     "underscore": "~1.8.3",
-    "moment": "~2.10.3"
+    "moment": "~2.10.3",
+    "angular-trackjs": "~0.1.0"
   },
   "resolutions": {
     "angular": "^1.3.0 || >1.4.0-beta.0"

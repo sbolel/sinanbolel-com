@@ -1,20 +1,30 @@
 var appModule = angular.module('SinanBolelApp', [
-  'ngMaterial',
+  'trackJs',
   'ui.router',
   'firebase',
   'angularMoment',
+  'ngMaterial',
   'layout',
   'home',
   'user',
   'thinkcrazy.server',
-  'thinkcrazy.apps'
+  'thinkcrazy.apps',
 ]);
 
+appModule.constant('AUTO_ANON', true);
 appModule.constant('FBURL', 'https://sinanbolel.firebaseio.com/');
 
-appModule.constant('AUTO_ANON', true);
+appModule.config(['$stateProvider', '$urlRouterProvider', '$logProvider', 'TrackJSProvider',
+        function ($stateProvider, $urlRouterProvider, $logProvider, TrackJSProvider) {
+  $urlRouterProvider.otherwise('/');
+  $logProvider.debugEnabled(false);
+  TrackJsProvider.configure({
+      version: "1.0.1"
+  });
+}]);
 
-appModule.run(function ($log, $rootScope, $state, $stateParams, ServerService) {
+appModule.run(['$log', '$rootScope', '$state', '$stateParams', 'ServerService',
+  function ($log, $rootScope, $state, $stateParams, ServerService) {
     $log.debug("module.SinanBolelApp.run()");
     ServerService.ping();
     $rootScope.$state = $state;
@@ -27,15 +37,11 @@ appModule.run(function ($log, $rootScope, $state, $stateParams, ServerService) {
       if (error === "AUTH_REQUIRED") {
         $log.error(error);
         $state.go("user.login");
+      } else {
+        $log.error(error);
       }
     });
-
-});
-
-appModule.config(function ($stateProvider, $urlRouterProvider, $logProvider) {
-  $urlRouterProvider.otherwise('/');
-  $logProvider.debugEnabled(false);
-});
+}]);
 
 appModule.filter('reverse', function() {
   return function(items) {

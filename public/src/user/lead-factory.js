@@ -1,4 +1,5 @@
-userModule.factory('Lead',['$log', '$q', '$rootScope', '$firebaseAuth', 'LeadFactory', 'FBURL',
+var leadModule = angular.module('user.leads',[]);
+leadModule.factory('Lead',['$log', '$q', '$rootScope', '$firebaseAuth', 'LeadFactory', 'FBURL',
                   function($log, $q, $rootScope, $firebaseAuth, LeadFactory, FBURL){
   var userData;
   return function(scope){
@@ -16,7 +17,7 @@ userModule.factory('Lead',['$log', '$q', '$rootScope', '$firebaseAuth', 'LeadFac
     }
 }]);
 
-userModule.factory('LeadFactory',['$log', '$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL',
+leadModule.factory('LeadFactory',['$log', '$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL',
                           function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBURL){
   var ref = new Firebase(FBURL);
   return $firebaseObject.$extend({

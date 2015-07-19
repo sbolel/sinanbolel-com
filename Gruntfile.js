@@ -8,6 +8,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-wiredep');
+  // grunt.loadNpmTasks('grunt-ng-annotate');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -97,6 +98,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['concat', 'uglify']);
   grunt.registerTask('test', ['jshint', 'qunit']);
   grunt.registerTask('serve', ['jshint', 'qunit', 'concat', 'uglify']);
-  grunt.registerTask('default', ['wiredep','connect','watch']);
+  grunt.registerTask('default', ['connect','watch']);
 
 };

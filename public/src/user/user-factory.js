@@ -1,11 +1,13 @@
-userModule.factory('User', ['$log', '$q', '$rootScope', '$firebaseAuth', '$exceptionHandler', 'UserFactory', 'FBURL',
-        function($log, $q, $rootScope, $firebaseAuth, $exceptionHandler, UserFactory, FBURL){
+var userFactories = angular.module('user.factories',[]);
+userFactories.factory('User', ['$log', '$q', '$rootScope', '$firebaseAuth', '$exceptionHandler', 'UserFactory', 'FBURL', 'trackJs',
+        function($log, $q, $rootScope, $firebaseAuth, $exceptionHandler, UserFactory, FBURL, trackJs){
   var userData;
   return function(userAuth){
     var deferred = $q.defer();
     if(userAuth.uid){
       var userRef = new Firebase(FBURL+'/users/'+userAuth.provider+'/'+userAuth.uid);
       userData = new UserFactory(userRef);
+      trackJs.configure({userId: userAuth.uid});
       $log.debug("Current user:", userData.$id);
       userData.$updateUser();
       userData.$bindTo($rootScope, "userData").then(function() {
@@ -20,7 +22,7 @@ userModule.factory('User', ['$log', '$q', '$rootScope', '$firebaseAuth', '$excep
   }
 }]);
 
-userModule.factory('UserFactory',['$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL', 
+userFactories.factory('UserFactory',['$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL', 
                           function($rootScope, $firebaseAuth, $firebaseObject, $q, FBURL){
   var ref = new Firebase(FBURL);
   return $firebaseObject.$extend({

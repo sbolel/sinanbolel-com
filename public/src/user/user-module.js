@@ -1,10 +1,10 @@
-var userModule = angular.module('user',[]);
+var userModule = angular.module('user',['user.services','user.factories','user.leads']);
 
-userModule.run(function ($rootScope, UserService) {
+userModule.run(['$rootScope', 'UserService', function ($rootScope, UserService) {
   UserService.init();
-});
+}]);
 
-userModule.config(function ($stateProvider, $urlRouterProvider) {
+userModule.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('user', {
       url: '',
@@ -50,7 +50,7 @@ userModule.config(function ($stateProvider, $urlRouterProvider) {
         $state.go('user.login',{alert: 'You have been logged out.'})
       }
     })
-});
+}]);
 
 userModule.controller('UserCtrl',['$log', '$scope', '$state', 'UserService', 
                           function($log, $scope, $state, UserService) {

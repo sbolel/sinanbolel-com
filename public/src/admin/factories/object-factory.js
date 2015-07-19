@@ -1,4 +1,4 @@
-adminModule.factory('ObjectFactory', function($log, $q, DataObject, FBURL){
+adminModule.factory('ObjectFactory', ['$log', '$q', 'DataObject', 'FBURL', function($log, $q, DataObject, FBURL){
   return function(listPath){
     var deferred = $q.defer();
     if(listPath.constructor === Array){
@@ -15,12 +15,12 @@ adminModule.factory('ObjectFactory', function($log, $q, DataObject, FBURL){
     }
     return deferred.promise;
   }
-});
+}]);
 
-adminModule.factory('DataObject', function($firebaseAuth, $firebaseArray, $q, FBURL){
+adminModule.factory('DataObject', ['$firebaseAuth', '$firebaseArray', '$q', 'FBURL', function($firebaseAuth, $firebaseArray, $q, FBURL){
   return $firebaseArray.$extend({
     $$defaults: {
 
     }
   });
-});
+}]);

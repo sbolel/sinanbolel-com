@@ -1,6 +1,7 @@
 var layoutModule = angular.module('layout', []);
 
-layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, $timeout, $mdSidenav, $mdUtil, $log, LayoutService){
+layoutModule.controller('LayoutCtrl', ['$rootScope', '$scope', '$state', '$timeout', '$mdSidenav', '$mdUtil', '$log', 'LayoutService',
+  function($rootScope, $scope, $state, $timeout, $mdSidenav, $mdUtil, $log, LayoutService){
   
   $scope.goBack = function(){
     var backState = $rootScope.$state.$back;
@@ -32,30 +33,30 @@ layoutModule.controller('LayoutCtrl', function($rootScope, $scope, $state, $time
         },300);
     return debounceFn;
   };
-})
+}])
 
-.controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+.controller('LeftCtrl', ['$scope', '$timeout', '$mdSidenav', '$log', function($scope, $timeout, $mdSidenav, $log) {
   $scope.close = function () {
     $mdSidenav('left').close()
       .then(function () {
         $log.debug("close LEFT is done");
       });
   };
-})
-.controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+}])
+.controller('RightCtrl', ['$scope', '$timeout', '$mdSidenav', '$log', function($scope, $timeout, $mdSidenav, $log) {
   $scope.close = function () {
     $mdSidenav('right').close()
       .then(function () {
         $log.debug("close RIGHT is done");
       });
   };
-});
+}]);
 
-layoutModule.service('LayoutService', function($mdSidenav){
+layoutModule.service('LayoutService',['$mdSidenav', function($mdSidenav){
   this.toggleRight = function() {
     $mdSidenav('right').toggle().then( function() { console.debug("toggle RIGHT is done"); });
   };
   this.toggleLeft = function() {
     $mdSidenav('left').toggle().then( function(){ console.debug("toggle left is done"); });
   }
-});
+}]);

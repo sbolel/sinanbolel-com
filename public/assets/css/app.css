@@ -2,8 +2,8 @@ ui-view {height: 100% !important;}
 
 /* Typography */
 
-body {font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;height:auto;}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+body {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;height:auto;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, select, textarea {
   margin-bottom: 24px;

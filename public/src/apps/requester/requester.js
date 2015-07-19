@@ -2,14 +2,14 @@ var requesterModule = angular.module('thinkcrazy.apps.requester', [
   'thinkcrazy.apps.requester.service'
   ]);
 
-requesterModule.config(function ($stateProvider) {
+requesterModule.config(['$stateProvider', function($stateProvider) {
   $stateProvider
     .state('apps.requester', {
       url: '/requester',
       controller: 'RequesterAppController',
       templateUrl: 'src/apps/requester/requester.html'
     });
-});
+}]);
 
 requesterModule.controller('RequesterAppController', 
                   ['$log', '$scope', '$http', 'RequesterService', 'ServerService', 
@@ -20,7 +20,6 @@ requesterModule.controller('RequesterAppController',
     $requestKeys: [],
     params: {}
   };
-
   $scope.makeRequest = function(){
     $scope.requester.$loading = true;
     RequesterService.createRequest($scope.requester.url, $scope.requester.params)
@@ -30,11 +29,9 @@ requesterModule.controller('RequesterAppController',
         $scope.requester.response = data;
     });
   };
-
   $scope.init = function(){
     ServerService.ping();
   };
-
   $scope.xmlToJson = function(){
     var xmlString = $scope.requester.response;
     if(xmlString){
@@ -43,7 +40,6 @@ requesterModule.controller('RequesterAppController',
       $log.error('$scope.requester.response not set');
     }
   }
-
   function convertData(inputData, inputDataType, outputDataType){
     if(inputDataType==='xml'&&outputDataType==='json'){
       ServerService.request.xmlToJson(inputData).then(function(result){
@@ -59,6 +55,4 @@ requesterModule.controller('RequesterAppController',
     var res = RequesterService.getRequestByKey(key);
     $log.debug('Got request[',key,']: ',res);
   }
-
-
 }]);

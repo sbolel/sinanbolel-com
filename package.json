@@ -1,11 +1,11 @@
 {
-  "name": "thinkcrazy",
+  "name": "sinanbolel",
+  "version": "1.0.1",
   "private": true,
-  "version": "1.0.0",
-  "description": "Think Crazy Co single-page application",
   "author": "Sinan Bolel <sinanbolel@gmail.com>",
-  "homepage": "https://thinkcrazy.firebaseapp.com",
-  "repository": "https://github.com/sbolel/thinkcrazy",
+  "description": "Sinan Bolel's Personal Site",
+  "homepage": "sinanbolel.com",
+  "repository": "https://github.com/sbolel/sbolel.github.io",
   "scripts": {
     "postinstall": "bower update",
     "prestart": "npm update"
@@ -21,6 +21,7 @@
     "grunt-contrib-qunit": "^0.7.0",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-ng-annotate": "^1.0.1",
     "grunt-search": "^0.1.7",
     "grunt-wiredep": "^2.0.0",
     "http-server": "^0.6.1",
