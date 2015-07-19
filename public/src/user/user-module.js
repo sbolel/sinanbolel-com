@@ -52,7 +52,8 @@ userModule.config(function ($stateProvider, $urlRouterProvider) {
     })
 });
 
-userModule.controller('UserCtrl', function($log, $scope, $state, UserService) {
+userModule.controller('UserCtrl',['$log', '$scope', '$state', 'UserService', 
+                          function($log, $scope, $state, UserService) {
 
   var showAccountErrorAlert = function() {
     alert("Oops, we couldn't log you in.");
@@ -90,4 +91,4 @@ userModule.controller('UserCtrl', function($log, $scope, $state, UserService) {
     }
   };
 
-});
+}]);

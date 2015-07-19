@@ -2,10 +2,11 @@ var serverUtil = angular.module('thinkcrazy.server', []);
 
 // serverUtil.constant('SERVER_URL', 'http://localhost:4000');
 serverUtil.constant('SERVER_URL', 'https://thinkcrazy-dev.herokuapp.com');
+serverUtil.constant('PING_PARAMS', '?firebase=sinanbolel');
 
 serverUtil.service('ServerService', 
-                  ['$log', '$q', '$http', 'SERVER_URL',
-          function($log, $q, $http, SERVER_URL){
+                  ['$log', '$q', '$http', 'SERVER_URL', 'PING_PARAMS',
+          function($log, $q, $http, SERVER_URL, PING_PARAMS){
   
   var that = this;
 
@@ -13,12 +14,22 @@ serverUtil.service('ServerService',
     return SERVER_URL;
   };
 
-  this.ping = function(){
-    $log.debug('Pinging server...')
-    $http.get(SERVER_URL+'/ping')
+  this.ping = function(params){
+    var deferred = $q.defer();
+    var completeUrlParamsString = PING_PARAMS;
+    if(params){
+      completeUrlParamsString += params;
+    }
+    $log.debug('Pinging server with params',completeUrlParamsString);
+    $http.get(SERVER_URL+'/ping'+completeUrlParamsString)
       .success(function(data, status, headers, config) {
-         $log.debug('Server Ping',status);
+        $log.debug('Server ping',status);
+        deferred.resolve({data: data, status: status, headers: headers, config: config});
+      }).error(function(){
+        $log.error('Server ping failed.');
+        deferred.reject('Server ping failed.');
       });
+    return deferred.promise;
   };
 
   this.request = {

@@ -37,7 +37,12 @@ module.exports = function(grunt) {
         separator: ''
       },
       dist: {
-        src: ['public/**/*.js', '!public/vendor/**/*'],
+        src: ['public/**/*.js',
+              '!public/bower_components/**/*',
+              '!public/vendor/**/*',
+              '!public/src/util/autocomplete.js',
+              '!public/src/util/cache.js'
+              ],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },

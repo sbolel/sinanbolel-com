@@ -1,4 +1,6 @@
-userModule.service('UserService', function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBURL, User, AUTO_ANON) {  
+userModule.service('UserService', 
+  ['$log', '$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL', 'User', 'AUTO_ANON',
+  function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBURL, User, AUTO_ANON) {  
 
   var _firebaseRef = new Firebase(FBURL);
   var self, auth, _authObj, currentUser, previousUser;
@@ -6,7 +8,6 @@ userModule.service('UserService', function($log, $rootScope, $firebaseAuth, $fir
   self = {
     init: function(successCb, errorCb) {
       if (_authObj.$getAuth()) {
-        // currentUser = User(_authObj.$getAuth());
         User(_authObj.$getAuth()).then(function(userData){
           currentUser = userData;
           $log.debug("User loaded", currentUser);
@@ -85,4 +86,4 @@ userModule.service('UserService', function($log, $rootScope, $firebaseAuth, $fir
     }
   };
   return self;
-});
+}]);

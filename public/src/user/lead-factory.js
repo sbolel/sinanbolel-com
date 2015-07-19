@@ -1,4 +1,5 @@
-userModule.factory('Lead', function($log, $q, $rootScope, $firebaseAuth, LeadFactory, FBURL){
+userModule.factory('Lead',['$log', '$q', '$rootScope', '$firebaseAuth', 'LeadFactory', 'FBURL',
+                  function($log, $q, $rootScope, $firebaseAuth, LeadFactory, FBURL){
   var userData;
   return function(scope){
       var deferred = $q.defer();
@@ -13,9 +14,10 @@ userModule.factory('Lead', function($log, $q, $rootScope, $firebaseAuth, LeadFac
       });
       return deferred.promise;
     }
-});
+}]);
 
-userModule.factory('LeadFactory', function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBURL){
+userModule.factory('LeadFactory',['$log', '$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL',
+                          function($log, $rootScope, $firebaseAuth, $firebaseObject, $q, FBURL){
   var ref = new Firebase(FBURL);
   return $firebaseObject.$extend({
     $$defaults: {
@@ -36,4 +38,4 @@ userModule.factory('LeadFactory', function($log, $rootScope, $firebaseAuth, $fir
       return deferred.promise;
     }
   });
-});
+}]);

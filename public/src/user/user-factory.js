@@ -1,4 +1,5 @@
-userModule.factory('User', function($log, $q, $rootScope, $firebaseAuth, $exceptionHandler, UserFactory, FBURL){
+userModule.factory('User', ['$log', '$q', '$rootScope', '$firebaseAuth', '$exceptionHandler', 'UserFactory', 'FBURL',
+        function($log, $q, $rootScope, $firebaseAuth, $exceptionHandler, UserFactory, FBURL){
   var userData;
   return function(userAuth){
     var deferred = $q.defer();
@@ -17,9 +18,10 @@ userModule.factory('User', function($log, $q, $rootScope, $firebaseAuth, $except
     }
     return deferred.promise;
   }
-});
+}]);
 
-userModule.factory('UserFactory', function($rootScope, $firebaseAuth, $firebaseObject, $q, FBURL){
+userModule.factory('UserFactory',['$rootScope', '$firebaseAuth', '$firebaseObject', '$q', 'FBURL', 
+                          function($rootScope, $firebaseAuth, $firebaseObject, $q, FBURL){
   var ref = new Firebase(FBURL);
   return $firebaseObject.$extend({
     $$defaults: {
@@ -56,4 +58,4 @@ userModule.factory('UserFactory', function($rootScope, $firebaseAuth, $firebaseO
     //   $log.error("Authentication failed:", error);
     // });
   });
-});
+}]);

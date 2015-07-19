@@ -1,3 +1,1 @@
-# Think Crazy
-
-
+# sinanbolel.com

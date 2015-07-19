@@ -12,10 +12,11 @@ var appModule = angular.module('SinanBolelApp', [
 
 appModule.constant('FBURL', 'https://sinanbolel.firebaseio.com/');
 
-appModule.constant('AUTO_ANON', false);
+appModule.constant('AUTO_ANON', true);
 
-appModule.run(function ($log, $rootScope, $state, $stateParams) {
+appModule.run(function ($log, $rootScope, $state, $stateParams, ServerService) {
     $log.debug("module.SinanBolelApp.run()");
+    ServerService.ping();
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
     // $rootScope.$on("$stateChangeSuccess", function(event,toState,toParams,fromState,fromParams, error){ 
@@ -28,10 +29,12 @@ appModule.run(function ($log, $rootScope, $state, $stateParams) {
         $state.go("user.login");
       }
     });
+
 });
 
-appModule.config(function ($stateProvider, $urlRouterProvider) {
+appModule.config(function ($stateProvider, $urlRouterProvider, $logProvider) {
   $urlRouterProvider.otherwise('/');
+  $logProvider.debugEnabled(false);
 });
 
 appModule.filter('reverse', function() {
@@ -40,7 +43,8 @@ appModule.filter('reverse', function() {
   };
 });
 
-appModule.service('StateService', function($log, $rootScope, $state, $q, ObjectFactory){
+appModule.service('StateService', ['$log', '$rootScope', '$state', '$q', 'ObjectFactory', 
+                          function($log, $rootScope, $state, $q, ObjectFactory){
   var self = {
     getLastChild: function() {
       var statePath = $state.$current.toString();
@@ -61,5 +65,5 @@ appModule.service('StateService', function($log, $rootScope, $state, $q, ObjectF
     }
   };
   return self;
-});
+}]);
 
