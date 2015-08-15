@@ -6,3 +6,5 @@ _docs/
 dist/
 node_modules/
 bower_components/
+public/README.md
+public/LICENSE

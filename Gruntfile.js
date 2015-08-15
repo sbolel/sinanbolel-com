@@ -1,17 +1,14 @@
-module.exports = function(grunt) {
+#!/usr/bin/env node
+'use strict';
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-wiredep');
-  // grunt.loadNpmTasks('grunt-ng-annotate');
+module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    clean: {
+      release: ['public/release/vendor.js', 'public/release/rha.js']
+    },
 
     connect: {
       client: {
@@ -27,46 +24,83 @@ module.exports = function(grunt) {
       }
     },
 
-    wiredep: {
-      task: {
-        src: ['public/index.html']
-      }
-    },
-
-    concat: {
+    cssmin: {
       options: {
-        separator: ''
+        sourceMap: true,
+        shorthandCompacting: true
       },
-      dist: {
-        src: ['public/**/*.js',
-              '!public/bower_components/**/*',
-              '!public/vendor/**/*',
-              '!public/src/util/autocomplete.js',
-              '!public/src/util/cache.js'
-              ],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
-    },
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
-      dist: {
+      dev: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'public/release/app.min.css': ['public/assets/css/app.css']
+        }
+      },
+      vendor: {
+        files: {
+          'public/release/vendor.min.css': [
+            'bower_components/angular-material/angular-material.css',
+            'bower_components/ionicons/css/ionicons.css'
+          ]
         }
       }
     },
 
-    qunit: {
-      files: ['test/**/*.html']
+    ngAnnotate: {
+      options: {
+        singleQuotes: true,
+      },
+      dev: {
+        files: {
+          'public/release/<%= pkg.name %>.js': [
+            'public/src/utils/helpers.js',
+            'public/app.js',
+            'public/src/home/**/*.js',
+            'public/src/apps/**/*.js',
+            'public/src/utils/server.js',
+            '!public/release/**/*'
+          ]
+        }
+      },
+      vendor: {
+        files: {
+          'public/release/vendor.js': [
+            'bower_components/angular/angular.js',
+            'bower_components/angular-aria/angular-aria.js',
+            'bower_components/angular-route/angular-route.js',
+            'bower_components/angular-animate/angular-animate.js',
+            'bower_components/angular-material/angular-material.js',
+            'bower_components/angular-ui-router/release/angular-ui-router.js',
+            'bower_components/firebase/firebase.js',
+            'bower_components/angularfire/dist/angularfire.js',
+            'bower_components/moment/moment.js',
+            'bower_components/angular-moment/angular-moment.js',
+            'bower_components/angular-trackjs/dist/angular-trackjs.min.js',
+            'bower_components/angular-firebase-cms/dist/angular-firebase-cms.min.js',
+            'bower_components/angular-material-layout/dist/angular-material-layout.min.js',
+          ]
+        }
+      }
+    },
+
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      },
+      dev: {
+        files: {
+          'public/release/<%= pkg.name %>.min.js': ['public/release/<%= pkg.name %>.js']
+        }
+      },
+      vendor: {
+        files: {
+          'public/release/vendor.min.js': ['public/release/vendor.js']
+        }
+      }
     },
 
     jshint: {
       files: ['Gruntfile.js', 'public/**/*.js'],
       options: {
         globals: {
-          jQuery: true,
           console: true,
           module: true,
           document: true
@@ -91,13 +125,27 @@ module.exports = function(grunt) {
         files: ['bower.json'],
         tasks:['wiredep']
       }
+    },
+
+    wiredep: {
+      task: {
+        src: ['public/index.html']
+      }
     }
 
   });
-  
-  grunt.registerTask('build', ['concat', 'uglify']);
-  grunt.registerTask('test', ['jshint', 'qunit']);
-  grunt.registerTask('serve', ['jshint', 'qunit', 'concat', 'uglify']);
-  grunt.registerTask('default', ['connect','watch']);
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-ng-annotate');
+  grunt.loadNpmTasks('grunt-wiredep');
+
+  grunt.registerTask('build:dev', ['ngAnnotate:dev', 'uglify:dev', 'clean', 'cssmin:dev']);
+  grunt.registerTask('build', ['ngAnnotate', 'uglify', 'clean', 'cssmin']);
+  grunt.registerTask('serve', ['connect', 'watch']);
+  grunt.registerTask('default', ['serve']);
 };

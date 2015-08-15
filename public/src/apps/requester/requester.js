@@ -11,9 +11,7 @@ requesterModule.config(['$stateProvider', function($stateProvider) {
     });
 }]);
 
-requesterModule.controller('RequesterAppController', 
-                  ['$log', '$scope', '$http', 'RequesterService', 'ServerService', 
-          function($log, $scope, $http, RequesterService, ServerService){
+requesterModule.controller('RequesterAppController', ['$log', '$scope', '$http', 'RequesterService', 'ServerService', function($log, $scope, $http, RequesterService, ServerService){
 
   $scope.requester = {
     $loading: false,

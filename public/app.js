@@ -1,31 +1,28 @@
+'use strict';
+
 var appModule = angular.module('SinanBolelApp', [
   'trackJs',
   'ui.router',
   'firebase',
   'angularMoment',
   'ngMaterial',
-  'layout',
-  'home',
-  'user',
-  'thinkcrazy.server',
+  'cmsClient',
+  'mdLayout',
+  'server',
+  'thinkcrazy.home',
   'thinkcrazy.apps',
 ]);
 
 appModule.constant('AUTO_ANON', true);
-appModule.constant('FBURL', 'https://sinanbolel.firebaseio.com/');
+appModule.constant('FBURL', 'https://sinanbolel.firebaseio.com');
 
-appModule.config(['$stateProvider', '$urlRouterProvider', '$logProvider', 'TrackJSProvider',
-        function ($stateProvider, $urlRouterProvider, $logProvider, TrackJSProvider) {
+appModule.config(['$urlRouterProvider', '$logProvider', '$mdThemingProvider', 'cmsClientProvider', 'FBURL', function ($urlRouterProvider, $logProvider, $mdThemingProvider, cmsClientProvider, FBURL) {
   $urlRouterProvider.otherwise('/');
   $logProvider.debugEnabled(false);
-  TrackJsProvider.configure({
-      version: "1.0.1"
-  });
+  cmsClientProvider.setContentUrl(FBURL+'/_sinanbolel/content');
 }]);
 
-appModule.run(['$log', '$rootScope', '$state', '$stateParams', 'ServerService',
-  function ($log, $rootScope, $state, $stateParams, ServerService) {
-    $log.debug("module.SinanBolelApp.run()");
+appModule.run(['$log', '$rootScope', '$state', '$stateParams', 'ServerService', function ($log, $rootScope, $state, $stateParams, ServerService) {
     ServerService.ping();
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
@@ -48,28 +45,3 @@ appModule.filter('reverse', function() {
     return _.toArray(items).slice().reverse();
   };
 });
-
-appModule.service('StateService', ['$log', '$rootScope', '$state', '$q', 'ObjectFactory', 
-                          function($log, $rootScope, $state, $q, ObjectFactory){
-  var self = {
-    getLastChild: function() {
-      var statePath = $state.$current.toString();
-      var array = statePath.split('.');
-      var res = array[array.length-1];
-      return res;
-    },
-    loadData: function(){
-      var deferred = $q.defer();
-      var stateName = self.getLastChild();
-      var data = new ObjectFactory([stateName], 50).then(function(data){
-        var res = {contents: data,state: stateName};
-        deferred.resolve(res);
-      }).catch(function(error){
-        deferred.reject(error);
-      });
-      return deferred.promise;
-    }
-  };
-  return self;
-}]);
-

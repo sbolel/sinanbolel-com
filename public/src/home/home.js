@@ -1,4 +1,6 @@
-var homeModule = angular.module('home',[]);
+'use strict';
+
+var homeModule = angular.module('thinkcrazy.home',[]);
 
 homeModule.config(['$stateProvider', function ($stateProvider) {
   $stateProvider
@@ -18,48 +20,51 @@ homeModule.config(['$stateProvider', function ($stateProvider) {
     });
 }]);
 
-homeModule.controller('HomeController',['$log', '$scope', '$mdToast', 'Lead', function($log, $scope, $mdToast, Lead){
+homeModule.controller('HomeController',['$log', '$scope', '$mdToast', 'FBURL', function ($log, $scope, $mdToast, FBURL){
   
-  $scope.leadData = {};
+  var messagesList = new Firebase(FBURL+'/messages');
 
-  var lead;
+  var MessageRef = function(){
+    return messagesList.push();
+  };
 
-  var setLead = function(){
-    lead = new Lead($scope).then(function(leadData){
-      lead = leadData;
-    });
-  };
-  var toastPosition = {
-    bottom: true,
-    top: false,
-    left: true,
-    right: true
-  };
-  var getToastPosition = function() {
-    return Object.keys(toastPosition)
-      .filter(function(pos) { return toastPosition[pos]; })
-      .join(' ');
-  };
-  var showToast = function() {
-    $mdToast.show(
-      $mdToast.simple()
-        .content('Sent!')
-        .position(getToastPosition())
-        .hideDelay(5000)
-    );
-  };
+  var toastPosition = {bottom: true, top: false, left: true, right: true};
+
   $scope.submit = function(){
-    if ($scope.leadData) {
-      lead.$submit().then(function(){
-        lead.$destroy();
-        $scope.leadData.name = '';
-        $scope.leadData.email = '';
-        $scope.leadData.message = '';
-        showToast();
-        lead = null;
-        setLead();
-      });
-    }
+    submitMessage();
   };
-  setLead();
+
+  function submitMessage(){
+    if ($scope.contact.$valid) {
+      var msgRef = new MessageRef();
+      var msg = timestampMessage();
+      msgRef.set(msg, onMessageSubmit);
+    }
+  }
+
+  function getToastPosition(){
+    return Object.keys(toastPosition).filter(function(pos){
+      return toastPosition[pos];
+    }).join(' ');
+  }
+
+  function onMessageSubmit(error){
+    if(error){
+      $log.error('Error submitting contact message:',error);
+      $mdToast.show($mdToast.simple().content('Error!').position(getToastPosition()).hideDelay(5000));
+    } else {
+      $log.debug('Submitted contact message.');
+      $scope.messageData = {};
+      $scope.contact.$setUntouched();
+      $scope.contact.$setPristine();
+      $mdToast.show($mdToast.simple().content('Sent!').position(getToastPosition()).hideDelay(5000));
+    }
+  }
+
+  function timestampMessage(){
+    $scope.messageData.submitAt = Firebase.ServerValue.TIMESTAMP;
+    $scope.messageData.submitAtString = Date($scope.messageData.submitAt);
+    return $scope.messageData;
+  }
+
 }]);

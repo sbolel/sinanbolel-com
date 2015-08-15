@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" ng-app="SinanBolelApp">
+<html lang="en" class="no-js">
   <head>
     <title>Sinan Bolel</title>
     <meta charset="utf-8">
@@ -27,32 +27,19 @@
     <link rel="manifest" href="assets/favicons/manifest.json">
     <!-- bower:css -->
     <!-- endbower -->
-    <link rel="stylesheet" href="vendor/angular-material.css"></link>
-    <link rel="stylesheet" href="vendor/ionicons.css"></link>
-    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link rel="stylesheet" href="release/vendor.min.css">
+    <link rel="stylesheet" href="release/app.min.css">
     <link href='//fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
   </head>
-  <body layout="column" ng-controller="LayoutCtrl">
-    <div id="content" ui-view layout-fill flex></div>
+  <body ng-app="SinanBolelApp" style="background-color:#E8EAF6">
+    <div id="content-view" ui-view ng-controller="LayoutController"></div>
     <footer>
       <!-- bower:js -->
       <!-- endbower -->
-      <script src="vendor/angular.js "></script>
-      <script src="vendor/angular-animate.js "></script>
-      <script src="vendor/angular-aria.js "></script>
-      <script src="vendor/angular-material.js "></script>
-      <script src="vendor/moment.js "></script>
-      <script src="vendor/angular-moment.js "></script>
-      <script src="vendor/ui-grid.js "></script>
-      <script src="vendor/angular-ui-router.js "></script>
-      <script src="vendor/statehelper.js "></script>
-      <script src="vendor/angular-route.js "></script>
-      <script src="vendor/firebase.js "></script>
-      <script src="vendor/angularfire.js "></script>
-      <script src="vendor/angular-trackjs.js"></script>
+      <script src="release/vendor.min.js "></script>
       <script type="text/javascript">window._trackJs={token:'368c1e68150148bfbc92b626884c7dc2',visitor:{enabled:true}};</script>
       <script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous"></script>
-      <script src="vendor/sinanbolel.min.js"></script>
+      <script src="release/sinanbolel-angular.min.js"></script>
     </footer>
   </body>
 </html>

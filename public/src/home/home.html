@@ -33,17 +33,17 @@
           <div layout-gt-md="row" layout-md="column">
             <md-input-container flex>
               <label>Name</label>
-              <input type="text" ng-model="leadData.name">
+              <input type="text" ng-model="messageData.name">
             </md-input-container>
             <md-input-container flex>
               <label>Email (required)</label>
-              <input type="email" ng-model="leadData.email">
+              <input type="email" ng-model="messageData.email" required>
             </md-input-container>
           </div>
           <h4>What would you like to discuss?</h4>
           <md-input-container flex>
             <label>Enter a message (required)</label>
-            <textarea ng-model="leadData.message" columns="1" md-maxlength="500"></textarea>
+            <textarea ng-model="messageData.message" columns="1" md-maxlength="500" required></textarea>
           </md-input-container>
          
         <div flex layout layout-align="center center" class="mb10">
