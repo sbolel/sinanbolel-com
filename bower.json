@@ -43,7 +43,8 @@
     "angularfire": "~1.1.2",
     "firebase": "~2.2.9",
     "angular-firebase-cms": "git@github.com:sbolel/angular-firebase-cms.git#~0.1.1",
-    "angular-material-layout": "git@github.com:sbolel/angular-material-layout.git#~0.1.1"
+    "angular-material-layout": "git@github.com:sbolel/angular-material-layout.git#~0.1.1",
+    "angular-firebase-form": "git@github.com:sbolel/angular-firebase-form.git#~0.0.1"
   },
   "resolutions": {
     "angular": ">=1.2.0 <1.5.0"

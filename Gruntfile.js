@@ -54,9 +54,7 @@ module.exports = function(grunt) {
             'public/src/utils/helpers.js',
             'public/app.js',
             'public/src/home/**/*.js',
-            'public/src/apps/**/*.js',
-            'public/src/utils/server.js',
-            '!public/release/**/*'
+            'public/src/utils/server.js'
           ]
         }
       },
@@ -74,6 +72,7 @@ module.exports = function(grunt) {
             'bower_components/moment/moment.js',
             'bower_components/angular-moment/angular-moment.js',
             'bower_components/angular-trackjs/dist/angular-trackjs.min.js',
+            'bower_components/angular-firebase-form/release/angular-firebase-form.min.js',
             'bower_components/angular-firebase-cms/dist/angular-firebase-cms.min.js',
             'bower_components/angular-material-layout/dist/angular-material-layout.min.js',
           ]
