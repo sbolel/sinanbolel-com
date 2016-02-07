@@ -9,12 +9,24 @@
   ],
   "rules": "config/security-rules.json",
   "headers": [ {
-    "source" : "**/*.@(jpg|jpeg|gif|png)",
+    "source" : "**/*.@(svg|jpg|jpeg|gif|png)",
     "headers" : [ {
       "key" : "Cache-Control",
-      "value" : "max-age=7200"
+      "value" : "max-age=2592000"
     } ]
-  } ],
+    } , {
+    "source" : "**/*.@(eot|ttf|woff)",
+    "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=2592000"
+    } ]
+  } , {
+    "source" : "**/*.@(js|css)",
+    "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=2592000"
+    } ]
+  }],
   "redirects": [ {
     "source" : "/home",
     "destination" : "https://www.sinanbolel.com/",
