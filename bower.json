@@ -41,6 +41,7 @@
     "firebase": "^2.4.0",
     "angular-material-layout": "git@github.com:sbolel/angular-material-layout.git#~0.1.1",
     "angular-firebase-form": "git@github.com:sbolel/angular-firebase-form.git#~0.0.1",
-    "Ionicons": "ionicons#^2.0.1"
+    "Ionicons": "ionicons#^2.0.1",
+    "smoothscroll-for-websites": "^1.4.2"
   }
 }

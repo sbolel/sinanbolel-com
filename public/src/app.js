@@ -1,5 +1,4 @@
 angular.module('SinanBolelApp', [
-  'firebase',
   'ngAnimate',
   'ngMaterial',
   'ui.router',
@@ -41,11 +40,19 @@ angular.module('SinanBolelApp', [
   });
 })
 
-.controller('HomeController',function ($scope, $timeout){
+.controller('HomeController',function ($scope, $timeout, $location){
   $scope.init = function(){
     $timeout(function(){
       $scope.visible = true;
-      console.debug('done');
     }, 5)
-  }
+    $timeout(function(){
+      if($location.hash()==='contact'){
+        $scope.scrollTo();
+      }
+    }, 50)
+  };
+  $scope.scrollTo = function(){
+      var el = document.getElementById('contact');
+      window.scrollTo(0,el.getBoundingClientRect().top);
+  };
 });

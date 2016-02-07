@@ -66,9 +66,8 @@ module.exports = function(grunt) {
             'bower_components/angular-route/angular-route.js',
             'bower_components/angular-ui-router/release/angular-ui-router.js',
             'bower_components/firebase/firebase.js',
-            'bower_components/angularfire/dist/angularfire.js',
             'bower_components/angular-firebase-form/release/angular-firebase-form.min.js',
-            'bower_components/angular-material-layout/dist/angular-material-layout.min.js',
+            'bower_components/angular-material-layout/dist/angular-material-layout.min.js'
           ]
         }
       }
@@ -142,6 +141,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-wiredep');
 
+  grunt.registerTask('build:vendor', ['ngAnnotate:vendor', 'uglify:vendor', 'cssmin:vendor']);
   grunt.registerTask('build:dev', ['ngAnnotate:dev', 'uglify:dev', 'cssmin:dev']);
   grunt.registerTask('build', ['ngAnnotate', 'uglify', 'cssmin']);
   grunt.registerTask('bundle', ['uglify:bundle']);

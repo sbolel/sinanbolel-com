@@ -3,32 +3,34 @@
   <div id="hero" class="cover fullscreen center" layout="column" layout-align="center center">
   <span flex></span>
   <div class="fade" ng-show="visible">
-      <div class="logo">
-        <img src="assets/images/sb-logo-360-light.png"/>
-      </div>
-      <h1 class="large">sinanbolel</h1>
-      <div layout="row" class="mt20">
-        <md-button href="https://www.linkedin.com/in/sinanbolel" target="_blank" class="md-fab" aria-label="LinkedIn">
-            <md-tooltip>in/sinanbolel</md-tooltip>
-            <md-icon style="font-size:2em;margin-top:-4px;" md-font-icon="ion-social-linkedin"></md-icon>
-        </md-button>
-        <md-button href="https://github.com/sbolel" target="_blank" class="md-fab" aria-label="Github">
-            <md-tooltip>/sbolel</md-tooltip>
-            <md-icon style="font-size:2em;margin-top:-4px;" md-font-icon="ion-social-github"></md-icon>
-        </md-button>
-        <md-button href="https://twitter.com/sinbols" target="_blank" class="md-fab" aria-label="Twitter">
-            <md-tooltip>@sinbols</md-tooltip>
-            <md-icon style="font-size:2em;margin-top:-4px;" md-font-icon="ion-social-twitter"></md-icon>
-        </md-button>
-      </div>
-      <span flex></span>
+    <div class="logo">
+      <img src="assets/images/sb-logo-360-light.png"/>
+    </div>
+    <h1 class="large">sinanbolel</h1>
+    <div layout="row" class="mt20">
+      <md-button href="https://www.linkedin.com/in/sinanbolel" target="_blank" class="md-fab" aria-label="LinkedIn">
+          <md-tooltip>in/sinanbolel</md-tooltip>
+          <md-icon style="font-size:2em;margin-top:-4px;" md-font-icon="ion-social-linkedin"></md-icon>
+      </md-button>
+      <md-button href="https://github.com/sbolel" target="_blank" class="md-fab" aria-label="Github">
+          <md-tooltip>/sbolel</md-tooltip>
+          <md-icon style="font-size:2em;margin-top:-4px;" md-font-icon="ion-social-github"></md-icon>
+      </md-button>
+      <md-button href="https://twitter.com/sinbols" target="_blank" class="md-fab" aria-label="Twitter">
+          <md-tooltip>@sinbols</md-tooltip>
+          <md-icon style="font-size:2em;margin-top:-4px;" md-font-icon="ion-social-twitter"></md-icon>
+      </md-button>
+    </div>
+    <span flex></span>
+    <a href="#" ng-click="scrollTo()">
       <i style="color:#9FA8DA;font-size:3em;" class="ion-ios-arrow-down"></i>
-      </div>
+    </a>
+    </div>
     <span flex></span>
   </div>
 
   <div id="contact" class="cover pt20 pb50">
-    <div layout="column" layout-padding layout-align="center center">
+    <div layout="column" layout-padding layout-align="center center" class="fade" ng-show="visible">
       <h1 class="large">get in touch</h1>
       <div contact-form layout-fill><div>
     </div>
