@@ -2,13 +2,20 @@
 <html lang="en" class="no-js">
   <head>
     <title>Sinan Bolel</title>
-    <base href="/">
+    <script src="sinanbolel.bundle.js"></script>
+    <!--
+    <script src="release/vendor.min.js"></script>
+    <script src="release/sinanbolel.min.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/server.js"></script>
+    -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="author" content="Sinan Bolel <sinanbolel@gmail.com>">
     <meta name="description" content="Sinan Bolel's Personal Page">
     <meta name="keywords" content="Sinan Bolel, software engineer, full-stack, programmer, software, web apps, mobile apps, JavaScript, AngularJS, Node.js, Ruby on Rails, Java, C++, Git, database design, NoSQL, MySQL, cross-platform application development, mobile developer, web developer, API development, analytics, cloud, iOS, Android, Firebase, Ionic Framework, object-oriented programming, Northwestern University, Northwestern student, Northwestern engineer, Northwestern alumni, bachelors of science, computer science, entrepreneur, crazy, Think Crazy, thinkcrazy, thinkcrazy.co, Pyro, Pyro Platform, Escollate, Basilar, Besso Labs, One Six Solutions, Agile methodology, program management, UX, UI, designer, user experience design, user interface design, human computer interaction, sinbols, Firebase, Ionic Framework, Google App Engine, Amazon AWS, S3, EC2, D3.js, HTML, CSS, Wordpress, Heroku, GitHub, PLTW, Project Lead the Way, Pi Kappa Alpha">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="robots" content="all">
     <meta name="msapplication-TileColor" content="#3f51b5">
     <meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -26,19 +33,19 @@
     <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="assets/favicons/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" type="text/css" href="assets/favicons/manifest.json">
-    <link rel="stylesheet" type="text/css" href="release/vendor.min.css">
-    <link rel="stylesheet" type="text/css" href="release/app.min.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:100,300,400">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta property="og:description" content="Sinan Bolel's Personal Page">
+    <meta property="og:title" content="Sinan Bolel">
+    <meta itemprop="description" content="Sinan Bolel's Personal Page">
+    <meta itemprop="name" content="Sinan Bolel">
+    <base href="/">
+    <link rel="stylesheet" href="/release/vendor.min.css">
+    <link rel="stylesheet" href="/release/app.min.css">
     <style>body{background-color:#E8EAF6;}</style>
   </head>
   <body data-ng-app="SinanBolelApp">
-    <div id="content-view" ui-view ng-controller="LayoutController"></div>
+    <div id="content-view" ui-view data-ng-controller="LayoutController"></div>
     <footer>
-      <!-- bower:js -->
-      <!-- endbower -->
-      <script type="text/javascript" src="release/vendor.min.js "></script>
-      <script type="text/javascript" src="release/sinanbolel-angular.min.js"></script>
     </footer>
   </body>
 </html>

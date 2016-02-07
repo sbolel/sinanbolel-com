@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-      release: ['public/release/vendor.js', 'public/release/rha.js']
+      release: ['public/release/*.js']
     },
 
     connect: {
@@ -51,9 +51,7 @@ module.exports = function(grunt) {
       dev: {
         files: {
           'public/release/<%= pkg.name %>.js': [
-            'public/src/utils/helpers.js',
             'public/src/app.js',
-            'public/src/home/**/*.js',
             'public/src/utils/server.js'
           ]
         }
@@ -62,10 +60,10 @@ module.exports = function(grunt) {
         files: {
           'public/release/vendor.js': [
             'bower_components/angular/angular.js',
-            'bower_components/angular-aria/angular-aria.js',
-            'bower_components/angular-route/angular-route.js',
             'bower_components/angular-animate/angular-animate.js',
+            'bower_components/angular-aria/angular-aria.js',
             'bower_components/angular-material/angular-material.js',
+            'bower_components/angular-route/angular-route.js',
             'bower_components/angular-ui-router/release/angular-ui-router.js',
             'bower_components/firebase/firebase.js',
             'bower_components/angularfire/dist/angularfire.js',
@@ -88,6 +86,11 @@ module.exports = function(grunt) {
       vendor: {
         files: {
           'public/release/vendor.min.js': ['public/release/vendor.js']
+        }
+      },
+      bundle: {
+        files: {
+          'public/<%= pkg.name %>.bundle.js': ['public/release/vendor.js', 'public/release/<%= pkg.name %>.js']
         }
       }
     },
@@ -139,8 +142,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-wiredep');
 
-  grunt.registerTask('build:dev', ['ngAnnotate:dev', 'uglify:dev', 'clean', 'cssmin:dev']);
-  grunt.registerTask('build', ['ngAnnotate', 'uglify', 'clean', 'cssmin']);
+  grunt.registerTask('build:dev', ['ngAnnotate:dev', 'uglify:dev', 'cssmin:dev']);
+  grunt.registerTask('build', ['ngAnnotate', 'uglify', 'cssmin']);
+  grunt.registerTask('bundle', ['uglify:bundle']);
   grunt.registerTask('serve', ['connect', 'watch']);
   grunt.registerTask('default', ['serve']);
 };

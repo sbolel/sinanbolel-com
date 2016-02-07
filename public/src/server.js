@@ -1,10 +1,9 @@
-'use strict';
+angular.module('sinanbolel.server', [])
 
-var serverUtil = angular.module('sinanbolel.server', [])
-  .constant('SERVER_URL', 'https://sinanbolel.herokuapp.com')
-  .constant('PING_PARAMS', '?env=dev');
+.constant('SERVER_URL', 'https://sinanbolel.herokuapp.com')
+.constant('PING_PARAMS', '?env=dev')
 
-serverUtil.service('ServerService', ['$log', '$q', '$http', 'SERVER_URL', 'PING_PARAMS', function ($log, $q, $http, SERVER_URL, PING_PARAMS){
+.service('ServerService', function ($log, $q, $http, SERVER_URL, PING_PARAMS){
   
   this.getServerUrl = function(){
     return SERVER_URL;
@@ -52,4 +51,4 @@ serverUtil.service('ServerService', ['$log', '$q', '$http', 'SERVER_URL', 'PING_
   };
 
   return this;
-}]);
+});

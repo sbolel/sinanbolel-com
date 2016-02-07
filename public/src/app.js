@@ -1,28 +1,41 @@
-var appModule = angular.module('SinanBolelApp', [
-  'ui.router',
+angular.module('SinanBolelApp', [
   'firebase',
   'ngMaterial',
+  'ui.router',
   'mdLayout',
-  'firebaseForm',
-  'sinanbolel.home'
-]);
+  'firebaseForm'
+])
 
-appModule.constant('FBURL', 'https://sinanbolel.firebaseio.com');
+.constant('FBURL', 'https://sinanbolel.firebaseio.com')
 
-appModule.config(['$urlRouterProvider', '$locationProvider', '$logProvider', 'firebaseFormProvider', 'FBURL', 
-  function ($urlRouterProvider, $locationProvider, $logProvider, firebaseFormProvider, FBURL) {
+.config(function ($locationProvider, $stateProvider, $urlRouterProvider, firebaseFormProvider, FBURL) {
+
+  $stateProvider
+    .state('home', {
+      url: '/',
+      abstract: true,
+      template: '<ui-view/>'
+    })
+    .state('home.index', {
+      url: '',
+      views: {
+        '': {
+          templateUrl: 'home.html'
+        }
+      }
+    });
+
   $urlRouterProvider.otherwise('/');
   $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
   firebaseFormProvider.setFirebaseUrl(FBURL+'/messages');
-}]);
+})
 
-appModule.run(['$log', '$rootScope', '$state', '$stateParams', function ($log, $rootScope, $state, $stateParams) {
-  // ServerService.ping();
+.run(function ($log, $rootScope, $state, $stateParams) {
   $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
     $log.error(error);
     if (error === 'AUTH_REQUIRED') {
       $state.go('user.login');
     }
   });
-}]);
+});
