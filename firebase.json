@@ -4,17 +4,11 @@
   "ignore": [
     "firebase.json",
     "**/.*",
-    "**/node_modules",
-    "**/bower_components",
-    "public/src"
+    "src",
+    "release"
   ],
+  "rules": "config/security-rules.json",
   "headers": [ {
-    "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-    "headers" : [ {
-      "key" : "Access-Control-Allow-Origin",
-      "value" : "*"
-    } ]
-  }, {
     "source" : "**/*.@(jpg|jpeg|gif|png)",
     "headers" : [ {
       "key" : "Cache-Control",

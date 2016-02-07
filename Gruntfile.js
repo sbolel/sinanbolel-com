@@ -18,7 +18,7 @@ module.exports = function(grunt) {
           livereload: true,
           open: {
             target: 'http://localhost:9000',
-            appName: 'Google Chrome',
+            appName: 'Chrome',
           }
         }
       }
@@ -27,18 +27,15 @@ module.exports = function(grunt) {
     cssmin: {
       options: {
         sourceMap: true,
-        shorthandCompacting: true
+        shorthandCompacting: true,
+        keepSpecialComments: false
       },
-      dev: {
+      target: {
         files: {
-          'public/release/app.min.css': ['public/assets/css/app.css']
-        }
-      },
-      vendor: {
-        files: {
-          'public/release/vendor.min.css': [
+          'public/<%= pkg.name %>.min.css': [
             'bower_components/angular-material/angular-material.css',
-            'bower_components/ionicons/css/ionicons.css'
+            'bower_components/ionicons/css/ionicons.css',
+            'public/assets/css/app.css'
           ]
         }
       }

@@ -1,9 +1,4 @@
-!.gitkeep
-.DS_Store
-logs
-*.log
-_docs/
-dist/
-node_modules/
-bower_components/
+.*
+node_modules
+bower_components
 public/release
