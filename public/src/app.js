@@ -1,5 +1,6 @@
 angular.module('SinanBolelApp', [
   'firebase',
+  'ngAnimate',
   'ngMaterial',
   'ui.router',
   'mdLayout',
@@ -20,7 +21,7 @@ angular.module('SinanBolelApp', [
       url: '',
       views: {
         '': {
-          templateUrl: 'home.html'
+          templateUrl: '/templates/home.html'
         }
       }
     });
@@ -38,4 +39,13 @@ angular.module('SinanBolelApp', [
       $state.go('user.login');
     }
   });
+})
+
+.controller('HomeController',function ($scope, $timeout){
+  $scope.init = function(){
+    $timeout(function(){
+      $scope.visible = true;
+      console.debug('done');
+    }, 5)
+  }
 });

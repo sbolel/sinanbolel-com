@@ -7,6 +7,7 @@ html, body, ui-view  {
 #content-view {
   height: auto;
 }
+
 ui-view {
   top: 0; 
   bottom: 0;
@@ -21,6 +22,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, select, textar
   margin-top: 0;
   padding: 0;
 }
+
 
 h6 {font-size: 0.75em;}
 
@@ -49,7 +51,7 @@ i.lg {
   padding: 0;
 }
 .fullscreen {
-  height: 95vh;
+  height: 100vh;
 }
 .hs {
   height: 45vh;
@@ -59,6 +61,30 @@ i.lg {
 }
 
 /* Mods */
+.animate-show.ng-hide-add, 
+.animate-show.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove {
+  line-height:0;
+  opacity:0;
+  padding:0 10px;
+}
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  line-height:20px;
+  opacity:1;
+  padding:10px;
+  border:1px solid black;
+  background:white;
+}
 
 .pointer {cursor: pointer;}
 .center {text-align: center;}

@@ -22,12 +22,8 @@
     } ]
   } ],
   "redirects": [ {
-    "source" : "/home.html",
-    "destination" : "/",
-    "type" : 301
-  }, {
     "source" : "/home",
-    "destination" : "https://www.thinkcrazy.co",
+    "destination" : "https://www.sinanbolel.com/",
     "type" : 301
   } ]
 }
