@@ -18,12 +18,16 @@
     "source" : "**/*.@(jpg|jpeg|gif|png)",
     "headers" : [ {
       "key" : "Cache-Control",
-      "value" : "max-age=86400"
+      "value" : "max-age=7200"
     } ]
   } ],
   "redirects": [ {
     "source" : "/home",
     "destination" : "https://www.sinanbolel.com/",
     "type" : 301
+  } , {
+    "source" : "/contact",
+    "destination" : "https://www.sinanbolel.com/#contact",
+    "type" : 302
   } ]
 }

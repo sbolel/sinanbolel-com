@@ -44,12 +44,12 @@ angular.module('SinanBolelApp', [
   $scope.init = function(){
     $timeout(function(){
       $scope.visible = true;
-    }, 5)
+    })
     $timeout(function(){
       if($location.hash()==='contact'){
         $scope.scrollTo();
       }
-    }, 50)
+    }, 10)
   };
   $scope.scrollTo = function(){
       var el = document.getElementById('contact');
