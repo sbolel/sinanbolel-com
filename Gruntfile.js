@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         files: {
           'public/release/<%= pkg.name %>.js': [
             'public/src/utils/helpers.js',
-            'public/app.js',
+            'public/src/app.js',
             'public/src/home/**/*.js',
             'public/src/utils/server.js'
           ]
