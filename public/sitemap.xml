@@ -5,13 +5,13 @@
       xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url>
-    <loc>https://sinanbolel.com/</loc>
-    <lastmod>2016-02-13T19:24:32+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <image:image>
-       <image:loc>https://sinanbolel.com/assets/images/sb-logo-360-light.png</image:loc>
-       <image:caption>Sinan Bolel's Logo</image:caption>
-    </image:image>
-  </url>
+<url>
+  <loc>https://sinanbolel.com/</loc>
+  <lastmod>2016-02-13T19:24:32+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <image:image>
+     <image:loc>https://sinanbolel.com/assets/images/sb-logo-360-light.png</image:loc>
+     <image:caption>Sinan Bolel's Logo</image:caption>
+  </image:image>
+</url>
 </urlset>

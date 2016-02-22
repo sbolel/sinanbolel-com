@@ -1,6 +1,5 @@
 {
   "name": "sinanbolel",
-  "version": "1.1.1",
   "private": "true",
   "author": "Sinan Bolel <sinanbolel@gmail.com>",
   "description": "Sinan Bolel's Personal Site",
@@ -16,7 +15,7 @@
     "ionicons": "~2.0.1",
     "firebase": "^2.4.0",
     "angular-material-layout": "git@github.com:sbolel/angular-material-layout.git#~0.1.1",
-    "angular-firebase-form": "git@github.com:sbolel/angular-firebase-form.git#~0.0.1",
-    "Ionicons": "ionicons#^2.0.1"
+    "Ionicons": "ionicons#^2.0.1",
+    "angular-firebase-form": "git@github.com:sbolel/angular-firebase-form.git#~0.1.0"
   }
 }
