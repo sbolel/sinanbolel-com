@@ -1,49 +1,102 @@
-html, body, ui-view  {
-    margin: 0;
-    height: auto;
-    min-height: 100%;
+html,
+body {
+  margin: 0;
+  height: auto;
+  min-height: 100%;
+  background-color: #e8eaf6
 }
-
 #content-view {
   height: auto;
 }
-
-ui-view {
-  top: 0; 
-  bottom: 0;
+a.md-button.md-default-theme.md-fab,
+a.md-button.md-fab,
+.md-button.md-default-theme.md-fab,
+.md-button.md-fab {
+  background-color: rgb(255, 64, 129);
+  color: rgb(255, 255, 255);
+  height: 5rem;
+  width: 5rem;
 }
-
-/* Typography */
-
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;height:auto;}
-
-h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, select, textarea {
+#home-view {
+  background-color: #e3e3e3
+}
+#hero {
+  background-color: #3f51b5;
+  color: #fff;
+  text-align: center;
+}
+.logo {
+  background-image: url(sinan-bolel.jpeg);
+  background-size: cover;
+  border-radius: 9rem;
+  box-shadow: 0px 0px 1rem #424242;
+  margin-left: auto;
+  margin-right: auto;
+  height: 18rem;
+  width: 18rem;
+}
+.fade.ng-hide {
+  opacity: 0
+}
+.fade.ng-hide-remove {
+  transition: all linear 1s
+}
+.fade.ng-hide-add {
+  transition: all linear .5s
+}
+.social-icon-button {
+  font-size: 3rem;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+pre,
+table,
+blockquote,
+input,
+select,
+textarea {
   margin-bottom: 24px;
   margin-top: 0;
   padding: 0;
 }
-
-
-h6 {font-size: 0.75em;}
-
+h6 {
+  font-size: 0.75em;
+}
 h1.large {
   font-size: 3em;
   line-height: 80px;
   font-weight: 300;
 }
-
 p.lead {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
 }
-
 i.lg {
   font-size: 5em;
-  font-weight: 100;
-}
-/* Sizing */
-.thin {
   font-weight: 100;
 }
 .cover {
@@ -53,149 +106,25 @@ i.lg {
 .fullscreen {
   height: 100vh;
 }
-.hs {
-  height: 50vh;
+.center {
+  text-align: center;
 }
-.container {
-  max-width: 940px;
+.t-right {
+  text-align: right;
 }
-
-/* Mods */
-
-.pointer {cursor: pointer;}
-.center {text-align: center;}
-.t-right {text-align: right;}
-.light {font-weight: 200;}
-.uppercase {text-transform: uppercase;}
-
 /* Sections */
-
 #content {
   padding: 0;
 }
-
-/* Material Design Elements */
-
-.md-input {
-  margin-bottom: 0;
+.mb20 {
+  margin-bottom: 20px;
 }
-.dark {
-  background-color: #616161;
-}
-
-md-card.background {
-  background-color: #333;
-  color: white;
-}
-
-.md-table {
-  border-collapse: collapse;
-  min-width: 100%;
-}
-.md-table thead tr th {
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid #eee;
-  color: rgba(0,0,0,.54);
-}
-.md-table tbody tr {
-    height: 48px;
-}
-.md-table tbody tr td {
-  font-size: 14px;
-  vertical-align: middle;
-  border-bottom: 1px solid #eee;
-}
-.md-table tfoot tr {
-  width: 100%;
-}
-.md-table tfoot .md-table-footer {
-  font-size: 12px;
-  height: 56px;
-  color: rgba(0,0,0,.54);
-}
-
-.md-icon-button i {
-  font-size: 1.5em;
-}
-
-.toolbar-button {
-  position: relative;
-}
-
-.toolbar-button .button-glyph {
-  padding-bottom: 0.125em;
-}
-
-.toolbar-button .button-scale span {
-  font-size: 0.5em;
-  position: absolute;
-  width: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-/* Spacing */
-
-.mb0 {margin-bottom: 0;}
-.mb10 {margin-bottom: 10px;}
-.mb20 {margin-bottom: 20px;}
-.mb30 {margin-bottom: 30px;}
-.mb40 {margin-bottom: 40px;}
-.mb50 {margin-bottom: 50px;}
-.mb60 {margin-bottom: 60px;}
-
-.pb0 {padding-bottom: 0;}
-.pb20 {padding-bottom: 20px;}
-.pb30 {padding-bottom: 30px;}
-.pb40 {padding-bottom: 40px;}
-.pb50 {padding-bottom: 50px;}
-
-.mt20 {margin-top: 20px;}
-.mt30 {margin-top: 30px;}
-.mt40 {margin-top: 40px;}
-.mt50 {margin-top: 50px;}
-.mt60 {margin-top: 60px;}
-
-.pt20 {padding-top: 20px;}
-.pt30 {padding-top: 30px;}
-.pt40 {padding-top: 40px;}
-.pt50 {padding-top: 50px;}
-
-.pr20 {padding-right: 20px;}
-.pr30 {padding-right: 30px;}
-.pr40 {padding-right: 40px;}
-.pr50 {padding-right: 50px;}
-
-.pl20 {padding-left: 20px;}
-.pl30 {padding-left: 30px;}
-.pl40 {padding-left: 40px;}
-.pl50 {padding-left: 50px;}
-
-.zoom50 {
-  zoom: 0.50;
-  -moz-transform: scale(0.50);
-}
-.zoom70 {
-  zoom: 0.70;
-  -moz-transform: scale(0.70);
-}
-
-md-toast {
-  z-index: 10000;
-}
-
-md-toast.md-right.md-left {
-  text-align: center !important;
-}
-
 /* Media Queries */
 /*
-  layout-sm     600px > width           (phones).
-  layout-gt-sm  600px < width           (bigger than phones).
-  layout-md     600px < width < 960px   (tablets in portrait).
-  layout-gt-md  960px < width           (bigger than tablets in portrait).
-  layout-lg     960px < width < 1200px  (tablets in landscape).
-  layout-gt-lg  1200px < width          (computers and large screens).
+  layout-sm   600px > width       (phones).
+  layout-gt-sm  600px < width       (bigger than phones).
+  layout-md   600px < width < 960px   (tablets in portrait).
+  layout-gt-md  960px < width       (bigger than tablets in portrait).
+  layout-lg   960px < width < 1200px  (tablets in landscape).
+  layout-gt-lg  1200px < width      (computers and large screens).
 */
