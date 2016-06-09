@@ -49,22 +49,6 @@ module.exports = function(grunt) {
         files: {
           'public/release/<%= pkg.name %>.js': [
             'public/src/app.js',
-            'public/src/utils/server.js'
-          ]
-        }
-      },
-      vendor: {
-        files: {
-          'public/release/vendor.js': [
-            'bower_components/angular/angular.js',
-            'bower_components/angular-animate/angular-animate.js',
-            'bower_components/angular-aria/angular-aria.js',
-            'bower_components/angular-material/angular-material.js',
-            'bower_components/angular-route/angular-route.js',
-            'bower_components/angular-ui-router/release/angular-ui-router.js',
-            'bower_components/firebase/firebase.js',
-            'bower_components/angular-firebase-form/release/angular-firebase-form.min.js',
-            'bower_components/angular-material-layout/dist/angular-material-layout.min.js'
           ]
         }
       }
@@ -81,12 +65,27 @@ module.exports = function(grunt) {
       },
       vendor: {
         files: {
-          'public/release/vendor.min.js': ['public/release/vendor.js']
+          'public/release/vendor.min.js': [
+            'bower_components/angular/angular.js',
+            'bower_components/angular-animate/angular-animate.js',
+            'bower_components/angular-aria/angular-aria.js',
+            'bower_components/angular-material/angular-material.js',
+            'bower_components/angular-ui-router/release/angular-ui-router.js',
+            'bower_components/angular-material-layout/dist/angular-material-layout.min.js'
+          ]
         }
       },
       bundle: {
         files: {
-          'public/<%= pkg.name %>.bundle.js': ['public/release/vendor.js', 'public/release/<%= pkg.name %>.js']
+          'public/<%= pkg.name %>.bundle.min.js': [
+            'bower_components/angular/angular.js',
+            'bower_components/angular-animate/angular-animate.js',
+            'bower_components/angular-aria/angular-aria.js',
+            'bower_components/angular-material/angular-material.js',
+            'bower_components/angular-ui-router/release/angular-ui-router.js',
+            'bower_components/angular-material-layout/dist/angular-material-layout.min.js',
+            'public/release/<%= pkg.name %>.js'
+          ]
         }
       }
     },
@@ -138,9 +137,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-wiredep');
 
-  grunt.registerTask('build:vendor', ['ngAnnotate:vendor', 'uglify:vendor', 'cssmin:vendor']);
-  grunt.registerTask('build:dev', ['ngAnnotate:dev', 'uglify:dev', 'cssmin:dev']);
-  grunt.registerTask('build', ['ngAnnotate', 'uglify', 'cssmin']);
+  grunt.registerTask('build:vendor', ['uglify:vendor']);
+  grunt.registerTask('build:dev', ['ngAnnotate:dev', 'uglify:dev']);
+  grunt.registerTask('release', ['build:dev', 'build:vendor', 'cssmin']);
   grunt.registerTask('bundle', ['uglify:bundle']);
   grunt.registerTask('serve', ['connect', 'watch']);
   grunt.registerTask('default', ['serve']);

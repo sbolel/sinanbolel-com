@@ -5,8 +5,10 @@
     "firebase.json",
     "**/.*",
     "src",
+    "assets/css",
     "release",
-    "projects"
+    "projects",
+    "templates"
   ],
   "rules": "config/security-rules.json",
   "headers": [ {
@@ -32,9 +34,5 @@
     "source" : "/home",
     "destination" : "https://www.sinanbolel.com/",
     "type" : 301
-  } , {
-    "source" : "/contact",
-    "destination" : "https://www.sinanbolel.com/#contact",
-    "type" : 302
-  } ]
+  }]
 }

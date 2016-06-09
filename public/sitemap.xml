@@ -7,11 +7,11 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://sinanbolel.com/</loc>
-  <lastmod>2016-02-13T19:24:32+00:00</lastmod>
+  <lastmod>2016-06-08T09:24:32+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <image:image>
-     <image:loc>https://sinanbolel.com/assets/images/sb-logo-360-light.png</image:loc>
-     <image:caption>Sinan Bolel's Logo</image:caption>
+     <image:loc>https://sinanbolel.com/sinan-bolel.jpeg</image:loc>
+     <image:caption>Sinan Bolel</image:caption>
   </image:image>
 </url>
 </urlset>
