@@ -8,15 +8,6 @@ body {
 #content-view {
   height: auto;
 }
-a.md-button.md-default-theme.md-fab,
-a.md-button.md-fab,
-.md-button.md-default-theme.md-fab,
-.md-button.md-fab {
-  background-color: rgb(255, 64, 129);
-  color: rgb(255, 255, 255);
-  height: 5rem;
-  width: 5rem;
-}
 #home-view {
   background-color: #e3e3e3
 }
@@ -34,18 +25,6 @@ a.md-button.md-fab,
   margin-right: auto;
   height: 18rem;
   width: 18rem;
-}
-.fade.ng-hide {
-  opacity: 0
-}
-.fade.ng-hide-remove {
-  transition: all linear 1s
-}
-.fade.ng-hide-add {
-  transition: all linear .5s
-}
-.social-icon-button {
-  font-size: 3rem;
 }
 body,
 h1,
@@ -99,6 +78,19 @@ i.lg {
   font-size: 5em;
   font-weight: 100;
 }
+a.md-button.md-default-theme.md-fab,
+a.md-button.md-fab,
+.md-button.md-default-theme.md-fab,
+.md-button.md-fab {
+  background-color: rgb(255, 64, 129);
+  color: rgb(255, 255, 255);
+  height: 4.5rem;
+  width: 4.5rem;
+}
+a md-icon {
+  font-size: 3rem;
+  margin-top: -0.6rem;
+}
 .cover {
   margin: 0;
   padding: 0;
@@ -112,19 +104,6 @@ i.lg {
 .t-right {
   text-align: right;
 }
-/* Sections */
-#content {
-  padding: 0;
-}
 .mb20 {
   margin-bottom: 20px;
 }
-/* Media Queries */
-/*
-  layout-sm   600px > width       (phones).
-  layout-gt-sm  600px < width       (bigger than phones).
-  layout-md   600px < width < 960px   (tablets in portrait).
-  layout-gt-md  960px < width       (bigger than tablets in portrait).
-  layout-lg   960px < width < 1200px  (tablets in landscape).
-  layout-gt-lg  1200px < width      (computers and large screens).
-*/

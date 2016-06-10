@@ -137,10 +137,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-wiredep');
 
-  grunt.registerTask('build:vendor', ['uglify:vendor']);
-  grunt.registerTask('build:dev', ['ngAnnotate:dev', 'uglify:dev']);
-  grunt.registerTask('release', ['build:dev', 'build:vendor', 'cssmin']);
-  grunt.registerTask('bundle', ['uglify:bundle']);
   grunt.registerTask('serve', ['connect', 'watch']);
-  grunt.registerTask('default', ['serve']);
+  grunt.registerTask('default', ['cssmin', 'serve']);
 };
