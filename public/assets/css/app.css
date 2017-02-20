@@ -1,19 +1,24 @@
-html,
-body {
+html, body {
   margin: 0;
   height: auto;
   min-height: 100%;
   background-color: #e8eaf6
 }
+
 #content-view {
   height: auto;
 }
+
 #home-view {
   background-color: #e3e3e3
 }
+
 #hero {
   background-color: #3f51b5;
   color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   text-align: center;
 }
 .logo {
@@ -26,37 +31,13 @@ body {
   height: 18rem;
   width: 18rem;
 }
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: --apple-system, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: auto;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-pre,
-table,
-blockquote,
-input,
-select,
-textarea {
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, select, textarea {
   margin-bottom: 24px;
   margin-top: 0;
   padding: 0;
@@ -78,6 +59,7 @@ i.lg {
   font-size: 5em;
   font-weight: 100;
 }
+
 a.md-button.md-default-theme.md-fab,
 a.md-button.md-fab,
 .md-button.md-default-theme.md-fab,
