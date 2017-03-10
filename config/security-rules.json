@@ -12,18 +12,18 @@
       ".write": "!data.exists()"
       }
     },
-    
+
     "fs":{
       ".read":true,
       ".write": true
     },
-    
+
     "sb:plnkr":{
       ".read":false,
       ".write":false,
       "so:29996982":{
         ".read": true,
-        ".write": true        
+        ".write": true
       },
       "so:28942661": {
         ".read": true,
@@ -35,11 +35,11 @@
       },
       "so:29016772": {
         ".read": true,
-        ".write": true 
+        ".write": true
       },
       "so:29055552": {
         ".read": true,
-        ".write": true 
+        ".write": true
       },
       "syncedValue":{
         ".read":true,
@@ -86,7 +86,5 @@
         }
       }
     }
-    
-    
   }
 }

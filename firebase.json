@@ -1,38 +1,40 @@
 {
-  "firebase": "sinanbolel",
-  "public": "./public",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "src",
-    "assets/css",
-    "release",
-    "projects",
-    "templates"
-  ],
   "rules": "config/security-rules.json",
-  "headers": [ {
-    "source" : "**/*.@(svg|jpg|jpeg|gif|png)",
-    "headers" : [ {
-      "key" : "Cache-Control",
-      "value" : "max-age=2592000"
-    } ]
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/node_modules/**",
+      "assets/css/",
+      "projects/"
+    ],
+    "headers": [ {
+      "source" : "**/*.@(svg|jpg|jpeg|gif|png)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=2592000"
+      } ]
     } , {
-    "source" : "**/*.@(eot|ttf|woff)",
-    "headers" : [ {
-      "key" : "Cache-Control",
-      "value" : "max-age=2592000"
-    } ]
-  } , {
-    "source" : "**/*.@(js|css)",
-    "headers" : [ {
-      "key" : "Cache-Control",
-      "value" : "max-age=2592000"
-    } ]
-  }],
-  "redirects": [ {
-    "source" : "/home",
-    "destination" : "https://www.sinanbolel.com/",
-    "type" : 301
-  }]
+      "source" : "**/*.@(eot|ttf|woff|css)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=2592000"
+      } ]
+    } , {
+      "source" : "**/*.@(html|pdf)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=0"
+      } ]
+    }],
+    "redirects": [ {
+      "source" : "/home",
+      "destination" : "https://sinanbolel.com/",
+      "type" : 301
+    }, {
+      "source" : "/resume",
+      "destination" : "https://sinanbolel.com/resume.pdf",
+      "type" : 302
+    }]
+  }
 }
