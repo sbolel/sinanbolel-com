@@ -9,18 +9,13 @@
 
 <img href="https://sinanbolel.com" src="https://sinanbolel.com/sinan-bolel.jpeg" width="250" height="250"/>
 
-Sinan is a Development Manager at [Rocket Wagon](http://rw.co). His expertise lies in engineering robust full-stack systems and building remarkable user experiences. Sinan received his B.S. in Computer Science from Northwestern University.
-
 ### Connect
 
 * [GitHub](https://github.com/sbolel)
-* [npm](https://www.npmjs.com/~sinanbolel)
 * [StackOverflow](http://stackoverflow.com/users/1526037/sinan-bolel)
 * [LinkedIn](https://www.linkedin.com/in/sinanbolel)
 * [Instagram](https://www.instagram.com/sinan.bolel/)
-* [+Google](https://plus.google.com/+SinanBolel)
 * [AngelList](https://angel.co/sinanbolel)
-* [Facebook](https://www.facebook.com/sinanbolel.co/?ref=github)
 * [Medium](https://medium.com/@sinbols)
 
 [sinan-url]: https://sinanbolel.com
