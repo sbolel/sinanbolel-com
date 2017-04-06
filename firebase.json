@@ -5,36 +5,65 @@
     "ignore": [
       "firebase.json",
       "**/node_modules/**",
-      "assets/css/",
-      "projects/"
+      "assets/css/"
     ],
-    "headers": [ {
-      "source" : "**/*.@(svg|jpg|jpeg|gif|png)",
-      "headers" : [ {
-        "key" : "Cache-Control",
-        "value" : "max-age=2592000"
-      } ]
-    } , {
-      "source" : "**/*.@(eot|ttf|woff|css)",
-      "headers" : [ {
-        "key" : "Cache-Control",
-        "value" : "max-age=2592000"
-      } ]
-    } , {
-      "source" : "**/*.@(html|pdf)",
-      "headers" : [ {
-        "key" : "Cache-Control",
-        "value" : "max-age=0"
-      } ]
-    }],
-    "redirects": [ {
-      "source" : "/home",
-      "destination" : "https://sinanbolel.com/",
-      "type" : 301
-    }, {
-      "source" : "/resume",
-      "destination" : "https://goo.gl/FC3aiq",
-      "type" : 302
-    }]
+    "headers": [
+      {
+        "source": "**/*.@(svg|jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(eot|ttf|woff|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html|pdf)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/home",
+        "destination": "https://sinanbolel.com",
+        "type": 301
+      },
+      {
+        "source": "/@(git|github|code)",
+        "destination": "https://github.com/sbolel",
+        "type": 302
+      },
+      {
+        "source": "/@(linkedin|li|in)",
+        "destination": "https://www.linkedin.com/in/sinanbolel",
+        "type": 302
+      },
+      {
+        "source": "/@(resume|cv)",
+        "destination": "https://goo.gl/FC3aiq",
+        "type": 302
+      },
+      {
+        "source" : "/@(cal|calendar|meet|book)",
+        "destination": "https://goo.gl/Jpc3pG",
+        "type" : 302
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }
