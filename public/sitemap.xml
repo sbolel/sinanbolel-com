@@ -7,11 +7,16 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://sinanbolel.com/</loc>
-  <lastmod>2017-03-08T09:24:32+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2017-05-16T14:22:12+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <image:image>
-     <image:loc>https://sinanbolel.com/sinan-bolel.jpeg</image:loc>
+     <image:loc>https://sinanbolel.com/sinan-bolel.jpg</image:loc>
      <image:caption>Sinan Bolel</image:caption>
   </image:image>
+</url>
+<url>
+  <loc>https://sinanbolel.com/sinan-bolel-resume.pdf</loc>
+  <lastmod>2017-05-16T15:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
 </url>
 </urlset>
