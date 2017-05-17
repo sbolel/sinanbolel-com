@@ -1,6 +1,6 @@
 {
   "name": "sinanbolel",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "author": "Sinan Bolel <sinanbolel@gmail.com>",
   "description": "Sinan Bolel's Personal Site",
@@ -8,19 +8,12 @@
   "repository": "https://github.com/sbolel/sbolel.github.io",
   "scripts": {
     "deploy": "firebase deploy --project project-8970125030784982605",
-    "postinstall": "bower update",
-    "start": "grunt"
+    "start": "serve ./public"
   },
   "devDependencies": {
-    "bower": "1.8.0",
-    "grunt": "1.0.1",
-    "grunt-contrib-clean": "1.1.0",
-    "grunt-contrib-connect": "1.0.2",
-    "grunt-contrib-cssmin": "2.1.0",
-    "grunt-contrib-watch": "1.0.0",
-    "uglify-js": "github:mishoo/UglifyJS2#harmony"
+    "serve": "^5.1.5"
   },
-  "dependencies": {
+  "optionalDependencies": {
     "ionicons": "^3.0.0"
   }
 }
