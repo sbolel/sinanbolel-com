@@ -72,7 +72,7 @@
         "type" : 302
       }
     ],
-    "cleanUrls": true,
+    "cleanUrls": false,
     "trailingSlash": false
   }
 }
