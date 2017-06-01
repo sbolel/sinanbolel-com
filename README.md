@@ -11,11 +11,11 @@
 
 ### Connect
 
+* [LinkedIn](https://www.linkedin.com/in/sinanbolel)
 * [GitHub](https://github.com/sbolel)
 * [StackOverflow](http://stackoverflow.com/users/1526037/sinan-bolel)
-* [LinkedIn](https://www.linkedin.com/in/sinanbolel)
+* [Facebook](http://www.facebook.com/sinan.bolel)
 * [Instagram](https://www.instagram.com/sinan.bolel/)
-* [AngelList](https://angel.co/sinanbolel)
 * [Medium](https://medium.com/@sinbols)
 
 [sinan-url]: https://sinanbolel.com

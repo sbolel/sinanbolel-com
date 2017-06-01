@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Ionicons;
+  src: url(/fonts/ionicons.eot?v=3.0.0-alpha.3-patch);
+  src: url(/fonts/ionicons.eot?v=3.0.0-alpha.3-patch#iefix) format("embedded-opentype"), url(/fonts/ionicons.woff2?v=3.0.0-alpha.3-patch) format("woff2"), url(/fonts/ionicons.woff?v=3.0.0-alpha.3-patch) format("woff"), url(/fonts/ionicons.ttf?v=3.0.0-alpha.3-patch) format("truetype"), url(/fonts/ionicons.svg?v=3.0.0-alpha.3-patch#Ionicons) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ion,
+.ion-logo-github:before,
+.ion-logo-instagram:before,
+.ion-logo-linkedin:before,
+.ionicons {
+  display: inline-block;
+  font-family: Ionicons;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ion-logo-linkedin {
+  background-color: #0077b5;
+}
+
+.ion-logo-github {
+  background-color: #24292e;
+}
+
+.ion-logo-instagram:before {
+  content: "\f23e";
+}
+
+.ion-logo-github:before {
+  content: "\f239";
+}
+
+.ion-logo-linkedin:before {
+  content: "\f240";
+}

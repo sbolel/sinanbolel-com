@@ -1,36 +1,22 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
-<!--
-2016-1-11: Created with FontForge (http://fontforge.org)
--->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
 Created by FontForge 20150913 at Mon Jan 11 15:33:02 2016
- By Adam Bradley
+By Adam Bradley
 Copyright (c) 2016, Adam Bradley
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="416" >
-  <font-face
-    font-family="Ionicons"
-    font-weight="400"
-    font-stretch="normal"
-    units-per-em="512"
-    panose-1="2 0 5 3 0 0 0 0 0 0"
-    ascent="448"
-    descent="-64"
-    bbox="-0.75 -64 512.487 448"
-    underline-thickness="25.6"
-    underline-position="-51.2"
-    unicode-range="U+F100-F4CD"
-  />
-    <missing-glyph />
-    <glyph glyph-name="ion-logo-linkedin" unicode="&#xf240;" horiz-adv-x="384"
+<font-face font-family="Ionicons" font-weight="400" font-stretch="normal" units-per-em="512" panose-1="2 0 5 3 0 0 0 0 0 0" ascent="448" descent="-64" bbox="-0.75 -64 512.487 448" underline-thickness="25.6" underline-position="-51.2" unicode-range="U+F100-F4CD"/>
+<missing-glyph /><glyph glyph-name="ion-logo-linkedin" unicode="&#xf240;" horiz-adv-x="384"
 d="M353 384c18 0 31 -13 31 -30v-321c0 -17 -13 -33 -31 -33h-320c-18 0 -33 16 -33 33v321c0 17 15 30 33 30h320zM119 64v171h-55v-171h55zM93 261c18 0 30 13 30 29c0 17 -11 30 -29 30s-30 -13 -30 -30c0 -16 11 -29 29 -29v0zM320 64v100c0 51 -27 75 -63 75
-c-29 0 -42 -17 -50 -28v24h-55v-171h55v97c0 5 0 10 2 14c4 10 13 20 28 20c20 0 28 -15 28 -37v-94h55z" />
-    <glyph glyph-name="ion-logo-github" unicode="&#xf239;" horiz-adv-x="448"
+c-29 0 -42 -17 -50 -28v24h-55v-171h55v97c0 5 0 10 2 14c4 10 13 20 28 20c20 0 28 -15 28 -37v-94h55z" /><glyph glyph-name="ion-logo-github" unicode="&#xf239;" horiz-adv-x="448"
 d="M224 416c124 0 224 -103 224 -230c0 -101 -64 -188 -153 -218h-4c-8 0 -12 7 -12 12c0 8 1 31 1 62c0 21 -8 36 -16 43c50 6 103 25 103 113c0 25 -9 46 -23 62c2 6 10 29 -2 61h-5c-8 0 -27 -3 -57 -24c-18 5 -37 8 -56 8s-38 -3 -56 -8c-30 21 -49 24 -57 24h-5
 c-12 -32 -4 -55 -2 -61c-14 -16 -23 -37 -23 -62c0 -88 52 -107 102 -113c-6 -6 -12 -16 -14 -31c-6 -3 -16 -6 -26 -6c-13 0 -28 5 -39 25c0 0 -13 22 -35 24v0c-2 0 -21 0 -1 -14c0 0 15 -8 25 -34c0 0 10 -33 53 -33c7 0 14 0 22 2v-39c0 -5 -3 -11 -11 -11h-4
 c-89 30 -153 116 -153 218c0 127 100 230 224 230z" />
-  </font>
+<glyph glyph-name="ion-logo-instagram" unicode="&#xf23e;" horiz-adv-x="384"
+d="M112 192c0 44 36 80 80 80s80 -36 80 -80s-36 -80 -80 -80s-80 36 -80 80zM113 271c-13 -13 -23 -29 -28 -47h-85v112c0 27 22 48 49 48h288c27 0 47 -21 47 -48v-112h-84c-5 18 -15 34 -28 47c-21 21 -50 33 -80 33s-58 -12 -79 -33zM352 300v39c0 7 -6 13 -13 13h-38
+c-7 0 -13 -6 -13 -13v-39c0 -7 6 -12 13 -12h38c7 0 13 5 13 12zM272 113c21 21 32 50 32 79h80v-144c0 -27 -20 -48 -47 -48h-288c-27 0 -49 21 -49 48v144h81c0 -29 11 -58 32 -79s49 -33 79 -33s59 12 80 33z" />
+</font>
 </defs></svg>
