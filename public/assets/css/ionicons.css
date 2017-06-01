@@ -1,7 +1,7 @@
 @font-face {
   font-family: Ionicons;
-  src: url(/fonts/ionicons.eot?v=3.0.0-alpha.3);
-  src: url(/fonts/ionicons.eot?v=3.0.0-alpha.3#iefix) format("embedded-opentype"), url(../fonts/ionicons.woff2?v=3.0.0-alpha.3) format("woff2"), url(../fonts/ionicons.woff?v=3.0.0-alpha.3) format("woff"), url(../fonts/ionicons.ttf?v=3.0.0-alpha.3) format("truetype"), url(../fonts/ionicons.svg?v=3.0.0-alpha.3#Ionicons) format("svg");
+  src: url(/fonts/ionicons.eot?v=3.0.0-alpha.3-patch);
+  src: url(/fonts/ionicons.eot?v=3.0.0-alpha.3-patch#iefix) format("embedded-opentype"), url(/fonts/ionicons.woff2?v=3.0.0-alpha.3-patch) format("woff2"), url(/fonts/ionicons.woff?v=3.0.0-alpha.3-patch) format("woff"), url(/fonts/ionicons.ttf?v=3.0.0-alpha.3-patch) format("truetype"), url(/fonts/ionicons.svg?v=3.0.0-alpha.3-patch#Ionicons) format("svg");
   font-weight: 400;
   font-style: normal;
 }
