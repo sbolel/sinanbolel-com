@@ -8,8 +8,8 @@
       "yarn.lock",
       "Gruntfile.js",
       "**/node_modules/**",
-      "public/assets/css/**",
-      "public/projects/**"
+      "assets/css/**",
+      "projects/**"
     ],
     "headers": [{
       "source": "**/*.@(svg|jpg|jpeg|gif|png)",
