@@ -1,61 +1,68 @@
 {
   "rules": "config/security-rules.json",
   "hosting": {
+    "site": "sinanbolel",
     "public": "public",
     "ignore": [
+      "README.md",
+      "yarn.lock",
+      "Gruntfile.js",
       "**/node_modules/**",
-      "firebase.json",
-      "assets/css/**",
-      "projects/**"
+      "public/assets/css/**",
+      "public/projects/**"
     ],
-    "headers": [ {
-        "source": "**/*.@(svg|jpg|jpeg|gif|png)",
-        "headers": [
-          { "key": "Cache-Control",
-            "value": "max-age=2592000" } ]
-      }, {
-        "source": "**/*.@(eot|ttf|woff|css)",
-        "headers": [
-          { "key": "Cache-Control",
-            "value": "max-age=2592000" } ]
-      }, {
-        "source": "**/*.@(html)",
-        "headers": [
-          { "key": "Cache-Control",
-            "value": "max-age=0" } ]
-      }, {
-        "source": "cdn/*.@(js|min.js)",
-        "headers": [
-          { "key": "Cache-Control",
-            "value": "max-age=2592000" } ]
-      }
-    ],
-    "redirects": [
-      { "source": "/home",
+    "headers": [{
+      "source": "**/*.@(svg|jpg|jpeg|gif|png)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=2592000"
+      }]
+    }, {
+      "source": "**/*.@(eot|ttf|woff|css)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=2592000"
+      }]
+    }, {
+      "source": "**/*.@(html)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=0"
+      }]
+    }, {
+      "source": "cdn/*.@(js|min.js)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=2592000"
+      }]
+    }],
+    "redirects": [{
+        "source": "/home",
         "destination": "https://sinanbolel.com",
         "type": 301
       },
-      { "source": "/@(git|github|code)",
+      {
+        "source": "/@(git|github|code)",
         "destination": "https://github.com/sbolel",
         "type": 302
       },
-      { "source": "/@(linkedin|li|in)",
+      {
+        "source": "/@(linkedin|li|in)",
         "destination": "https://www.linkedin.com/in/sinanbolel",
         "type": 302
       },
-      { "source": "/@(resume|cv)",
+      {
+        "source": "/@(resume|cv)",
         "destination": "https://goo.gl/iOqwL1",
         "type": 302
       },
-      { "source" : "/@(cal|calendar|meet|book)",
+      {
+        "source": "/@(cal|calendar|meet|book)",
         "destination": "https://goo.gl/Jpc3pG",
-        "type" : 302
+        "type": 302
       }
     ],
-    "rewrites": [
-      { "source": "/v2",
-        "destination": "/index-v2.1.1.html" }
-    ],
+    "rewrites": [],
     "cleanUrls": false,
     "trailingSlash": false
   }

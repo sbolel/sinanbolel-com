@@ -7,16 +7,25 @@
   "homepage": "https://sinanbolel.com",
   "repository": "https://github.com/sbolel/sbolel.github.io",
   "scripts": {
+    "clean": "rimraf public/index.html public/sinanbolel.min.css",
+    "prebuild": "npm run clean",
+    "build": "grunt build",
+    "build:hash": "grunt replace --target=`md5 ./public/sinanbolel.min.css | cut -c37-44`",
+    "postbuild": "npm run build:hash && cp public/sinanbolel.min.css public/styles-`md5 ./public/sinanbolel.min.css | cut -c37-44`.min.css && rm public/sinanbolel.min.css",
     "deploy": "firebase deploy --project project-8970125030784982605 --only hosting,database:rules",
-    "start": "serve ./public"
+    "start": "grunt serve"
   },
   "devDependencies": {
     "grunt": "^1.3.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-watch": "^1.1.0",
-    "serve": "^11.3.2"
+    "grunt-replace": "^1.0.1",
+    "rimraf": "^3.0.2",
+    "serve": "^11.3.2",
+    "yarn-run-all": "^3.1.1"
   },
   "optionalDependencies": {
     "ionicons": "^5.1.2"

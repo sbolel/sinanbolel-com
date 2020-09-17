@@ -1,27 +1,23 @@
 {
   "rules": {
-
     ".read": false,
     ".write": false,
-
-    "messages":{
-      ".read":false,
-      ".write": false,
-      "$message":{
+    "messages": {
       ".read": false,
-      ".write": "!data.exists()"
+      ".write": false,
+      "$message": {
+        ".read": false,
+        ".write": "!data.exists()"
       }
     },
-
-    "fs":{
-      ".read":true,
+    "fs": {
+      ".read": true,
       ".write": true
     },
-
-    "sb:plnkr":{
-      ".read":false,
-      ".write":false,
-      "so:29996982":{
+    "sb:plnkr": {
+      ".read": false,
+      ".write": false,
+      "so:29996982": {
         ".read": true,
         ".write": true
       },
@@ -29,7 +25,7 @@
         ".read": true,
         ".write": true
       },
-      "so:28975845":{
+      "so:28975845": {
         ".read": true,
         ".write": true
       },
@@ -41,46 +37,46 @@
         ".read": true,
         ".write": true
       },
-      "syncedValue":{
-        ".read":true,
-        ".write":true
+      "syncedValue": {
+        ".read": true,
+        ".write": true
       },
-      "so:29083862":{
-        ".read":true,
-        ".write":true
+      "so:29083862": {
+        ".read": true,
+        ".write": true
       },
-      "so:29129341":{
-        ".read":true,
-        ".write":true,
-        "posts":{
-          ".indexOn":"timestamp"
+      "so:29129341": {
+        ".read": true,
+        ".write": true,
+        "posts": {
+          ".indexOn": "timestamp"
         }
       },
-      "so:29164753":{
-        ".read":true,
-        ".write":true,
-        "series":{
-          ".indexOn":"name"
+      "so:29164753": {
+        ".read": true,
+        ".write": true,
+        "series": {
+          ".indexOn": "name"
         }
       },
-      "so:29179389":{
-        ".read":true,
-        ".write":true,
-        "companies":{
-          ".indexOn":"creation"
+      "so:29179389": {
+        ".read": true,
+        ".write": true,
+        "companies": {
+          ".indexOn": "creation"
         },
-        "companies2":{
-          ".indexOn":"creation"
+        "companies2": {
+          ".indexOn": "creation"
         }
       },
-      "so:29306489":{
-        ".read":true,
-        "users" : {
-          "$user_id" : {
+      "so:29306489": {
+        ".read": true,
+        "users": {
+          "$user_id": {
             ".read": "auth.uid === $user_id",
             ".write": "auth.uid === $user_id",
-            "messages":{
-               ".write":"root.child('so:29306489').child('users').child($user_id).child('friends').hasChild(auth.uid)"
+            "messages": {
+              ".write": "root.child('so:29306489').child('users').child($user_id).child('friends').hasChild(auth.uid)"
             }
           }
         }

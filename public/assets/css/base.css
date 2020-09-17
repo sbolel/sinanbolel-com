@@ -41,12 +41,12 @@ body {
 }
 
 .connections {
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   position: relative;
   z-index: 1;
 }
 
-.connections > a {
+.connections a {
   margin: 0 1rem;
 }
 
@@ -55,14 +55,13 @@ body {
   font-size: 3rem;
   font-weight: 300;
   line-height: 3rem;
-  margin: 0 0 4rem;
+  margin: 0 0 2.5rem;
   padding: 0;
   vertical-align: bottom;
   width: 100%;
 }
 
 .logo {
-  /*vertical-align: middle;*/
   border-radius: 50%;
   border-width: 8px outset #eee;
   box-shadow: 0 0 1rem #424242;
