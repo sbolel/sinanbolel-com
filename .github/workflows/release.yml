@@ -41,7 +41,12 @@ jobs:
           yarn --frozen-lockfile
       - name: Build
         run: yarn build
-      - name: Deploy to Firebase
+      - name: Semantic Release
+        run: yarn semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy
         run: yarn deploy-ci
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
