@@ -3,6 +3,6 @@
 **/node_modules
 public/index.html
 public/styles-*.min.css
-public/assets/
+public/assets/css
 public/release/
 public/.git

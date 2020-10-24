@@ -20,11 +20,11 @@
       { "source": "cdn/*.@(js|min.js)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] }
     ],
     "redirects": [
-      { "source": "/home", "destination": "https://sinanbolel.com", "type": 301 },
-      { "source": "/@(cal|calendar|meet|book)", "destination": "https://goo.gl/Jpc3pG", "type": 302 },
+      { "source": "/home", "destination": "https://sinanbolel.com", "type": 302 },
+      { "source": "/@(cal|calendar|meet|book)", "destination": "https://link.sinanbolel.com/url/cal", "type": 302 },
       { "source": "/@(git|github|code)", "destination": "https://github.com/sbolel", "type": 302 },
       { "source": "/@(linkedin|li|in)", "destination": "https://www.linkedin.com/in/sinanbolel", "type": 302 },
-      { "source": "/@(resume|cv)", "destination": "https://goo.gl/iOqwL1", "type": 302 }
+      { "source": "/@(resume|cv)", "destination": "https://resume.sinanbolel.com", "type": 302 }
     ],
     "rewrites": [
       { "source": "/url/**", "dynamicLinks": true },
