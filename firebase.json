@@ -1,45 +1,56 @@
 {
-  "rules": "config/security-rules.json",
   "hosting": {
     "site": "sinanbolel",
     "public": "public",
+    "appAssociation": "AUTO",
+    "cleanUrls": false,
+    "trailingSlash": false,
     "ignore": [
-      "README.md",
-      "yarn.lock",
-      "Gruntfile.js",
       "**/node_modules/**",
       "assets/css/**",
-      "projects/**"
+      "projects/**",
+      "Gruntfile.js",
+      "README.md",
+      "yarn.lock"
     ],
     "headers": [{
-      "source": "**/*.@(svg|jpg|jpeg|gif|png)",
-      "headers": [{
-        "key": "Cache-Control",
-        "value": "max-age=2592000"
-      }]
-    }, {
-      "source": "**/*.@(eot|ttf|woff|css)",
-      "headers": [{
-        "key": "Cache-Control",
-        "value": "max-age=2592000"
-      }]
-    }, {
-      "source": "**/*.@(html)",
-      "headers": [{
-        "key": "Cache-Control",
-        "value": "max-age=0"
-      }]
-    }, {
-      "source": "cdn/*.@(js|min.js)",
-      "headers": [{
-        "key": "Cache-Control",
-        "value": "max-age=2592000"
-      }]
-    }],
+        "source": "**/*.@(svg|jpg|jpeg|gif|png)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=2592000"
+        }]
+      },
+      {
+        "source": "**/*.@(eot|ttf|woff|css)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=2592000"
+        }]
+      },
+      {
+        "source": "**/*.@(html)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=0"
+        }]
+      },
+      {
+        "source": "cdn/*.@(js|min.js)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=2592000"
+        }]
+      }
+    ],
     "redirects": [{
         "source": "/home",
         "destination": "https://sinanbolel.com",
         "type": 301
+      },
+      {
+        "source": "/@(cal|calendar|meet|book)",
+        "destination": "https://goo.gl/Jpc3pG",
+        "type": 302
       },
       {
         "source": "/@(git|github|code)",
@@ -55,15 +66,12 @@
         "source": "/@(resume|cv)",
         "destination": "https://goo.gl/iOqwL1",
         "type": 302
-      },
-      {
-        "source": "/@(cal|calendar|meet|book)",
-        "destination": "https://goo.gl/Jpc3pG",
-        "type": 302
       }
     ],
-    "rewrites": [],
-    "cleanUrls": false,
-    "trailingSlash": false
-  }
+    "rewrites": [{
+      "source": "/link/**",
+      "dynamicLinks": true
+    }]
+  },
+  "rules": "config/security-rules.json"
 }

@@ -1,5 +1,6 @@
 .*
-node_modules
+**/.firebase
+**/node_modules
 public/release
 public/google*
 public/.git
