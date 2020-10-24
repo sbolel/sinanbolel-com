@@ -12,9 +12,8 @@
   "scripts": {
     "clean": "rimraf public/index.html public/sinanbolel.min.css",
     "prebuild": "npm run clean",
-    "build": "grunt build",
-    "build-hash": "grunt replace --target=`md5 ./public/sinanbolel.min.css | cut -c37-44`",
-    "postbuild": "npm run build-hash && cp public/sinanbolel.min.css public/styles-`md5 ./public/sinanbolel.min.css | cut -c37-44`.min.css && rm public/sinanbolel.min.css",
+    "build": "grunt build && grunt replace --target=\"$(bin/hash.sh)\"",
+    "postbuild": "cp public/sinanbolel.min.css \"$(bin/hash.sh)\" && rm public/sinanbolel.min.css",
     "predeploy": "firebase use default",
     "predeploy-ci": "firebase use default",
     "deploy": "firebase deploy --only database:rules,hosting",
@@ -29,6 +28,7 @@
     "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-replace": "^1.0.1",
+    "md5": "^2.3.0",
     "rimraf": "^3.0.2",
     "serve": "^11.3.2",
     "yarn-run-all": "^3.1.1"

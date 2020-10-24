@@ -88,6 +88,8 @@ module.exports = ({
     }
   }
 
+
+
   initConfig({ clean, connect, cssmin, htmlmin, pkg, replace, watch })
 
   plugins.forEach(loadNpmTasks)
