@@ -19,6 +19,7 @@
     "deploy": "firebase deploy --only database:rules,hosting",
     "deploy-ci": "firebase deploy --only database:rules,hosting -m \"[ci] $(git rev-parse --short HEAD)\" --token \"$FIREBASE_TOKEN\"",
     "start": "grunt serve",
+    "serve": "npm run start",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {

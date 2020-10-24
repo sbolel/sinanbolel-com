@@ -19,3 +19,9 @@
   background-color: #e3e3e3;
   background-image: url('./assets/img/logo-github.svg');
 }
+
+.ion-logo-resume {
+  background-color: rgb(58, 108, 135);
+  background-size: 90%;
+  background-image: url('./assets/img/candidate.svg');
+}
