@@ -13,7 +13,7 @@
     "clean": "rimraf public/index.html public/sinanbolel.min.css",
     "prebuild": "npm run clean",
     "build": "grunt build && grunt replace --target=\"$(bin/hash.sh)\"",
-    "postbuild": "cp public/sinanbolel.min.css \"$(bin/hash.sh)\" && rm public/sinanbolel.min.css",
+    "postbuild": "cp public/sinanbolel.min.css \"public/$(bin/hash.sh)\" && rm public/sinanbolel.min.css",
     "predeploy": "firebase use default",
     "predeploy-ci": "firebase use default",
     "deploy": "firebase deploy --only database:rules,hosting",

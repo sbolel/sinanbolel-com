@@ -1,6 +1,8 @@
 **/.DS_Store
 **/.firebase
 **/node_modules
-public/release
-public/google*
+public/index.html
+public/styles-*.min.css
+public/assets/
+public/release/
 public/.git
