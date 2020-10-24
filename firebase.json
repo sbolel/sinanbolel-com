@@ -13,65 +13,23 @@
       "README.md",
       "yarn.lock"
     ],
-    "headers": [{
-        "source": "**/*.@(svg|jpg|jpeg|gif|png)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=2592000"
-        }]
-      },
-      {
-        "source": "**/*.@(eot|ttf|woff|css)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=2592000"
-        }]
-      },
-      {
-        "source": "**/*.@(html)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=0"
-        }]
-      },
-      {
-        "source": "cdn/*.@(js|min.js)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=2592000"
-        }]
-      }
+    "headers": [
+      { "source": "**/*.@(svg|jpg|jpeg|gif|png)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] },
+      { "source": "**/*.@(eot|ttf|woff|css)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] },
+      { "source": "**/*.@(html)", "headers": [{ "key": "Cache-Control", "value": "max-age=0" }] },
+      { "source": "cdn/*.@(js|min.js)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] }
     ],
-    "redirects": [{
-        "source": "/home",
-        "destination": "https://sinanbolel.com",
-        "type": 301
-      },
-      {
-        "source": "/@(cal|calendar|meet|book)",
-        "destination": "https://goo.gl/Jpc3pG",
-        "type": 302
-      },
-      {
-        "source": "/@(git|github|code)",
-        "destination": "https://github.com/sbolel",
-        "type": 302
-      },
-      {
-        "source": "/@(linkedin|li|in)",
-        "destination": "https://www.linkedin.com/in/sinanbolel",
-        "type": 302
-      },
-      {
-        "source": "/@(resume|cv)",
-        "destination": "https://goo.gl/iOqwL1",
-        "type": 302
-      }
+    "redirects": [
+      { "source": "/home", "destination": "https://sinanbolel.com", "type": 301 },
+      { "source": "/@(cal|calendar|meet|book)", "destination": "https://goo.gl/Jpc3pG", "type": 302 },
+      { "source": "/@(git|github|code)", "destination": "https://github.com/sbolel", "type": 302 },
+      { "source": "/@(linkedin|li|in)", "destination": "https://www.linkedin.com/in/sinanbolel", "type": 302 },
+      { "source": "/@(resume|cv)", "destination": "https://goo.gl/iOqwL1", "type": 302 }
     ],
-    "rewrites": [{
-      "source": "/link/**",
-      "dynamicLinks": true
-    }]
+    "rewrites": [
+      { "source": "/url/**", "dynamicLinks": true },
+      { "source": "**", "destination": "/index.html" }
+    ]
   },
   "rules": "config/security-rules.json"
 }
