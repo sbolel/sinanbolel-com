@@ -24,7 +24,6 @@ jobs:
           npm i -g yarn
           yarn set version latest
           yarn config set enableTelemetry 0
-          echo "::add-path::$(yarn global bin)"
           echo "::set-output name=dir::$(yarn cache dir)"
       - name: Cache Yarn
         uses: actions/cache@v2
