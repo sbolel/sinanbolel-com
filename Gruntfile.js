@@ -88,12 +88,8 @@ module.exports = ({
     }
   }
 
-
-
   initConfig({ clean, connect, cssmin, htmlmin, pkg, replace, watch })
-
   plugins.forEach(loadNpmTasks)
-
   registerTask('serve', ['connect', 'watch'])
   registerTask('build', ['cssmin', 'htmlmin'])
   registerTask('default', ['build', 'serve'])
