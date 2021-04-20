@@ -25,7 +25,8 @@
       { "source": "/@(git|github|code)", "destination": "https://link.sinanbolel.com/url/github", "type": 302 },
       { "source": "/@(linkedin|li|in)", "destination": "https://link.sinanbolel.com/url/linkedin", "type": 302 },
       { "source": "/@(resume|cv)", "destination": "https://link.sinanbolel.com/url/cv", "type": 302 },
-      { "source": "/@(stackoverflow|so)", "destination": "https://link.sinanbolel.com/url/stackoverflow", "type": 302 }
+      { "source": "/@(stackoverflow|so)", "destination": "https://link.sinanbolel.com/url/stackoverflow", "type": 302 },
+      { "source": "/@(twitter)", "destination": "https://link.sinanbolel.com/url/twitter", "type": 302 }
     ],
     "rewrites": [
       { "source": "/url/**", "dynamicLinks": true },
