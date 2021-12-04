@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git@github.com:sbolel/sinanbolel-com.git"
   },
+  "license": "UNLICENSED",
   "scripts": {
     "clean": "rimraf public/index.html public/sinanbolel.min.css",
     "prebuild": "npm run clean",
