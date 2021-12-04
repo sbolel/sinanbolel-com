@@ -13,14 +13,12 @@
   "scripts": {
     "clean": "rimraf public/index.html public/sinanbolel.min.css",
     "prebuild": "npm run clean",
-    "build": "grunt build && grunt replace --target=\"$(bin/hash.sh)\"",
-    "postbuild": "cp public/sinanbolel.min.css \"public/$(bin/hash.sh)\" && rm public/sinanbolel.min.css",
+    "build": "grunt build",
     "predeploy": "firebase use default",
     "predeploy-ci": "firebase use default",
     "deploy": "firebase deploy --only database:rules,hosting",
     "deploy-ci": "firebase deploy --only database:rules,hosting -m \"[ci] $(git rev-parse --short HEAD)\" --token \"$FIREBASE_TOKEN\"",
     "start": "grunt serve",
-    "serve": "npm run start",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {

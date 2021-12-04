@@ -1,5 +1,6 @@
-html, body {
-  background-color: #00AFCB;
+body,
+html {
+  background-color: #00afcb;
   color: #fff;
   height: 100%;
   height: 100vh;
@@ -7,18 +8,44 @@ html, body {
 }
 
 body {
-  font-family: --apple-system,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: --apple-system, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
   z-index: -1;
 }
 
+/* Utility */
+
+.separator {
+  line-height: 0;
+}
+
+.visible-xs, .visible-s {
+  display: none;
+}
+
+@media screen and (max-width: 360px) {
+  .visible-xs {
+    display: inherit;
+  }
+}
+
+
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .visible-s {
+    display: inherit;
+  }
+}
+
+/* Base */
+
 .hero-cover {
-  background-color: #2F526E;
-  box-shadow: #f5f5f5 0 12px 150px 6px;
-  height: 35%;
-  height: 35vh;
+  background-color: #2f526e;
+  box-shadow: #f5f5f5 0 1rem 10rem 1rem;
+  /* box-shadow: #f5f5f5 0 12px 150px 6px; */
+  height: 30%;
+  height: 30vh;
   position: absolute;
   top: 0;
   width: 100%;
@@ -34,20 +61,19 @@ body {
 
 .hero-container > p {
   color: #bdbdbd;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   margin: 1rem 0 1rem .33rem;
   top: -1.5rem;
   width: 15.33rem;
 }
 
-.connections {
-  margin-top: 2.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.connections a {
-  margin: 0 1rem;
+.subtitle,
+.title {
+  color: #fafafa;
+  padding: 0;
+  text-shadow: 0 .05rem .1rem #192b3a;
+  vertical-align: bottom;
+  width: 100%;
 }
 
 .title {
@@ -61,12 +87,10 @@ body {
   width: 100%;
 }
 
-.logo {
-  border-radius: 50%;
-  border-width: 8px outset #eee;
-  box-shadow: 0 0 1rem #424242;
-  height: 13rem;
-  margin: 0 0 1rem;
-  padding: 0;
-  width: 13rem;
+.subtitle {
+  color: #e4f4fe;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.75rem;
+  margin: 0;
 }

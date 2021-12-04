@@ -3,14 +3,24 @@
 
 const pkg = require('./package.json')
 
+const plugins = [
+  'grunt-contrib-clean',
+  'grunt-contrib-connect',
+  'grunt-contrib-cssmin',
+  'grunt-contrib-htmlmin',
+  'grunt-contrib-watch',
+  'grunt-replace',
+]
+
 const clean = {
-  release: ['public/release/*.js']
+  cssmin: ['public/sinanbolel.min.css'],
+  release: ['public/release/*.js'],
 }
 
 const connect = {
   client: {
     options: {
-      base: './public',
+      base: 'public',
       livereload: true,
       open: {
         appName: 'Google Chrome',
@@ -30,7 +40,10 @@ const cssmin = {
   target: {
     files: {
       'public/<%= pkg.name %>.min.css': [
-        'public/assets/css/*.css',
+        'public/assets/css/base.css',
+        'public/assets/css/buttons.css',
+        'public/assets/css/logos.css',
+        'public/assets/css/tooltip.css',
       ]
     },
   },
@@ -59,15 +72,6 @@ const watch = {
   },
 }
 
-const plugins = [
-  'grunt-contrib-clean',
-  'grunt-contrib-connect',
-  'grunt-contrib-cssmin',
-  'grunt-contrib-htmlmin',
-  'grunt-contrib-watch',
-  'grunt-replace',
-]
-
 module.exports = ({
   initConfig,
   loadNpmTasks,
@@ -78,12 +82,19 @@ module.exports = ({
     dist: {
       options: {
         patterns: [{
-          match: 'CSS_FILE_HASH',
-          replacement: () => `${option('target')}`
-        }]
+          match: '/*__MINIFIED_CSS__*/',
+          replacement: '<%= grunt.file.read("public/sinanbolel.min.css") %>',
+        }],
+        prefix: '',
+        usePrefix: false,
       },
       files: [
-        { dest: 'public/', expand: true, flatten: true, src: ['public/index.html'] }
+        {
+          dest: 'public/',
+          expand: true,
+          flatten: true,
+          src: ['public/index.html'],
+        }
       ]
     }
   }
@@ -91,6 +102,6 @@ module.exports = ({
   initConfig({ clean, connect, cssmin, htmlmin, pkg, replace, watch })
   plugins.forEach(loadNpmTasks)
   registerTask('serve', ['connect', 'watch'])
-  registerTask('build', ['cssmin', 'htmlmin'])
+  registerTask('build', ['cssmin', 'htmlmin', 'replace', 'clean:cssmin'])
   registerTask('default', ['build', 'serve'])
 }
