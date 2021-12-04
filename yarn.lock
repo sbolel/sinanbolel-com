@@ -3324,7 +3324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.3.0":
+"husky@npm:^4.3.8":
   version: 4.3.8
   resolution: "husky@npm:4.3.8"
   dependencies:
@@ -6582,7 +6582,7 @@ __metadata:
     grunt-contrib-htmlmin: ^3.1.0
     grunt-contrib-watch: ^1.1.0
     grunt-replace: ^1.0.1
-    husky: ^4.3.0
+    husky: ^4.3.8
     ionicons: ^5.5.4
     md5: ^2.3.0
     rimraf: ^3.0.2
