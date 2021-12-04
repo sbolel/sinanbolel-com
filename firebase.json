@@ -8,10 +8,7 @@
     "ignore": [
       "**/node_modules/**",
       "assets/css/**",
-      "projects/**",
-      "Gruntfile.js",
-      "README.md",
-      "yarn.lock"
+      "projects/**"
     ],
     "headers": [
       { "source": "**/*.@(svg|jpg|jpeg|gif|png)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] },
