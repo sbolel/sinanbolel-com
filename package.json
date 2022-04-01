@@ -26,10 +26,10 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/github": "^8.0.4",
     "@semantic-release/npm": "^8.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "conventional-changelog-conventionalcommits": "^4.6.1",
+    "conventional-changelog-conventionalcommits": "^4.6.3",
     "grunt": "^1.4.1",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-connect": "^3.0.0",
@@ -45,7 +45,7 @@
     "yarn-run-all": "^3.1.1"
   },
   "optionalDependencies": {
-    "ionicons": "^6.0.0"
+    "ionicons": "^6.0.1"
   },
   "husky": {
     "hooks": {

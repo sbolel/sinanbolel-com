@@ -629,9 +629,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^8.0.2":
-  version: 8.0.2
-  resolution: "@semantic-release/github@npm:8.0.2"
+"@semantic-release/github@npm:^8.0.4":
+  version: 8.0.4
+  resolution: "@semantic-release/github@npm:8.0.4"
   dependencies:
     "@octokit/rest": ^18.0.0
     "@semantic-release/error": ^2.2.0
@@ -651,7 +651,7 @@ __metadata:
     url-join: ^4.0.0
   peerDependencies:
     semantic-release: ">=18.0.0-beta.1"
-  checksum: 260ecf3fc0aaf2dad87ba85aadf779083015b8c413f8526c28cf10a9cc0c0faa72ddc742ea1170c848985f33d5f3adfe67c2a171e658c13d3819253e701a9231
+  checksum: e344b26f12891fe7ba157473d1c9c4ceebe2165cc0ba64fef36e20bc857694afe5e9c4bf196301b7b6fea2686c6a995949dc30d35d52120a8b6fef6016d76714
   languageName: node
   linkType: hard
 
@@ -741,12 +741,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stencil/core@npm:~2.10.0":
-  version: 2.10.0
-  resolution: "@stencil/core@npm:2.10.0"
+"@stencil/core@npm:~2.12.0":
+  version: 2.12.1
+  resolution: "@stencil/core@npm:2.12.1"
   bin:
     stencil: bin/stencil
-  checksum: 035f74e71c2428a69f15df2a3e234845e3105f3481a352a7aed65f64714fc8b4b3b135a6bb90dfd90aca559d7f80b488cf7b5b2247e96e94fccb5e1bee676634
+  checksum: acbd781a8073eb155cabad9375fda080ee38cb642f63fda2ae8c09811f996c6282ff84cd60f7796827e31fbce4eccc3c17f2041d9c5fec2df08947ebf8bcb0ac
   languageName: node
   linkType: hard
 
@@ -1807,14 +1807,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^4.6.1":
-  version: 4.6.1
-  resolution: "conventional-changelog-conventionalcommits@npm:4.6.1"
+"conventional-changelog-conventionalcommits@npm:^4.6.3":
+  version: 4.6.3
+  resolution: "conventional-changelog-conventionalcommits@npm:4.6.3"
   dependencies:
     compare-func: ^2.0.0
     lodash: ^4.17.15
     q: ^1.5.1
-  checksum: f866616c8f6f21cea005b42792451bfbd16bd4d82872867d1218f67a7993a53c5d87e26d6b483d9252e8022f2e4570e6cf9fa2a409aae5a3d73eea92ccf78b13
+  checksum: 7b8e8a21ebb56f9aaa510e12917b7c609202072c3e71089e0a09630c37c2e8146cdb04364809839b0e3eb55f807fe84d03b2079500b37f6186d505848be5c562
   languageName: node
   linkType: hard
 
@@ -3649,12 +3649,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ionicons@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "ionicons@npm:6.0.0"
+"ionicons@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "ionicons@npm:6.0.1"
   dependencies:
-    "@stencil/core": ~2.10.0
-  checksum: 237e788466b7b2b1fca1b0c7b14ffd84f5490d0d10d50d61b7ac2a2ac621d9627ac7600191214916ca4cd453dbb728ef8c99cb1549cb99bab445ed08cf6f942f
+    "@stencil/core": ~2.12.0
+  checksum: 395ff7574529c90a5e044ad5729793b4cc2233e6757a0f7c645cbee562402f4dc9f0ffa4b2799f14bc0874b2526e35287924a113ddc82cd16d48dae4c8df31fd
   languageName: node
   linkType: hard
 
@@ -6749,10 +6749,10 @@ __metadata:
     "@commitlint/config-conventional": ^15.0.0
     "@semantic-release/changelog": ^6.0.1
     "@semantic-release/commit-analyzer": ^9.0.2
-    "@semantic-release/github": ^8.0.2
+    "@semantic-release/github": ^8.0.4
     "@semantic-release/npm": ^8.0.3
     "@semantic-release/release-notes-generator": ^10.0.3
-    conventional-changelog-conventionalcommits: ^4.6.1
+    conventional-changelog-conventionalcommits: ^4.6.3
     grunt: ^1.4.1
     grunt-contrib-clean: ^2.0.0
     grunt-contrib-connect: ^3.0.0
@@ -6761,7 +6761,7 @@ __metadata:
     grunt-contrib-watch: ^1.1.0
     grunt-replace: ^2.0.2
     husky: ^4.3.8
-    ionicons: ^6.0.0
+    ionicons: ^6.0.1
     md5: ^2.3.0
     rimraf: ^3.0.2
     semantic-release: ^17.4.7
