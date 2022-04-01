@@ -5,29 +5,100 @@
     "appAssociation": "AUTO",
     "cleanUrls": false,
     "trailingSlash": false,
-    "ignore": [
-      "**/node_modules/**",
-      "assets/css/**",
-      "projects/**"
-    ],
+    "ignore": ["**/node_modules/**", "assets/css/**", "projects/**"],
     "headers": [
-      { "source": "**/*.@(svg|jpg|jpeg|gif|png)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] },
-      { "source": "**/*.@(eot|ttf|woff|css)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] },
-      { "source": "**/*.@(html)", "headers": [{ "key": "Cache-Control", "value": "max-age=0" }] },
-      { "source": "cdn/*.@(js|min.js)", "headers": [{ "key": "Cache-Control", "value": "max-age=2592000" }] }
+      {
+        "source": "**/*.pdf",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(svg|jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(eot|ttf|woff|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          }
+        ]
+      },
+      {
+        "source": "cdn/*.@(js|min.js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          }
+        ]
+      }
     ],
     "redirects": [
-      { "source": "/home", "destination": "https://sinanbolel.com", "type": 302 },
-      { "source": "/@(cal|calendar|meet|book)", "destination": "https://link.sinanbolel.com/url/cal", "type": 302 },
-      { "source": "/@(git|github|code)", "destination": "https://link.sinanbolel.com/url/github", "type": 302 },
-      { "source": "/@(linkedin|li|in)", "destination": "https://link.sinanbolel.com/url/linkedin", "type": 302 },
-      { "source": "/@(resume|cv)", "destination": "https://link.sinanbolel.com/url/cv", "type": 302 },
-      { "source": "/@(stackoverflow|so)", "destination": "https://link.sinanbolel.com/url/stackoverflow", "type": 302 },
-      { "source": "/@(twitter)", "destination": "https://link.sinanbolel.com/url/twitter", "type": 302 }
+      {
+        "source": "/home",
+        "destination": "https://sinanbolel.com",
+        "type": 302
+      },
+      {
+        "source": "/@(cal|calendar|meet|book)",
+        "destination": "https://link.sinanbolel.com/url/cal",
+        "type": 302
+      },
+      {
+        "source": "/@(git|github|code)",
+        "destination": "https://link.sinanbolel.com/url/github",
+        "type": 302
+      },
+      {
+        "source": "/@(linkedin|li|in)",
+        "destination": "https://link.sinanbolel.com/url/linkedin",
+        "type": 302
+      },
+      {
+        "source": "/@(resume|cv)",
+        "destination": "https://link.sinanbolel.com/url/cv",
+        "type": 302
+      },
+      {
+        "source": "/@(stackoverflow|so)",
+        "destination": "https://link.sinanbolel.com/url/stackoverflow",
+        "type": 302
+      },
+      {
+        "source": "/@(twitter)",
+        "destination": "https://link.sinanbolel.com/url/twitter",
+        "type": 302
+      }
     ],
     "rewrites": [
-      { "source": "/url/**", "dynamicLinks": true },
-      { "source": "!/url/**", "destination": "/index.html" }
+      {
+        "source": "/url/**",
+        "dynamicLinks": true
+      },
+      {
+        "source": "!/url/**",
+        "destination": "/index.html"
+      }
     ]
   },
   "rules": "config/security-rules.json"
