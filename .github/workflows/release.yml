@@ -1,61 +1,25 @@
-# .github/workflows/release.yml
 name: 'Release'
-
 on:
   push:
     branches:
       - master
-
 jobs:
   release:
-    name: Release
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2-beta
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '14'
           registry-url: 'https://registry.npmjs.org'
-
-      - name: Set up Yarn
-        id: yarn-cache-dir-path
-        run: |
-          npm i -g yarn
-          yarn set version 1.x
-          yarn config set enableTelemetry 0
-          echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Yarn
-        uses: actions/cache@v2
-        with:
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            **/node_modules
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install Dependencies
-        run: |
-          npm i -g firebase-tools
-          yarn --pure-lockfile
-
-      - name: Build
-        run: yarn build
-
-      - name: Semantic Release
-        run: yarn semantic-release
+          cache: 'yarn'
+      - run: yarn global add firebase-tools
+      - run: yarn install --pure-lockfile
+      - run: yarn build
+      - run: yarn semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Deploy
-        run: yarn deploy-ci
+      - run: yarn deploy-ci
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
