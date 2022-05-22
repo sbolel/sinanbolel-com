@@ -13,7 +13,7 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
           cache: 'yarn'
-      - run: yarn global firebase-tools
+      - run: yarn global add firebase-tools
       - run: yarn install --pure-lockfile
       - run: yarn build
       - run: yarn semantic-release
