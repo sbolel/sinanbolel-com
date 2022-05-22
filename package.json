@@ -2,7 +2,11 @@
   "name": "sinanbolel",
   "version": "0.0.0-semantic-release",
   "private": true,
-  "author": "Sinan Bolel <sbolel@users.noreply.github.com>",
+  "author": {
+    "name": "Sinan Bolel",
+    "email": "1915925+sbolel@users.noreply.github.com",
+    "url": "https://sinanbolel.com"
+  },
   "description": "Sinan Bolel's Personal Website",
   "homepage": "https://sinanbolel.com",
   "repository": {
@@ -23,41 +27,36 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": ">=14.0.0 <15",
-    "npm": ">=8.7.0",
-    "yarn": ">=1.20.0"
+    "node": ">=18, <19",
+    "npm": ">=8",
+    "yarn": ">=1.22.0, <2.0.0"
   },
-  "packageManager": "yarn@1.23.0",
+  "packageManager": "yarn@1.22.18",
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/github": "^8.0.4",
-    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "conventional-changelog-conventionalcommits": "^4.6.3",
-    "grunt": "^1.4.1",
+    "grunt": "^1.5.3",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-cssmin": "^4.0.0",
     "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-replace": "^2.0.2",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "md5": "^2.3.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.4.7",
+    "semantic-release": "^19.0.2",
     "serve": "^13.0.2",
     "yarn-run-all": "^3.1.1"
   },
   "optionalDependencies": {
     "ionicons": "^6.0.1"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   },
   "publishConfig": {
     "access": "restricted"

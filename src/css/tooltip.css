@@ -1,0 +1,40 @@
+:root {
+  --tooltip-height: 18px
+}
+
+[data-md-tooltip] {
+  position: relative
+}
+
+[data-md-tooltip]:before {
+  content: attr(data-md-tooltip);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  padding: 5px;
+  transform: translateX(-50%) scale(0);
+  transition: transform .3s ease-in-out;
+  transform-origin: top;
+  border-radius: 5px;
+  background: #616161e6;
+  color: #fff;
+  font-family: --apple-system, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+  height: 10px
+}
+
+[data-md-tooltip]:hover:before {
+  transform: translateX(-50%) scale(1)
+}
+
+@media screen and (min-width:501px) {
+  [data-md-tooltip]:before {
+    bottom: -38px;
+    padding: 8px;
+    font-size: 13px;
+    line-height: 13px;
+    height: 12px
+  }
+}
