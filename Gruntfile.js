@@ -24,9 +24,9 @@ const connect = {
       livereload: true,
       open: {
         appName: 'Google Chrome',
-        target: 'http://localhost:9000',
+        target: 'http://localhost:3000',
       },
-      port: 9000,
+      port: 3000,
     },
   },
 }
@@ -40,10 +40,10 @@ const cssmin = {
   target: {
     files: {
       'public/<%= pkg.name %>.min.css': [
-        'public/assets/css/base.css',
-        'public/assets/css/buttons.css',
-        'public/assets/css/logos.css',
-        'public/assets/css/tooltip.css',
+        'src/css/base.css',
+        'src/css/icons.css',
+        'src/css/buttons.css',
+        'src/css/tooltip.css',
       ]
     },
   },
@@ -55,17 +55,17 @@ const htmlmin = {
       removeComments: true,
       collapseWhitespace: true,
     },
-    files: { 'public/index.html': './index.html', }
+    files: { 'public/index.html': 'src/index.html', }
   }
 }
 
 const watch = {
-  css: {
-    files: ['public/assets/css/*.css'],
+  src: {
+    files: ['src/css/*.css', 'src/index.html'],
     tasks:['cssmin', 'htmlmin', 'replace'],
   },
   html: {
-    files: ['public/**/*.html'],
+    files: ['public/index.html'],
     options: {
       livereload: true,
     },

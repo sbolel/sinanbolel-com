@@ -1,0 +1,240 @@
+.connections {
+  margin-top: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.connections > a {
+  margin: .5rem 1rem;
+  overflow: visible;
+}
+
+button {
+  vertical-align: baseline;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button[disabled] {
+  cursor: default;
+}
+
+button.md-button::-moz-focus-inner {
+  border: 0;
+}
+
+.md-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 88px;
+  vertical-align: middle;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+  letter-spacing: .01em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+  border: 0;
+  background: 0 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), background-color .4s cubic-bezier(.25, .8, .25, 1);
+  transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), background-color .4s cubic-bezier(.25, .8, .25, 1);
+  font: inherit inherit 500 14px/36px inherit;
+}
+
+.md-dense:not(.md-dense-disabled) .md-button:not(.md-dense-disabled),
+.md-dense > .md-button:not(.md-dense-disabled) {
+  min-height: 32px;
+  line-height: 32px;
+  font-size: 13px;
+}
+
+.md-button:focus {
+  outline: 0;
+}
+
+.md-button:focus,
+.md-button:hover {
+  text-decoration: none;
+}
+
+.md-button.md-icon {
+  padding: 0;
+  background: 0 0;
+}
+
+.md-button.md-raised:not([disabled]) {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+.md-button.md-icon-button {
+  height: 40px;
+  min-width: 0;
+  line-height: 24px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.md-button.md-fab {
+  z-index: 20;
+  line-height: 56px;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  min-width: 0;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-clip: padding-box;
+  overflow: visible;
+  -webkit-transition: all .3s cubic-bezier(.55, 0, .55, .2);
+  transition: all .3s cubic-bezier(.55, 0, .55, .2);
+  -webkit-transition-property: background-color, box-shadow, -webkit-transform;
+  transition-property: background-color, box-shadow, -webkit-transform;
+  transition-property: background-color, box-shadow, transform;
+  transition-property: background-color, box-shadow, transform, -webkit-transform;
+}
+
+.md-button:not([disabled]).md-fab.md-focused,
+.md-button:not([disabled]).md-raised.md-focused {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+.md-button:not([disabled]).md-fab:active,
+.md-button:not([disabled]).md-fab:hover,
+.md-button:not([disabled]).md-raised:active,
+.md-button:not([disabled]).md-raised:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .4);
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .md-button.md-fab,
+  .md-button.md-raised {
+    border: 1px solid #fff;
+  }
+}
+
+.md-button.md-default-theme.md-fab,
+.md-button.md-fab,
+.md-font {
+  color: #fff;
+  height: 5rem;
+  line-height: 5rem;
+  width: 5rem;
+}
+
+.md-button.md-fab > .md-font {
+  font-size: 3rem;
+  border-radius: 50%;
+}
+
+@media screen and (max-width:360px) {
+  .md-button.md-default-theme.md-fab,
+  .md-button.md-fab,
+  .md-font {
+    height: 3.75rem;
+    line-height: 3.75rem;
+    width: 3.75rem;
+  }
+
+  .connections a {
+    margin: .5rem .5rem;
+  }
+}
+
+@media screen and (min-width:360px) and (max-width:500px) {
+  .md-button.md-default-theme.md-fab,
+  .md-button.md-fab,
+  .md-font {
+    height: 4.125rem;
+    line-height: 4.125rem;
+    width: 4.125rem;
+  }
+
+  .connections a {
+    margin: 0 .75rem;
+  }
+}
+
+@media screen and (min-width:501px) and (max-width:1024px) {
+  .md-button.md-default-theme.md-fab,
+  .md-button.md-fab,
+  .md-font {
+    height: 5.33rem;
+    line-height: 5.33rem;
+    width: 5.33rem;
+  }
+
+  .connections a {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width:1025px) {
+  .md-button.md-default-theme.md-fab,
+  .md-button.md-fab,
+  .md-font {
+    height: 6rem;
+    line-height: 6rem;
+    width: 6rem;
+  }
+
+  .connections a {
+    margin: 0 1.5rem;
+  }
+}
+
+@media screen and (max-height:601px) and (min-height:421px){
+  .md-button.md-default-theme.md-fab,
+  .md-button.md-fab,
+  .md-font {
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .connections {
+    margin: 1.25rem 0 0;
+  }
+
+  .connections a {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-height:420px) {
+  .md-button.md-default-theme.md-fab,
+  .md-button.md-fab,
+  .md-font {
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+  }
+
+  .connections {
+    margin: 1rem 0 0;
+  }
+
+  .connections a {
+    margin: 0 1rem;
+  }
+}
+
+
+.connections a:first-child {
+  margin-left: 0;
+}
+
+.connections a:last-child {
+  margin-right: 0;
+}

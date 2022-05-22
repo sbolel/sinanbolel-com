@@ -1,0 +1,44 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "affiliation": {
+    "@context": "http://schema.org",
+    "@type": "CollegeOrUniversity",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Evanston",
+      "addressRegion": "IL",
+      "postalCode": "60208",
+      "streetAddress": "633 Clark St"
+    },
+    "alumni": [{
+      "@type": "Person",
+      "name": "Sinan Bolel"
+    }],
+    "name": "Northwestern University",
+    "sameAs": "http://www.northwestern.edu/"
+  },
+  "alumniOf": {
+    "@context": "http://schema.org",
+    "@type": "CollegeOrUniversity",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Evanston",
+      "addressRegion": "IL",
+      "postalCode": "60208",
+      "streetAddress": "633 Clark St"
+    },
+    "alumni": [{
+      "@type": "Person",
+      "name": "Sinan Bolel"
+    }],
+    "name": "Northwestern University",
+    "sameAs": "http://www.northwestern.edu/"
+  },
+  "image": ["https://sinanbolel.com/sinan-bolel.jpg"],
+  "jobTitle": "Principal Software Engineer",
+  "name": "Sinan Bolel",
+  "telephone": "+17737897421",
+  "url": "http://sinanbolel.com",
+  "sameAs": ["http://linkedin.com/in/sinanbolel", "http://github.com/sbolel", "http://twitter.com/sinbols", "http://www.npmjs.com/~sinanbolel", "http://stackoverflow.com/users/1526037/sinan-bolel"]
+}

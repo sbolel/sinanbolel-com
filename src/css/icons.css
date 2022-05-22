@@ -1,0 +1,27 @@
+.ion-logo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.ion-logo-stackoverflow {
+  background-position: center 47%;
+  background-color: #f48023;
+  background-image: url('./assets/img/logo-stackoverflow.svg');
+}
+
+.ion-logo-linkedin {
+  background-color: rgba(0, 119, 181, .9);
+  background-image: url('./assets/img/logo-linkedin.svg');
+}
+
+.ion-logo-github {
+  background-color: #e3e3e3;
+  background-image: url('./assets/img/logo-github.svg');
+}
+
+.ion-logo-resume {
+  background-color: #3a6c87;
+  background-size: 90%;
+  background-image: url('./assets/img/candidate.svg');
+}

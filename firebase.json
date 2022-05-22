@@ -5,7 +5,13 @@
     "appAssociation": "AUTO",
     "cleanUrls": false,
     "trailingSlash": false,
-    "ignore": ["**/node_modules/**", "assets/css/**", "projects/**"],
+    "ignore": [
+      "**/node_modules/**",
+      "**/bin/**",
+      "**/config/**",
+      "**/src/**",
+      "projects/**"
+    ],
     "headers": [
       {
         "source": "**/*.pdf",
