@@ -8,10 +8,11 @@ public/*.min.css
 public/release/
 public/.git
 
-.pnp.*
+# yarn
 .yarn/*
-!.yarn/patches
-!.yarn/plugins
 !.yarn/releases
+!.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+.pnp.*
+.yarnrc
