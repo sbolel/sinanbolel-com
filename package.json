@@ -32,40 +32,13 @@
     "yarn": "3.2.4"
   },
   "packageManager": "yarn@3.2.4",
-  "devDependencies": {
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-conventional": "17.1.0",
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/commit-analyzer": "9.0.2",
-    "@semantic-release/github": "8.0.6",
-    "@semantic-release/npm": "9.0.1",
-    "@semantic-release/release-notes-generator": "10.0.3",
-    "conventional-changelog-conventionalcommits": "5.0.0",
-    "firebase-tools": "11.14.1",
-    "grunt": "1.5.3",
-    "grunt-contrib-clean": "2.0.1",
-    "grunt-contrib-connect": "3.0.0",
-    "grunt-contrib-cssmin": "4.0.0",
-    "grunt-contrib-htmlmin": "3.1.0",
-    "grunt-contrib-watch": "1.1.0",
-    "grunt-replace": "2.0.2",
-    "husky": "7.0.4",
-    "md5": "2.3.0",
-    "rimraf": "3.0.2",
-    "semantic-release": "19.0.5",
-    "serve": "14.0.1",
-    "yarn-run-all": "3.1.1"
-  },
-  "optionalDependencies": {
-    "ionicons": "6.0.3"
-  },
   "publishConfig": {
     "access": "restricted"
   },
   "release": {
     "private": true,
     "branches": [
-      "master"
+      "main"
     ],
     "tagFormat": "v${version}",
     "plugins": [
@@ -93,14 +66,55 @@
         {
           "assets": [
             "CHANGELOG.md",
-            "README.md"
-          ],
-          "branches": [
-            "master"
+            "README.md",
+            {
+              "path": "public/index.html",
+              "label": "index.html"
+            },
+            {
+              "path": "public/sinanbolel.min.css",
+              "label": "sinanbolel.min.css"
+            },
+            {
+              "path": "public/*.pdf",
+              "label": "resume"
+            }
           ]
         }
       ]
     ],
     "preset": "conventionalcommits"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/github": "8.0.6",
+    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "conventional-changelog-conventionalcommits": "5.0.0",
+    "firebase-tools": "11.14.1",
+    "grunt": "1.5.3",
+    "grunt-contrib-clean": "2.0.1",
+    "grunt-contrib-connect": "3.0.0",
+    "grunt-contrib-cssmin": "4.0.0",
+    "grunt-contrib-htmlmin": "3.1.0",
+    "grunt-contrib-watch": "1.1.0",
+    "grunt-replace": "2.0.2",
+    "husky": "7.0.4",
+    "md5": "2.3.0",
+    "rimraf": "3.0.2",
+    "semantic-release": "19.0.5",
+    "serve": "14.0.1",
+    "yarn-run-all": "3.1.1"
+  },
+  "optionalDependencies": {
+    "ionicons": "6.0.3"
   }
 }
