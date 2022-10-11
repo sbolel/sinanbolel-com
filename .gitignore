@@ -1,12 +1,17 @@
 **/*.log*
 **/.DS_Store
-**/.firebase
 **/node_modules
 
+# firebase cache
+**/.firebase
+
+# temporary build files
+public/assets/css
+public/release/
+
+# build output files
 public/index.html
 public/*.min.css
-public/release/
-public/.git
 
 # yarn
 .yarn/*

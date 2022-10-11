@@ -27,36 +27,37 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": ">=18, <19",
-    "npm": ">=8",
-    "yarn": ">=1.22.0, <2.0.0"
+    "node": "18.0",
+    "npm": "^8.19.0",
+    "yarn": "3.2.4"
   },
-  "packageManager": "yarn@1.22.18",
+  "packageManager": "yarn@3.2.4",
   "devDependencies": {
-    "@commitlint/cli": "^17.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/github": "^8.0.4",
-    "@semantic-release/npm": "^9.0.1",
-    "@semantic-release/release-notes-generator": "^10.0.3",
-    "conventional-changelog-conventionalcommits": "^4.6.3",
-    "grunt": "^1.5.3",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-connect": "^3.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-replace": "^2.0.2",
-    "husky": "^8.0.1",
-    "md5": "^2.3.0",
-    "rimraf": "^3.0.2",
-    "semantic-release": "^19.0.2",
-    "serve": "^13.0.2",
-    "yarn-run-all": "^3.1.1"
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/github": "8.0.6",
+    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "conventional-changelog-conventionalcommits": "5.0.0",
+    "firebase-tools": "11.14.1",
+    "grunt": "1.5.3",
+    "grunt-contrib-clean": "2.0.1",
+    "grunt-contrib-connect": "3.0.0",
+    "grunt-contrib-cssmin": "4.0.0",
+    "grunt-contrib-htmlmin": "3.1.0",
+    "grunt-contrib-watch": "1.1.0",
+    "grunt-replace": "2.0.2",
+    "husky": "7.0.4",
+    "md5": "2.3.0",
+    "rimraf": "3.0.2",
+    "semantic-release": "19.0.5",
+    "serve": "14.0.1",
+    "yarn-run-all": "3.1.1"
   },
   "optionalDependencies": {
-    "ionicons": "^6.0.1"
+    "ionicons": "6.0.3"
   },
   "publishConfig": {
     "access": "restricted"
@@ -64,16 +65,7 @@
   "release": {
     "private": true,
     "branches": [
-      "master",
-      "next",
-      {
-        "name": "alpha",
-        "prerelease": true
-      },
-      {
-        "name": "beta",
-        "prerelease": true
-      }
+      "master"
     ],
     "tagFormat": "v${version}",
     "plugins": [
@@ -102,6 +94,9 @@
           "assets": [
             "CHANGELOG.md",
             "README.md"
+          ],
+          "branches": [
+            "master"
           ]
         }
       ]
