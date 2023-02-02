@@ -107,5 +107,8 @@
       }
     ]
   },
-  "rules": "config/security-rules.json"
+  "rules": "config/security-rules.json",
+  "database": {
+    "rules": "config/security-rules.json"
+  }
 }
