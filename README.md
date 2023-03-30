@@ -6,7 +6,7 @@
 [![stackoverflow-img]][stackoverflow-url]
 [![npm-img]][npm-url]
 
-<img href="https://sinanbolel.com" src="https://sinanbolel.com/sinan-bolel.jpeg" width="250" height="250"/>
+<img href="https://sinanbolel.com" src="https://sinanbolel.com/assets/img/sinan-bolel-headshot-2023.png" width="250" height="250"/>
 
 ### Connect
 
