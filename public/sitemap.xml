@@ -11,20 +11,16 @@
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
   <image:image>
+    <image:loc>https://sinanbolel.com/assets/img/sinan-bolel-headshot-2023.png</image:loc>
+    <image:caption>Sinan Bolel</image:caption>
+  </image:image>
+  <image:image>
     <image:loc>https://sinanbolel.com/assets/img/sinan-bolel-aquia.png</image:loc>
     <image:caption>Sinan Bolel | Aquia, Inc.</image:caption>
   </image:image>
   <image:image>
-    <image:loc>https://sinanbolel.com/assets/img/sinan-bolel-headshot.png</image:loc>
-    <image:caption>Sinan Bolel</image:caption>
-  </image:image>
-  <image:image>
     <image:loc>https://sinanbolel.com/assets/img/sinan-bolel-portrait.jpg</image:loc>
     <image:caption>Sinan Bolel</image:caption>
-  </image:image>
-  <image:image>
-     <image:loc>https://sinanbolel.com/sinanbolel.png</image:loc>
-     <image:caption>Sinan Bolel</image:caption>
   </image:image>
 </url>
 <url>
