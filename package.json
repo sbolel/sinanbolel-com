@@ -27,11 +27,11 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": "18.12.1",
-    "npm": "^9.1.0",
-    "yarn": "3.2.4"
+    "node": "18.15.0",
+    "npm": "^9.6.3",
+    "yarn": "3.5.0"
   },
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@3.5.0",
   "publishConfig": {
     "access": "restricted"
   },
