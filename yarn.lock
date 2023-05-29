@@ -5434,12 +5434,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ionicons@npm:7.1.0":
-  version: 7.1.0
-  resolution: "ionicons@npm:7.1.0"
+"ionicons@npm:7.1.1":
+  version: 7.1.1
+  resolution: "ionicons@npm:7.1.1"
   dependencies:
     "@stencil/core": ^2.18.0
-  checksum: 66e05b7d7c9625085cad9640ff2e1bb2e7737fa25855911bd2e516b50f1cf441761cec6e894dfbc2a9770e577f1d83d851d1453cb210d6bb0064ad15fa484e9c
+  checksum: 929b129198cd788218955f43066b377d8527fbc0b8092db7f99254ccd1de1fa42332a67fea679d50e4425e194e9cbc7bdef3f38cb7846b397314f6d3c3017aca
   languageName: node
   linkType: hard
 
@@ -9846,7 +9846,7 @@ __metadata:
     grunt-contrib-watch: 1.1.0
     grunt-replace: 2.0.2
     husky: 8.0.3
-    ionicons: 7.1.0
+    ionicons: 7.1.1
     md5: 2.3.0
     rimraf: 5.0.1
     semantic-release: 21.0.2
