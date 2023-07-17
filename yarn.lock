@@ -4085,9 +4085,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase-tools@npm:12.4.2":
-  version: 12.4.2
-  resolution: "firebase-tools@npm:12.4.2"
+"firebase-tools@npm:12.4.4":
+  version: 12.4.4
+  resolution: "firebase-tools@npm:12.4.4"
   dependencies:
     "@google-cloud/pubsub": ^3.0.1
     abort-controller: ^3.0.0
@@ -4134,7 +4134,7 @@ __metadata:
     request: ^2.87.0
     retry: ^0.13.1
     rimraf: ^3.0.0
-    semver: ^5.7.1
+    semver: ^7.5.2
     stream-chain: ^2.2.4
     stream-json: ^1.7.3
     strip-ansi: ^6.0.1
@@ -4151,7 +4151,7 @@ __metadata:
     ws: ^7.2.3
   bin:
     firebase: lib/bin/firebase.js
-  checksum: 0222d35ff4cdb5680dedc2d442ab9c1966c1e81a9763c49266ea97710ddf4044027a8347f948416e9d267fb6f0cb3fee31bad3eac94ab75e8256e3bd23f41b26
+  checksum: 55fd4d4f33a9f137d5cac0cd5ca953b86c0df39dcd0a7aec65242f4edc3b26f93ec07a012893137049d2b84afda1507343e63b7378bafbc753339e10136977f2
   languageName: node
   linkType: hard
 
@@ -9706,7 +9706,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.5.0, semver@npm:^5.7.1":
+"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.5.0":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
   bin:
@@ -9743,6 +9743,17 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: ba9c7cbbf2b7884696523450a61fee1a09930d888b7a8d7579025ad93d459b2d1949ee5bbfeb188b2be5f4ac163544c5e98491ad6152df34154feebc2cc337c1
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.5.2":
+  version: 7.5.4
+  resolution: "semver@npm:7.5.4"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 12d8ad952fa353b0995bf180cdac205a4068b759a140e5d3c608317098b3575ac2f1e09182206bf2eb26120e1c0ed8fb92c48c592f6099680de56bb071423ca3
   languageName: node
   linkType: hard
 
@@ -9968,7 +9979,7 @@ __metadata:
     "@semantic-release/npm": 10.0.4
     "@semantic-release/release-notes-generator": 11.0.3
     conventional-changelog-conventionalcommits: 6.1.0
-    firebase-tools: 12.4.2
+    firebase-tools: 12.4.4
     grunt: 1.6.1
     grunt-contrib-clean: 2.0.1
     grunt-contrib-connect: 3.0.0
