@@ -27,11 +27,11 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": "18.15.0",
-    "npm": "^9.6.3",
-    "yarn": "3.5.0"
+    "node": "19",
+    "npm": "please-use-yarn",
+    "yarn": "3.6.1"
   },
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.6.1",
   "publishConfig": {
     "access": "restricted"
   },
@@ -95,11 +95,11 @@
     "@commitlint/config-conventional": "17.6.6",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "10.0.1",
-    "@semantic-release/github": "9.0.3",
+    "@semantic-release/github": "9.0.4",
     "@semantic-release/npm": "10.0.4",
-    "@semantic-release/release-notes-generator": "11.0.3",
+    "@semantic-release/release-notes-generator": "11.0.4",
     "conventional-changelog-conventionalcommits": "6.1.0",
-    "firebase-tools": "12.4.2",
+    "firebase-tools": "12.4.4",
     "grunt": "1.6.1",
     "grunt-contrib-clean": "2.0.1",
     "grunt-contrib-connect": "3.0.0",
