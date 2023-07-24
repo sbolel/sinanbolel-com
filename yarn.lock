@@ -3056,6 +3056,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"define-lazy-prop@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "define-lazy-prop@npm:2.0.0"
+  checksum: 0115fdb065e0490918ba271d7339c42453d209d4cb619dfe635870d906731eff3e1ade8028bb461ea27ce8264ec5e22c6980612d332895977e89c1bbc80fcee2
+  languageName: node
+  linkType: hard
+
 "define-properties@npm:^1.1.3":
   version: 1.1.4
   resolution: "define-properties@npm:1.1.4"
@@ -4692,20 +4699,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"grunt-contrib-connect@npm:3.0.0":
-  version: 3.0.0
-  resolution: "grunt-contrib-connect@npm:3.0.0"
+"grunt-contrib-connect@npm:4.0.0":
+  version: 4.0.0
+  resolution: "grunt-contrib-connect@npm:4.0.0"
   dependencies:
     async: ^3.2.0
     connect: ^3.7.0
     connect-livereload: ^0.6.1
     morgan: ^1.10.0
     node-http2: ^4.0.1
-    opn: ^6.0.0
+    open: ^8.0.0
     portscanner: ^2.2.0
     serve-index: ^1.9.1
     serve-static: ^1.14.1
-  checksum: 7f66448002f07432495bc4a36b78c2a7866d60fc1331b7241f345cf96bbfec4c423931ea6951ada5b16a7ad0cf4f5207b4e2de3c0396511354ce59313c33cf7d
+  checksum: ff823a1938dca1edde62c416f3d009cae57073ee0175aa0be214423a57ae979cfc894f78123bcb29363110ce7053d51d8b95b2c181c0a6b1aa61b4090466e697
   languageName: node
   linkType: hard
 
@@ -5547,7 +5554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-docker@npm:^2.0.0":
+"is-docker@npm:^2.0.0, is-docker@npm:^2.1.1":
   version: 2.2.1
   resolution: "is-docker@npm:2.2.1"
   bin:
@@ -7961,21 +7968,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"open@npm:^8.0.0":
+  version: 8.4.2
+  resolution: "open@npm:8.4.2"
+  dependencies:
+    define-lazy-prop: ^2.0.0
+    is-docker: ^2.1.1
+    is-wsl: ^2.2.0
+  checksum: 6388bfff21b40cb9bd8f913f9130d107f2ed4724ea81a8fd29798ee322b361ca31fa2cdfb491a5c31e43a3996cfe9566741238c7a741ada8d7af1cb78d85cf26
+  languageName: node
+  linkType: hard
+
 "openapi3-ts@npm:^2.0.1":
   version: 2.0.2
   resolution: "openapi3-ts@npm:2.0.2"
   dependencies:
     yaml: ^1.10.2
   checksum: ec82bbbbd51cb8311f52f10e0441d72715b10446269040556251edcdc0230b86e3790f48b324881c4a1b22e87a317b5eb70e4d6cb717242bfd32674f21eecfc9
-  languageName: node
-  linkType: hard
-
-"opn@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "opn@npm:6.0.0"
-  dependencies:
-    is-wsl: ^1.1.0
-  checksum: aa49c7ffb13d886611d3d74ddca42e132b0437ecde2e86c626fe52eaf223d9cf63c35f01da46b1a91187f275306375c914525c7b98685396d60019861f05b032
   languageName: node
   linkType: hard
 
@@ -9764,7 +9773,7 @@ __metadata:
     firebase-tools: 12.4.5
     grunt: 1.6.1
     grunt-contrib-clean: 2.0.1
-    grunt-contrib-connect: 3.0.0
+    grunt-contrib-connect: 4.0.0
     grunt-contrib-cssmin: 5.0.0
     grunt-contrib-htmlmin: 3.1.0
     grunt-contrib-watch: 1.1.0
