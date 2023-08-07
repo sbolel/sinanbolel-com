@@ -3970,9 +3970,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase-tools@npm:12.4.5":
-  version: 12.4.5
-  resolution: "firebase-tools@npm:12.4.5"
+"firebase-tools@npm:12.4.7":
+  version: 12.4.7
+  resolution: "firebase-tools@npm:12.4.7"
   dependencies:
     "@google-cloud/pubsub": ^3.0.1
     abort-controller: ^3.0.0
@@ -4036,7 +4036,7 @@ __metadata:
     ws: ^7.2.3
   bin:
     firebase: lib/bin/firebase.js
-  checksum: 394579b856fad5e6906f7498ab141f23283a67a07c157f0e7290b6f948a1e77d29d110358b1806ab4d5e38d472dc42166055531c8e7f7cc0ac95d3f71de05f3a
+  checksum: a218a5fb5133a016dcc420a47987371dee306cb58927e6d5d8f07a3889b2d24907eebc36d2d4561f722fe0d1d4aa7753e6b1b6e2c7920dca03060f55b6889bc5
   languageName: node
   linkType: hard
 
@@ -9770,7 +9770,7 @@ __metadata:
     "@semantic-release/npm": 10.0.4
     "@semantic-release/release-notes-generator": 11.0.4
     conventional-changelog-conventionalcommits: 6.1.0
-    firebase-tools: 12.4.5
+    firebase-tools: 12.4.7
     grunt: 1.6.1
     grunt-contrib-clean: 2.0.1
     grunt-contrib-connect: 4.0.0
