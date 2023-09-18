@@ -97,7 +97,7 @@
     "@semantic-release/commit-analyzer": "10.0.1",
     "@semantic-release/github": "9.0.4",
     "@semantic-release/npm": "10.0.4",
-    "@semantic-release/release-notes-generator": "11.0.4",
+    "@semantic-release/release-notes-generator": "11.0.7",
     "conventional-changelog-conventionalcommits": "6.1.0",
     "firebase-tools": "12.5.3",
     "grunt": "1.6.1",
