@@ -99,7 +99,7 @@
     "@semantic-release/npm": "11.0.0",
     "@semantic-release/release-notes-generator": "11.0.7",
     "conventional-changelog-conventionalcommits": "7.0.2",
-    "firebase-tools": "12.5.3",
+    "firebase-tools": "12.5.4",
     "grunt": "1.6.1",
     "grunt-contrib-clean": "2.0.1",
     "grunt-contrib-connect": "4.0.0",
