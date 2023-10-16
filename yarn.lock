@@ -1158,12 +1158,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stencil/core@npm:^2.18.0":
-  version: 2.19.2
-  resolution: "@stencil/core@npm:2.19.2"
+"@stencil/core@npm:^4.0.3":
+  version: 4.4.1
+  resolution: "@stencil/core@npm:4.4.1"
   bin:
     stencil: bin/stencil
-  checksum: 34a313b758f603e0a40164b330d86bb0ce4020eb01729fd2e330a067c654d07de5b25178e021fdf8553b717189965dde109922e9877555b905193b3cefe0a5ff
+  checksum: 939d5e3925b6b20725efbf8ade97184556b63b6e3a5b5f63ecad92da568184c0a503fa4a822989c305fd3b73cb649630450b0ed38754797311018d14b8bc981b
   languageName: node
   linkType: hard
 
@@ -5671,12 +5671,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ionicons@npm:7.1.2":
-  version: 7.1.2
-  resolution: "ionicons@npm:7.1.2"
+"ionicons@npm:7.2.1":
+  version: 7.2.1
+  resolution: "ionicons@npm:7.2.1"
   dependencies:
-    "@stencil/core": ^2.18.0
-  checksum: 5462bab32a4ce7b5ecf84d55f44c7110791dfdf7233aec32b08f0baed88fdde3a3c3053e9b08074f72b3a1d080763e95c22fba350c518215a3df8c744b2b229a
+    "@stencil/core": ^4.0.3
+  checksum: 7db24528339f65481c1501b92ab788b4e4f2dffb953470c224ae3e01de950cf9c46db561acfc3706cb8c5dd18721ed1ec61f5bf09a5715883e5db5768249ad62
   languageName: node
   linkType: hard
 
@@ -10195,7 +10195,7 @@ __metadata:
     grunt-contrib-watch: 1.1.0
     grunt-replace: 2.0.2
     husky: 8.0.3
-    ionicons: 7.1.2
+    ionicons: 7.2.1
     md5: 2.3.0
     rimraf: 5.0.5
     semantic-release: 22.0.5
