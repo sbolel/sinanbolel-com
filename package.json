@@ -92,14 +92,14 @@
   },
   "devDependencies": {
     "@commitlint/cli": "19.2.0",
-    "@commitlint/config-conventional": "18.4.4",
+    "@commitlint/config-conventional": "19.1.0",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/commit-analyzer": "11.0.0",
-    "@semantic-release/github": "9.2.1",
+    "@semantic-release/commit-analyzer": "12.0.0",
+    "@semantic-release/github": "10.0.2",
     "@semantic-release/npm": "12.0.0",
-    "@semantic-release/release-notes-generator": "12.0.0",
+    "@semantic-release/release-notes-generator": "12.1.0",
     "conventional-changelog-conventionalcommits": "7.0.2",
-    "firebase-tools": "13.0.3",
+    "firebase-tools": "13.5.1",
     "grunt": "1.6.1",
     "grunt-contrib-clean": "2.0.1",
     "grunt-contrib-connect": "4.0.0",
@@ -115,6 +115,6 @@
     "yarn-run-all": "3.1.1"
   },
   "optionalDependencies": {
-    "ionicons": "7.2.1"
+    "ionicons": "7.2.2"
   }
 }
