@@ -763,6 +763,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@octokit/openapi-types@npm:^22.1.0":
+  version: 22.1.0
+  resolution: "@octokit/openapi-types@npm:22.1.0"
+  checksum: 6c3c1ef11fd04be423eb347622a3da063b3847ba4c5e665458bf9461cf3c21a5ddbb16603b65694825537ef28b01ee6e700c37ec2981fb8eac13906b37874bb8
+  languageName: node
+  linkType: hard
+
 "@octokit/plugin-paginate-rest@npm:^10.0.0":
   version: 10.0.0
   resolution: "@octokit/plugin-paginate-rest@npm:10.0.0"
@@ -771,6 +778,17 @@ __metadata:
   peerDependencies:
     "@octokit/core": ">=6"
   checksum: cbe3c7e518df8c536c454e71de9456fd242d106bd9ee4b483bfe4bda18db859aaf011826416a57a44dd15bb70de4cde26abe086a09587ee78adc73c80469d44c
+  languageName: node
+  linkType: hard
+
+"@octokit/plugin-paginate-rest@npm:^11.0.0":
+  version: 11.1.1
+  resolution: "@octokit/plugin-paginate-rest@npm:11.1.1"
+  dependencies:
+    "@octokit/types": ^13.4.0
+  peerDependencies:
+    "@octokit/core": ">=6"
+  checksum: 785a15a7b8348ff08ac559cecd1ff9e83aebcaabc9535dcc984ce9bdd06bda1ef049a613a2991d836592f7accbf4f01cf9d7f3dc49291893e4a3e8c7d5c89f93
   languageName: node
   linkType: hard
 
@@ -835,6 +853,15 @@ __metadata:
   dependencies:
     "@octokit/openapi-types": ^20.0.0
   checksum: 850235f425584499a2266d5c585c1c2462ae11e25c650567142f3342cb9ce589c8c8fed87705811ca93271fd28c68e1fa77b88b67b97015d7b63d269fa46ed05
+  languageName: node
+  linkType: hard
+
+"@octokit/types@npm:^13.4.0":
+  version: 13.4.1
+  resolution: "@octokit/types@npm:13.4.1"
+  dependencies:
+    "@octokit/openapi-types": ^22.1.0
+  checksum: d47f42e8c97bd9ce410cbb7ada464f26260ca0147116611e00d9843c4b76fcd963df19d920e35c80e845d057d579f0d4be82ff0b7b7ce5e4dcaae38e012d66cb
   languageName: node
   linkType: hard
 
@@ -1004,7 +1031,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:10.0.2, @semantic-release/github@npm:^10.0.0":
+"@semantic-release/github@npm:10.0.3":
+  version: 10.0.3
+  resolution: "@semantic-release/github@npm:10.0.3"
+  dependencies:
+    "@octokit/core": ^6.0.0
+    "@octokit/plugin-paginate-rest": ^11.0.0
+    "@octokit/plugin-retry": ^7.0.0
+    "@octokit/plugin-throttling": ^9.0.0
+    "@semantic-release/error": ^4.0.0
+    aggregate-error: ^5.0.0
+    debug: ^4.3.4
+    dir-glob: ^3.0.1
+    globby: ^14.0.0
+    http-proxy-agent: ^7.0.0
+    https-proxy-agent: ^7.0.0
+    issue-parser: ^7.0.0
+    lodash-es: ^4.17.21
+    mime: ^4.0.0
+    p-filter: ^4.0.0
+    url-join: ^5.0.0
+  peerDependencies:
+    semantic-release: ">=20.1.0"
+  checksum: 177ea0b978c3abff02689e409133ed952396f04829d4535a0634856d0a951bf74de1f0adf1151197d9022f97812c0f89166538b6754c623f5b04a2df3fb64f47
+  languageName: node
+  linkType: hard
+
+"@semantic-release/github@npm:^10.0.0":
   version: 10.0.2
   resolution: "@semantic-release/github@npm:10.0.2"
   dependencies:
@@ -9835,7 +9888,7 @@ __metadata:
     "@commitlint/config-conventional": 19.2.2
     "@semantic-release/changelog": 6.0.3
     "@semantic-release/commit-analyzer": 12.0.0
-    "@semantic-release/github": 10.0.2
+    "@semantic-release/github": 10.0.3
     "@semantic-release/npm": 12.0.0
     "@semantic-release/release-notes-generator": 13.0.0
     conventional-changelog-conventionalcommits: 7.0.2
