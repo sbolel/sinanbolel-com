@@ -4005,9 +4005,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase-tools@npm:13.6.0":
-  version: 13.6.0
-  resolution: "firebase-tools@npm:13.6.0"
+"firebase-tools@npm:13.7.3":
+  version: 13.7.3
+  resolution: "firebase-tools@npm:13.7.3"
   dependencies:
     "@google-cloud/pubsub": ^3.0.1
     abort-controller: ^3.0.0
@@ -4037,7 +4037,6 @@ __metadata:
     google-auth-library: ^7.11.0
     inquirer: ^8.2.6
     inquirer-autocomplete-prompt: ^2.0.1
-    js-yaml: ^3.13.1
     jsonwebtoken: ^9.0.0
     leven: ^3.1.0
     libsodium-wrappers: ^0.7.10
@@ -4071,9 +4070,10 @@ __metadata:
     winston: ^3.0.0
     winston-transport: ^4.4.0
     ws: ^7.2.3
+    yaml: ^2.4.1
   bin:
     firebase: lib/bin/firebase.js
-  checksum: f8cc5a2e6aa6f9e67f70a9c997e9df9ba695c00d03ac9ec2a7e0eda21fb68fb941ac3222c55d0bcf8d3ac7738dbce0826a25033e135f3981d0ee29eff6cb9503
+  checksum: 9a606cd918614958d63b46f1824a255d79e55b6abf7bce916b880d28ecd080756aaced89f040b30ca64cb8118baa1ff766042e1f5fda07c0c517307f1c1d0f7b
   languageName: node
   linkType: hard
 
@@ -6033,18 +6033,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.13.1, js-yaml@npm:~3.14.0":
-  version: 3.14.1
-  resolution: "js-yaml@npm:3.14.1"
-  dependencies:
-    argparse: ^1.0.7
-    esprima: ^4.0.0
-  bin:
-    js-yaml: bin/js-yaml.js
-  checksum: bef146085f472d44dee30ec34e5cf36bf89164f5d585435a3d3da89e52622dff0b188a580e4ad091c3341889e14cb88cac6e4deb16dc5b1e9623bb0601fc255c
-  languageName: node
-  linkType: hard
-
 "js-yaml@npm:^4.0.0, js-yaml@npm:^4.1.0":
   version: 4.1.0
   resolution: "js-yaml@npm:4.1.0"
@@ -6053,6 +6041,18 @@ __metadata:
   bin:
     js-yaml: bin/js-yaml.js
   checksum: c7830dfd456c3ef2c6e355cc5a92e6700ceafa1d14bba54497b34a99f0376cecbb3e9ac14d3e5849b426d5a5140709a66237a8c991c675431271c4ce5504151a
+  languageName: node
+  linkType: hard
+
+"js-yaml@npm:~3.14.0":
+  version: 3.14.1
+  resolution: "js-yaml@npm:3.14.1"
+  dependencies:
+    argparse: ^1.0.7
+    esprima: ^4.0.0
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: bef146085f472d44dee30ec34e5cf36bf89164f5d585435a3d3da89e52622dff0b188a580e4ad091c3341889e14cb88cac6e4deb16dc5b1e9623bb0601fc255c
   languageName: node
   linkType: hard
 
@@ -9839,7 +9839,7 @@ __metadata:
     "@semantic-release/npm": 12.0.0
     "@semantic-release/release-notes-generator": 13.0.0
     conventional-changelog-conventionalcommits: 7.0.2
-    firebase-tools: 13.6.0
+    firebase-tools: 13.7.3
     grunt: 1.6.1
     grunt-contrib-clean: 2.0.1
     grunt-contrib-connect: 4.0.0
@@ -11344,6 +11344,15 @@ __metadata:
   version: 1.10.2
   resolution: "yaml@npm:1.10.2"
   checksum: ce4ada136e8a78a0b08dc10b4b900936912d15de59905b2bf415b4d33c63df1d555d23acb2a41b23cf9fb5da41c256441afca3d6509de7247daa062fd2c5ea5f
+  languageName: node
+  linkType: hard
+
+"yaml@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "yaml@npm:2.4.1"
+  bin:
+    yaml: bin.mjs
+  checksum: 4c391d07a5d5e935e058babb71026c9cdc9a6fd889e35dd91b53cfb0a12691b67c6c5c740858e71345fef18cd9c13c554a6dda9196f59820d769d94041badb0b
   languageName: node
   linkType: hard
 
