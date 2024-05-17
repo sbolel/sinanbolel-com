@@ -2941,7 +2941,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:7.0.2, conventional-changelog-conventionalcommits@npm:^7.0.2":
+"conventional-changelog-conventionalcommits@npm:8.0.0":
+  version: 8.0.0
+  resolution: "conventional-changelog-conventionalcommits@npm:8.0.0"
+  dependencies:
+    compare-func: ^2.0.0
+  checksum: af80a3294ec833b6ca6b13874c275952391319dd0ebb771dbcf0b837a2f8504c197e894a3fc5def44574a04daa038a94cae8d00f8222e843bc788b6911a1eff4
+  languageName: node
+  linkType: hard
+
+"conventional-changelog-conventionalcommits@npm:^7.0.2":
   version: 7.0.2
   resolution: "conventional-changelog-conventionalcommits@npm:7.0.2"
   dependencies:
@@ -10396,7 +10405,7 @@ __metadata:
     "@semantic-release/github": 10.0.3
     "@semantic-release/npm": 12.0.1
     "@semantic-release/release-notes-generator": 13.0.0
-    conventional-changelog-conventionalcommits: 7.0.2
+    conventional-changelog-conventionalcommits: 8.0.0
     firebase-tools: 13.8.3
     grunt: 1.6.1
     grunt-contrib-clean: 2.0.1
