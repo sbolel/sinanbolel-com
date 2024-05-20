@@ -1059,9 +1059,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:10.0.3":
-  version: 10.0.3
-  resolution: "@semantic-release/github@npm:10.0.3"
+"@semantic-release/github@npm:10.0.4":
+  version: 10.0.4
+  resolution: "@semantic-release/github@npm:10.0.4"
   dependencies:
     "@octokit/core": ^6.0.0
     "@octokit/plugin-paginate-rest": ^11.0.0
@@ -1081,7 +1081,7 @@ __metadata:
     url-join: ^5.0.0
   peerDependencies:
     semantic-release: ">=20.1.0"
-  checksum: 177ea0b978c3abff02689e409133ed952396f04829d4535a0634856d0a951bf74de1f0adf1151197d9022f97812c0f89166538b6754c623f5b04a2df3fb64f47
+  checksum: 396f36b5fe42aa01292ef9981625a13cf2f211141ac770447140e4a1afb569198c935737b3fc1eadef9089da192589f096a3eb20a9ffe3d69a7f0b845a3ce1b6
   languageName: node
   linkType: hard
 
@@ -10402,7 +10402,7 @@ __metadata:
     "@commitlint/config-conventional": 19.2.2
     "@semantic-release/changelog": 6.0.3
     "@semantic-release/commit-analyzer": 12.0.0
-    "@semantic-release/github": 10.0.3
+    "@semantic-release/github": 10.0.4
     "@semantic-release/npm": 12.0.1
     "@semantic-release/release-notes-generator": 13.0.0
     conventional-changelog-conventionalcommits: 8.0.0
