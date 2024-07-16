@@ -64,6 +64,8 @@
       [
         "@semantic-release/github",
         {
+          "failComment": false,
+          "successComment": false,
           "assets": [
             "CHANGELOG.md",
             "README.md",
