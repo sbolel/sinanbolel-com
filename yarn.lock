@@ -4891,9 +4891,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"grunt-contrib-connect@npm:5.0.0":
-  version: 5.0.0
-  resolution: "grunt-contrib-connect@npm:5.0.0"
+"grunt-contrib-connect@npm:5.0.1":
+  version: 5.0.1
+  resolution: "grunt-contrib-connect@npm:5.0.1"
   dependencies:
     async: ^3.2.5
     connect: ^3.7.0
@@ -4904,7 +4904,7 @@ __metadata:
     portscanner: ^2.2.0
     serve-index: ^1.9.1
     serve-static: ^1.15.0
-  checksum: dd58c786a5fad49480f8c1474e4da46d4576ee0827842452a27be2c172848c96b60657b1386f5c365fdea7bc5afed1b5110cbfdf11c8818d42a5f47e46301f8f
+  checksum: b93ba1dd12884c60e2bc583667a94aae7c5a2ca74fbdbb1e95b0a77bd867e16d647984dca6d5da4256d4268edfdaa40d294a2ee456932c09dce98c0238cfe8b3
   languageName: node
   linkType: hard
 
@@ -10243,7 +10243,7 @@ __metadata:
     firebase-tools: 13.22.0
     grunt: 1.6.1
     grunt-contrib-clean: 2.0.1
-    grunt-contrib-connect: 5.0.0
+    grunt-contrib-connect: 5.0.1
     grunt-contrib-cssmin: 5.0.0
     grunt-contrib-htmlmin: 3.1.0
     grunt-contrib-watch: 1.1.0
