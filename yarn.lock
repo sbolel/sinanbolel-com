@@ -1032,7 +1032,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:11.0.0, @semantic-release/github@npm:^11.0.0":
+"@semantic-release/github@npm:11.0.1":
+  version: 11.0.1
+  resolution: "@semantic-release/github@npm:11.0.1"
+  dependencies:
+    "@octokit/core": ^6.0.0
+    "@octokit/plugin-paginate-rest": ^11.0.0
+    "@octokit/plugin-retry": ^7.0.0
+    "@octokit/plugin-throttling": ^9.0.0
+    "@semantic-release/error": ^4.0.0
+    aggregate-error: ^5.0.0
+    debug: ^4.3.4
+    dir-glob: ^3.0.1
+    globby: ^14.0.0
+    http-proxy-agent: ^7.0.0
+    https-proxy-agent: ^7.0.0
+    issue-parser: ^7.0.0
+    lodash-es: ^4.17.21
+    mime: ^4.0.0
+    p-filter: ^4.0.0
+    url-join: ^5.0.0
+  peerDependencies:
+    semantic-release: ">=24.1.0"
+  checksum: e6b3a78ab3aadf8f6c05b530bcb395060a414f0ca3000e6e12874db869a2220a3e81bff08ecdb74ee091234534ddc69e0fd28ff7d5b6ffaed996fad0c245377a
+  languageName: node
+  linkType: hard
+
+"@semantic-release/github@npm:^11.0.0":
   version: 11.0.0
   resolution: "@semantic-release/github@npm:11.0.0"
   dependencies:
@@ -10222,7 +10248,7 @@ __metadata:
     "@commitlint/config-conventional": 19.5.0
     "@semantic-release/changelog": 6.0.3
     "@semantic-release/commit-analyzer": 13.0.0
-    "@semantic-release/github": 11.0.0
+    "@semantic-release/github": 11.0.1
     "@semantic-release/npm": 12.0.1
     "@semantic-release/release-notes-generator": 14.0.1
     conventional-changelog-conventionalcommits: 8.0.0
