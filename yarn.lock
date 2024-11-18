@@ -4095,9 +4095,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase-tools@npm:13.24.2":
-  version: 13.24.2
-  resolution: "firebase-tools@npm:13.24.2"
+"firebase-tools@npm:13.25.0":
+  version: 13.25.0
+  resolution: "firebase-tools@npm:13.25.0"
   dependencies:
     "@electric-sql/pglite": ^0.2.0
     "@google-cloud/cloud-sql-connector": ^1.3.3
@@ -4167,7 +4167,7 @@ __metadata:
     yaml: ^2.4.1
   bin:
     firebase: lib/bin/firebase.js
-  checksum: f983a1533a72bc09ad9538f25d61971af6f35afc654d1c7da2b72527009c9d9e97dbbc30111c0aa00361de53acf169129cc07fb1b2fd300810805ff7c2a69927
+  checksum: 2024be153d2c16bfb984a884184fc712bce1df0954ebab7a65cf5b9a681f71f2f31e16d3eaa6ce705baecb9374112985de6ee9b0bbd10e3fc78d5722b9bd4d8c
   languageName: node
   linkType: hard
 
@@ -10252,7 +10252,7 @@ __metadata:
     "@semantic-release/npm": 12.0.1
     "@semantic-release/release-notes-generator": 14.0.1
     conventional-changelog-conventionalcommits: 8.0.0
-    firebase-tools: 13.24.2
+    firebase-tools: 13.25.0
     grunt: 1.6.1
     grunt-contrib-clean: 2.0.1
     grunt-contrib-connect: 5.0.1
