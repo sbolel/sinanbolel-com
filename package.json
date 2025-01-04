@@ -20,6 +20,7 @@
     "prebuild": "npm run clean",
     "build": "grunt build",
     "start": "grunt serve",
+    "serve": "yarn run start",
     "predeploy": "firebase use default",
     "deploy": "firebase deploy --only database:rules,hosting -m \"[ci] $(git rev-parse --short HEAD)\" --token \"$FIREBASE_TOKEN\"",
     "semantic-release": "semantic-release"
