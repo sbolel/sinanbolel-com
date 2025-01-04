@@ -116,5 +116,10 @@
   },
   "optionalDependencies": {
     "ionicons": "7.4.0"
+  },
+  "resolutions": {
+    "@commitlint/is-ignored@npm:19.6.0/semver": "^7.3.5",
+    "make-dir/semver": "^6.3.1",
+    "semver-diff@npm:3.1.1/semver": "^6.3.1"
   }
 }
