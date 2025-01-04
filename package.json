@@ -119,6 +119,8 @@
   },
   "resolutions": {
     "@commitlint/is-ignored@npm:19.6.0/semver": "^7.3.5",
+    "cross-spawn@^7.0.0": "^7.0.5",
+    "cross-spawn@^7.0.3": "^7.0.5",
     "make-dir/semver": "^6.3.1",
     "semver-diff@npm:3.1.1/semver": "^6.3.1"
   }
