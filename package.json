@@ -15,16 +15,14 @@
   },
   "license": "UNLICENSED",
   "scripts": {
+    "prepare": "husky",
     "clean": "rimraf public/index.html public/sinanbolel.min.css",
     "prebuild": "npm run clean",
     "build": "grunt build",
-    "predeploy": "firebase use default",
-    "predeploy-ci": "firebase use default",
-    "deploy": "firebase deploy --only database:rules,hosting",
-    "deploy-ci": "firebase deploy --only database:rules,hosting -m \"[ci] $(git rev-parse --short HEAD)\" --token \"$FIREBASE_TOKEN\"",
     "start": "grunt serve",
-    "semantic-release": "semantic-release",
-    "prepare": "husky install"
+    "predeploy": "firebase use default",
+    "deploy": "firebase deploy --only database:rules,hosting -m \"[ci] $(git rev-parse --short HEAD)\" --token \"$FIREBASE_TOKEN\"",
+    "semantic-release": "semantic-release"
   },
   "engines": {
     "node": "20",
@@ -109,7 +107,7 @@
     "grunt-contrib-htmlmin": "3.1.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-replace": "2.0.2",
-    "husky": "8.0.3",
+    "husky": "9.1.7",
     "md5": "2.3.0",
     "rimraf": "6.0.1",
     "semantic-release": "24.2.1",
