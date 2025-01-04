@@ -15,23 +15,21 @@
   },
   "license": "UNLICENSED",
   "scripts": {
+    "prepare": "husky",
     "clean": "rimraf public/index.html public/sinanbolel.min.css",
     "prebuild": "npm run clean",
     "build": "grunt build",
-    "predeploy": "firebase use default",
-    "predeploy-ci": "firebase use default",
-    "deploy": "firebase deploy --only database:rules,hosting",
-    "deploy-ci": "firebase deploy --only database:rules,hosting -m \"[ci] $(git rev-parse --short HEAD)\" --token \"$FIREBASE_TOKEN\"",
     "start": "grunt serve",
-    "semantic-release": "semantic-release",
-    "prepare": "husky install"
+    "predeploy": "firebase use default",
+    "deploy": "firebase deploy --only database:rules,hosting -m \"[ci] $(git rev-parse --short HEAD)\" --token \"$FIREBASE_TOKEN\"",
+    "semantic-release": "semantic-release"
   },
   "engines": {
-    "node": "19",
+    "node": "20",
     "npm": "please-use-yarn",
-    "yarn": "3.6.1"
+    "yarn": "4.6.0"
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@4.6.0",
   "publishConfig": {
     "access": "restricted"
   },
@@ -78,8 +76,8 @@
               "label": "sinanbolel.min.css"
             },
             {
-              "path": "public/*.pdf",
-              "label": "resume"
+              "path": "public/sinan-bolel-resume.pdf",
+              "label": "Resume (PDF)"
             }
           ]
         }
@@ -96,10 +94,10 @@
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/commit-analyzer": "13.0.0",
+    "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/github": "11.0.1",
     "@semantic-release/npm": "12.0.1",
-    "@semantic-release/release-notes-generator": "14.0.2",
+    "@semantic-release/release-notes-generator": "14.0.3",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "firebase-tools": "13.29.1",
     "grunt": "1.6.1",
@@ -109,10 +107,10 @@
     "grunt-contrib-htmlmin": "3.1.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-replace": "2.0.2",
-    "husky": "8.0.3",
+    "husky": "9.1.7",
     "md5": "2.3.0",
     "rimraf": "6.0.1",
-    "semantic-release": "24.2.0",
+    "semantic-release": "24.2.1",
     "serve": "14.2.4",
     "yarn-run-all": "3.1.1"
   },
