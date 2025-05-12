@@ -115,7 +115,7 @@
     "serve": "14.2.4"
   },
   "optionalDependencies": {
-    "ionicons": "7.4.0"
+    "ionicons": "8.0.8"
   },
   "resolutions": {
     "@commitlint/is-ignored@npm:19.6.0/semver": "^7.3.5",
