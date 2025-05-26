@@ -1,5 +1,7 @@
 # [sinanbolel.com](https://sinanbolel.com)
 
+## ⚠️ ARCHIVED: See https://github.com/sbolel/sinanbolel-com-v2
+
 [![resume-img]][resume-url]
 [![linkedin-img]][linkedin-url]
 [![github-img]][github-url]
